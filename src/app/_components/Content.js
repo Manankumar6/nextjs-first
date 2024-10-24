@@ -17,7 +17,7 @@ const Content = () => {
             <p className="leading-relaxed text-base">
               Our team specializes in creating custom web solutions tailored to your business needs. From responsive designs to user-friendly interfaces, we ensure a seamless experience.
             </p>
-            <button className="flex mx-auto mt-6 text-white bg-purple-500 border-0 py-2 px-5 focus:outline-none hover:bg-purple-600 rounded">
+            <button className="flex mx-auto mt-6 text-white bg-indigo-500 border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600 rounded">
               Get Started
             </button>
           </div>
@@ -33,7 +33,7 @@ const Content = () => {
             <p className="leading-relaxed text-base">
               Elevate your brand with our comprehensive digital marketing services, including SEO, social media management, and targeted advertising to reach your audience effectively.
             </p>
-            <button className="flex mx-auto mt-6 text-white bg-purple-500 border-0 py-2 px-5 focus:outline-none hover:bg-purple-600 rounded">
+            <button className="flex mx-auto mt-6 text-white bg-indigo-500 border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600 rounded">
               Learn More
             </button>
           </div>
@@ -59,7 +59,7 @@ const Content = () => {
             Transform your online presence with tailored web development services. Our team specializes in creating responsive and user-friendly websites that cater to your business needs. From modern designs to seamless integrations, we ensure your site stands out in a crowded digital landscape.
           </p>
           <div className="flex justify-center">
-            <button className="inline-flex text-white bg-purple-500 border-0 py-2 px-6 focus:outline-none hover:bg-purple-600 rounded text-lg">
+            <button className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
               Get Started
             </button>
             <button className="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">

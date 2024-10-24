@@ -100,7 +100,7 @@ const LoginPage = () => {
             {/* Login Button */}
             <Button
               type="submit"
-              colorScheme="purple"
+              colorScheme="blue"
               size="lg"
               fontSize="md"
               mt={4}

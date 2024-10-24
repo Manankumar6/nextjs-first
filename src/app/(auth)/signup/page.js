@@ -181,7 +181,7 @@ const SignupPage = () => {
             {/* Sign Up Button */}
             <Button
               type="submit"
-              colorScheme="purple"
+              colorScheme="blue"
               size="lg"
               fontSize="md"
               mt={4}
