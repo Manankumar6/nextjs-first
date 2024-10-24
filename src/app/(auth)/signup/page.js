@@ -83,7 +83,7 @@ const SignupPage = () => {
     if(authenticate){
       router.push('/')
     }
-      },[authenticate])
+      },[authenticate,router])
 
   return (
     <Box

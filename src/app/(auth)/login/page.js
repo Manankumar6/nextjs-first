@@ -38,7 +38,7 @@ const LoginPage = () => {
     if (authenticate) {
       router.push('/')
     }
-  }, [authenticate])
+  }, [authenticate,router])
   return (
     <Box
       display="flex"
