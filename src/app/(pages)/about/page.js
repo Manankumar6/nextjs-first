@@ -30,7 +30,7 @@ const page = () => {
           </div>
           <div class="md:flex-grow">
             <h2 class="text-2xl font-medium text-gray-900 title-font mb-2">Custom E-commerce Platforms</h2>
-            <p class="leading-relaxed">We specialize in developing custom e-commerce solutions that are secure, scalable, and designed to drive sales. Whether you're a startup or an established business, we deliver tailored solutions to grow your online presence.</p>
+            <p class="leading-relaxed">We specialize in developing custom e-commerce solutions that are secure, scalable, and designed to drive sales. Whether you&apos;re a startup or an established business, we deliver tailored solutions to grow your online presence.</p>
             <a class="text-indigo-500 inline-flex items-center mt-4">Learn More
               <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M5 12h14"></path>

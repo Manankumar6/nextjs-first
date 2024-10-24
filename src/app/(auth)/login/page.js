@@ -73,7 +73,7 @@ const LoginPage = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
-              <FormHelperText>We'll never share your email.</FormHelperText>
+              <FormHelperText>We&apos;ll never share your email.</FormHelperText>
             </FormControl>
 
             {/* Password */}
