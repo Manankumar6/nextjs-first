@@ -1,7 +1,14 @@
-import Image from "next/image";
+import Content from "./_components/Content";
+import Hero from "./_components/Hero";
+import Offer from "./_components/Offer";
+
 
 export default function Home() {
   return (
-   <div>Hello world</div>
+    <div>
+     <Hero/>
+     <Offer/>
+     <Content/>
+    </div>
   );
 }

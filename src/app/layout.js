@@ -1,5 +1,9 @@
 import localFont from "next/font/local";
 import "./globals.css";
+import Navbar from "./_components/Navbar";
+import { ChakraProvider } from '@chakra-ui/react'
+import { AuthProvider } from "./context/AuthContext";
+import ProtectedRoute from "./_components/ProtectiveRoute";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -23,7 +27,16 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <AuthProvider>
+
+          <ChakraProvider>
+            <ProtectedRoute>
+
+          <Navbar />
+         {children}
+            </ProtectedRoute>
+          </ChakraProvider>
+        </AuthProvider>
       </body>
     </html>
   );
