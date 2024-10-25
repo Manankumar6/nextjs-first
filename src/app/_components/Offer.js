@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Card from '../_components/Card'
 import React from 'react';
 
@@ -38,6 +39,16 @@ const Offer = () => {
 
   return (
     <div className="w-full  mx-auto px-4 ">
+       <div className="flex flex-wrap justify-center gap-4 p-4"> {/* Flex container with wrapping */}
+    {cards.map((card,ind)=>{
+      return (
+        <div key={ind} className="flex-none w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
+        <Card title={card.title} text={card.text} img={card.img} />
+        </div>
+
+      )
+    })}
+    </div>
       <section class="text-gray-600 body-font">
         <div class="container px-5 py-24 mx-auto">
           <div class="flex flex-wrap w-full mb-20">
@@ -105,16 +116,18 @@ const Offer = () => {
           </div>
         </div>
       </section>
-      <div className="flex flex-wrap justify-center gap-4 p-4"> {/* Flex container with wrapping */}
-    {cards.map((card,ind)=>{
-      return (
-        <div key={ind} className="flex-none w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
-        <Card title={card.title} text={card.text} img={card.img} />
-        </div>
-
-      )
-    })}
-    </div>
+     
+      <section className="py-16 bg-indigo-700 text-white text-center">
+    <h2 className="text-3xl font-bold">Explore Our Services</h2>
+    <p className="mt-4 text-lg max-w-2xl mx-auto">
+        Discover how our tailored solutions can help your business thrive. From web development to digital marketing, we have you covered!
+    </p>
+    <Link href='/service'>
+        <button className="mt-8 px-8 py-4 bg-white text-indigo-700 font-semibold rounded-lg shadow-md hover:bg-gray-200">
+            View Our Services
+        </button>
+    </Link>
+</section>
 
 
 

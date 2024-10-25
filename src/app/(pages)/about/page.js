@@ -2,64 +2,95 @@ import React from 'react'
 
 const page = () => {
   return (
-    <section class="text-gray-600 body-font overflow-hidden">
-    <div class="container px-5 py-24 mx-auto">
-      <div class="-my-8 divide-y-2 divide-gray-100">
-   
-        <div class="py-8 flex flex-wrap md:flex-nowrap">
-          <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
-            <span class="font-semibold title-font text-gray-700">Web Design & Development</span>
-            <span class="mt-1 text-gray-500 text-sm">10 Jan 2023</span>
+    <div className="bg-gray-100 text-gray-700">
+      {/* Hero Section */}
+      <section className="text-center py-20 bg-blue-600 text-white">
+        <h1 className="text-4xl font-bold">About Our Web Services</h1>
+        <p className="mt-4 text-lg max-w-xl mx-auto">
+          We are committed to delivering top-notch web solutions to help your business thrive online.
+        </p>
+      </section>
+
+      {/* Our Mission Section */}
+      <section className="container mx-auto px-6 py-12 text-center">
+        <h2 className="text-3xl font-semibold">Our Mission</h2>
+        <p className="mt-4 text-lg">
+          To empower businesses with scalable, secure, and user-friendly web applications that meet industry standards and exceed customer expectations.
+        </p>
+      </section>
+
+      {/* Services Section */}
+      <section className="container mx-auto px-6 py-12 grid gap-8 md:grid-cols-3">
+        <div className="p-6 bg-white rounded-lg shadow-md">
+          <h3 className="text-2xl font-bold text-blue-600">Web Development</h3>
+          <p className="mt-4">Custom websites built with performance, security, and user experience in mind.</p>
+        </div>
+        <div className="p-6 bg-white rounded-lg shadow-md">
+          <h3 className="text-2xl font-bold text-blue-600">E-commerce Solutions</h3>
+          <p className="mt-4">Seamless online shopping experiences tailored to increase sales and engagement.</p>
+        </div>
+        <div className="p-6 bg-white rounded-lg shadow-md">
+          <h3 className="text-2xl font-bold text-blue-600">SEO & Marketing</h3>
+          <p className="mt-4">Boost your online presence and reach with our proven SEO and digital marketing strategies.</p>
+        </div>
+      </section>
+
+      {/* Why Choose Us Section */}
+      <section className="bg-blue-600 text-white py-16">
+        <div className="container mx-auto px-6 text-center">
+          <h2 className="text-3xl font-semibold">Why Choose Us</h2>
+          <p className="mt-4 max-w-2xl mx-auto text-lg">
+            Our dedicated team of experts brings experience, reliability, and passion to each project, ensuring results that drive success.
+          </p>
+          <ul className="mt-8 grid gap-8 md:grid-cols-3 text-left">
+            <li className="flex items-start">
+              <span className="text-4xl font-bold text-white">✓</span>
+              <span className="ml-4">Experienced Developers</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-4xl font-bold text-white">✓</span>
+              <span className="ml-4">Quality-Driven Approach</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-4xl font-bold text-white">✓</span>
+              <span className="ml-4">Dedicated Support</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="container mx-auto px-6 py-12 text-center">
+        <h2 className="text-3xl font-semibold">What Our Clients Say</h2>
+        <div className="mt-8 grid gap-8 md:grid-cols-2">
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <p className="text-lg">
+              "This team is amazing! They transformed our website and boosted our online traffic significantly."
+            </p>
+            <p className="mt-4 font-semibold">- Client A</p>
           </div>
-          <div class="md:flex-grow">
-            <h2 class="text-2xl font-medium text-gray-900 title-font mb-2">Responsive Website Design & Development</h2>
-            <p class="leading-relaxed">We build high-performing websites tailored to your business needs. Our designs are responsive, modern, and fully optimized for all devices to ensure a seamless user experience.</p>
-            <a class="text-indigo-500 inline-flex items-center mt-4">Learn More
-              <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14"></path>
-                <path d="M12 5l7 7-7 7"></path>
-              </svg>
-            </a>
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <p className="text-lg">
+              "Professional, efficient, and always goes above and beyond. Highly recommend their services!"
+            </p>
+            <p className="mt-4 font-semibold">- Client B</p>
           </div>
         </div>
-    
-        <div class="py-8 flex flex-wrap md:flex-nowrap">
-          <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
-            <span class="font-semibold title-font text-gray-700">E-commerce Solutions</span>
-            <span class="mt-1 text-gray-500 text-sm">25 Mar 2023</span>
-          </div>
-          <div class="md:flex-grow">
-            <h2 class="text-2xl font-medium text-gray-900 title-font mb-2">Custom E-commerce Platforms</h2>
-            <p class="leading-relaxed">We specialize in developing custom e-commerce solutions that are secure, scalable, and designed to drive sales. Whether you&apos;re a startup or an established business, we deliver tailored solutions to grow your online presence.</p>
-            <a class="text-indigo-500 inline-flex items-center mt-4">Learn More
-              <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14"></path>
-                <path d="M12 5l7 7-7 7"></path>
-              </svg>
-            </a>
-          </div>
+      </section>
+
+      {/* Call to Action Section */}
+      <section className="bg-blue-600 text-white py-16">
+        <div className="container mx-auto px-6 text-center">
+          <h2 className="text-3xl font-semibold">Ready to Grow Your Business?</h2>
+          <p className="mt-4 max-w-lg mx-auto text-lg">
+            Contact us today to discuss how we can help bring your vision to life with tailored web solutions.
+          </p>
+          <button className="mt-6 px-6 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-200 transition">
+            Get in Touch
+          </button>
         </div>
-     
-        <div class="py-8 flex flex-wrap md:flex-nowrap">
-          <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
-            <span class="font-semibold title-font text-gray-700">SEO & Digital Marketing</span>
-            <span class="text-sm text-gray-500">05 Sep 2023</span>
-          </div>
-          <div class="md:flex-grow">
-            <h2 class="text-2xl font-medium text-gray-900 title-font mb-2">Boost Your Online Visibility</h2>
-            <p class="leading-relaxed">Our SEO and digital marketing services help your business rank higher on search engines and attract more organic traffic. We use the latest tools and strategies to ensure your website stands out in a competitive market.</p>
-            <a class="text-indigo-500 inline-flex items-center mt-4">Learn More
-              <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14"></path>
-                <path d="M12 5l7 7-7 7"></path>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
+      </section>
     </div>
-  </section>
-  
   )
 }
 

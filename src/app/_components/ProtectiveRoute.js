@@ -7,7 +7,7 @@ const ProtectedRoute = ({ children }) => {
     const { isAuthenticated } = useAuth(); // Get the authentication state
     const router = useRouter();
     const pathname = usePathname();
-    const protectedRoutes = ['/contact'];
+    const protectedRoutes = [''];
     useEffect(() => {
         // If not authenticated, redirect to the login page
         if (!isAuthenticated && protectedRoutes.includes(pathname)) {

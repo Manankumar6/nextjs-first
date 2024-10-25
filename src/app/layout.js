@@ -4,6 +4,7 @@ import Navbar from "./_components/Navbar";
 import { ChakraProvider } from '@chakra-ui/react'
 import { AuthProvider } from "./context/AuthContext";
 import ProtectedRoute from "./_components/ProtectiveRoute";
+import Footer from "./_components/Footer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -34,6 +35,7 @@ export default function RootLayout({ children }) {
 
           <Navbar />
          {children}
+         <Footer/>
             </ProtectedRoute>
           </ChakraProvider>
         </AuthProvider>
