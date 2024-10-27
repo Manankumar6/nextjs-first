@@ -56,6 +56,7 @@ export async function POST(req) {
               path: '/',
               maxAge: 2592000 , // Cookie will expire in 1 hour
             });
+            
             return NextResponse.json({ message: "Login successful!" }, { status: 200 });
         }else if(action == 'logout'){
            

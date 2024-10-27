@@ -16,7 +16,7 @@ const RefundPolicy = () => {
             <section className="container mx-auto px-6 py-16 text-center">
                 <h2 className="text-3xl font-semibold mb-4">Overview</h2>
                 <p className="text-lg max-w-3xl mx-auto text-gray-700">
-                    This Refund Policy outlines the conditions under which you may request a refund for services purchased through TechCanvas. We are committed to providing high-quality service and transparency for our clients.
+                    This Refund Policy outlines the conditions under which you may request a refund for services purchased through TechCanva. We are committed to providing high-quality service and transparency for our clients.
                 </p>
             </section>
 
@@ -60,7 +60,7 @@ const RefundPolicy = () => {
                 <div className="container mx-auto px-6 text-center">
                     <h2 className="text-3xl font-semibold">Refund Process</h2>
                     <p className="mt-4 max-w-3xl mx-auto text-lg">
-                        To request a refund, please contact us at <Link href="mailto:support@techcanvas.com" className="underline">support@techcanvas.com</Link>. Provide details of the service, reason for the request, and any relevant documentation.
+                        To request a refund, please contact us at <Link href="mailto:support@techcanva.com" className="underline">support@techcanva.com</Link>. Provide details of the service, reason for the request, and any relevant documentation.
                     </p>
                     <ul className="mt-8 grid gap-8 md:grid-cols-3 text-left">
                         <li className="flex items-start">
@@ -103,7 +103,7 @@ const RefundPolicy = () => {
                 <div className="container mx-auto px-6 text-center">
                     <h2 className="text-3xl font-semibold">Need Help?</h2>
                     <p className="mt-4 max-w-2xl mx-auto text-lg">
-                        If you have questions about this refund policy, please contact us at <Link href="mailto:support@techcanvas.com" className="underline">support@techcanvas.com</Link> or visit our <Link href="/contact"><span className="underline">Contact Us</span></Link> page.
+                        If you have questions about this refund policy, please contact us at <Link href="mailto:support@techcanva.com" className="underline">support@techcanva.com</Link> or visit our <Link href="/contact"><span className="underline">Contact Us</span></Link> page.
                     </p>
                     <Link href="/contact">
                         <p className="inline-block mt-8 px-8 py-4 bg-white text-indigo-700 rounded-lg font-semibold shadow-md hover:bg-gray-200 transition duration-300">

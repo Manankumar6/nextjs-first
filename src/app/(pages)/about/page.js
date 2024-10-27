@@ -22,19 +22,20 @@ const page = () => {
 
       {/* Services Section */}
       <section className="container mx-auto px-6 py-12 grid gap-8 md:grid-cols-3">
-        <div className="p-6 bg-white rounded-lg shadow-md">
-          <h3 className="text-2xl font-bold text-blue-600">Web Development</h3>
-          <p className="mt-4">Custom websites built with performance, security, and user experience in mind.</p>
-        </div>
-        <div className="p-6 bg-white rounded-lg shadow-md">
-          <h3 className="text-2xl font-bold text-blue-600">E-commerce Solutions</h3>
-          <p className="mt-4">Seamless online shopping experiences tailored to increase sales and engagement.</p>
-        </div>
-        <div className="p-6 bg-white rounded-lg shadow-md">
-          <h3 className="text-2xl font-bold text-blue-600">SEO & Marketing</h3>
-          <p className="mt-4">Boost your online presence and reach with our proven SEO and digital marketing strategies.</p>
-        </div>
-      </section>
+  <div className="p-6 bg-white rounded-lg shadow-md">
+    <h3 className="text-2xl font-bold text-blue-600">Custom Web Development</h3>
+    <p className="mt-4">Developing modern, responsive websites that deliver exceptional user experiences and meet business goals effectively.</p>
+  </div>
+  <div className="p-6 bg-white rounded-lg shadow-md">
+    <h3 className="text-2xl font-bold text-blue-600">UI/UX Design</h3>
+    <p className="mt-4">Crafting user-friendly designs that are visually appealing and optimized for intuitive user navigation.</p>
+  </div>
+  <div className="p-6 bg-white rounded-lg shadow-md">
+    <h3 className="text-2xl font-bold text-blue-600">Performance Optimization</h3>
+    <p className="mt-4">Enhancing your website’s speed and security to ensure fast load times and secure data handling.</p>
+  </div>
+</section>
+
 
       {/* Why Choose Us Section */}
       <section className="bg-indigo-600 text-white py-16">
@@ -44,15 +45,15 @@ const page = () => {
             Our dedicated team of experts brings experience, reliability, and passion to each project, ensuring results that drive success.
           </p>
           <ul className="mt-8 grid gap-8 md:grid-cols-3 text-left">
-            <li className="flex items-start">
+            <li className="flex items-center mx-auto">
               <span className="text-4xl font-bold text-white">✓</span>
               <span className="ml-4">Experienced Developers</span>
             </li>
-            <li className="flex items-start">
+            <li className="flex items-center mx-auto">
               <span className="text-4xl font-bold text-white">✓</span>
               <span className="ml-4">Quality-Driven Approach</span>
             </li>
-            <li className="flex items-start">
+            <li className="flex items-center mx-auto">
               <span className="text-4xl font-bold text-white">✓</span>
               <span className="ml-4">Dedicated Support</span>
             </li>

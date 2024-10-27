@@ -39,6 +39,13 @@ const Offer = () => {
 
   return (
     <div className="w-full  mx-auto px-4 ">
+      <div class="flex flex-wrap w-full mb-20 px-10">
+            <div class="lg:w-1/2 w-full mb-6 lg:mb-0   lg:ps-16">
+              <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">What We Offer ?</h1>
+              <div class="h-1 w-20 bg-indigo-500 rounded"></div>
+            </div>
+            <p class="lg:w-1/2 w-full leading-relaxed text-gray-500">  We specialize in delivering high-quality web development solutions tailored to meet the unique needs of each client. From full-stack development to responsive design and cloud deployment, We ensure that your digital presence stands out and performs seamlessly across all platforms.</p>
+          </div>
        <div className="flex flex-wrap justify-center gap-4 p-4"> {/* Flex container with wrapping */}
     {cards.map((card,ind)=>{
       return (
@@ -51,13 +58,7 @@ const Offer = () => {
     </div>
       <section class="text-gray-600 body-font">
         <div class="container px-5 py-24 mx-auto">
-          <div class="flex flex-wrap w-full mb-20">
-            <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
-              <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">What I Offer ?</h1>
-              <div class="h-1 w-20 bg-indigo-500 rounded"></div>
-            </div>
-            <p class="lg:w-1/2 w-full leading-relaxed text-gray-500">  I specialize in delivering high-quality web development solutions tailored to meet the unique needs of each client. From full-stack development to responsive design and cloud deployment, I ensure that your digital presence stands out and performs seamlessly across all platforms.</p>
-          </div>
+          
           {/* Card  */}
 
           <div class="flex flex-wrap -m-4">

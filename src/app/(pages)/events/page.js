@@ -56,7 +56,7 @@ const EventPage = () => {
                     <h2 className="text-3xl font-semibold">Need More Information?</h2>
                     <p className="mt-4 max-w-2xl mx-auto text-lg">
                         If you have any questions regarding this offer, feel free to reach out to us at 
-                        <a href="mailto:support@techcanvas.com" className="underline"> support@techcanvas.com</a> or visit our 
+                        <a href="mailto:support@techcanva.com" className="underline"> support@techcanva.com</a> or visit our 
                         <a href="/contact" className="underline"> Contact Us</a> page.
                     </p>
                 </div>

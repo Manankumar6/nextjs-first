@@ -17,14 +17,15 @@ const Hero = () => {
         </div>
         <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
           <h1 class="text-4xl font-bold text-gray-800 mb-4">
-            Welcome to <span class="text-indigo-600">MERN Stack</span> Development Services
+            Welcome to <span class="text-indigo-600">TechCanva</span>
           </h1>
-          <h2 class="text-xl text-gray-600 mb-6">
+          {/* <h2 class="text-xl text-gray-600 mb-6">
             Full-Stack Web Development with MongoDB, Express, React, and Node.js
-          </h2>
-          <p class="text-lg text-gray-700 max-w-2xl ">
-            Are you looking for a highly skilled MERN Stack developer to bring your web project to life? With <span class="font-bold">5</span> years of experience in full-stack development, I specialize in building dynamic, responsive, and scalable web applications that deliver exceptional user experiences and meet modern business needs.
-          </p>
+          </h2> */}
+         <p class="text-lg text-gray-700 max-w-2xl">
+    Looking for an experienced MERN Stack developer to bring your web project to life? With over <span class="font-bold">5</span> years of expertise in full-stack development, we specialize in building dynamic, responsive, and scalable web applications that deliver exceptional user experiences and meet the demands of modern businesses.
+</p>
+
         </div>
       </div>
 

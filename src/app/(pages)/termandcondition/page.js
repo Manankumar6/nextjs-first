@@ -8,7 +8,7 @@ const TermsAndConditions = () => {
       <section className="text-center py-20 bg-indigo-700 text-white">
         <h1 className="text-5xl font-bold">Terms and Conditions</h1>
         <p className="mt-4 text-lg max-w-2xl mx-auto">
-          Welcome to TechCanvas. Please read these terms and conditions carefully before using our services.
+          Welcome to TechCanva. Please read these terms and conditions carefully before using our services.
         </p>
       </section>
 
@@ -16,7 +16,7 @@ const TermsAndConditions = () => {
       <section className="container mx-auto px-6 py-16 text-center">
         <h2 className="text-3xl font-semibold mb-4">Introduction</h2>
         <p className="text-lg max-w-3xl mx-auto text-gray-700">
-          By accessing or using TechCanvas’s web development services, you agree to be bound by these terms and conditions. If you do not agree, please do not use our services.
+          By accessing or using TechCanva’s web development services, you agree to be bound by these terms and conditions. If you do not agree, please do not use our services.
         </p>
       </section>
 
@@ -45,7 +45,7 @@ const TermsAndConditions = () => {
         <div className="p-8 bg-white rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
           <h3 className="text-2xl font-bold text-indigo-600">Termination of Service</h3>
           <p className="mt-4 text-gray-700">
-            TechCanvas reserves the right to terminate or suspend services for any user who violates these terms or engages in harmful activities.
+            TechCanva reserves the right to terminate or suspend services for any user who violates these terms or engages in harmful activities.
           </p>
         </div>
       </section>
@@ -55,7 +55,7 @@ const TermsAndConditions = () => {
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-3xl font-semibold">Intellectual Property</h2>
           <p className="mt-4 max-w-3xl mx-auto text-lg">
-            All content, designs, and technology provided by TechCanvas are protected under intellectual property laws. Unauthorized use of our intellectual property is prohibited.
+            All content, designs, and technology provided by TechCanva are protected under intellectual property laws. Unauthorized use of our intellectual property is prohibited.
           </p>
           <ul className="mt-8 grid gap-8 md:grid-cols-3 text-left">
             <li className="flex items-start">
@@ -80,7 +80,7 @@ const TermsAndConditions = () => {
         <div className="mt-8 grid gap-10 md:grid-cols-2">
           <div className="bg-white p-8 rounded-lg shadow-lg">
             <p className="text-lg text-gray-700">
-              TechCanvas is not liable for any indirect, incidental, or consequential damages arising from the use of our services.
+              TechCanva is not liable for any indirect, incidental, or consequential damages arising from the use of our services.
             </p>
             <p className="mt-4 font-semibold">Limitation Clause</p>
           </div>
@@ -106,6 +106,7 @@ const TermsAndConditions = () => {
             </p>
           </Link>
         </div>
+        
       </section>
     </div>
   );
