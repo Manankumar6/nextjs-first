@@ -1,10 +1,11 @@
+import Link from 'next/link'
 import React from 'react'
 
 const page = () => {
   return (
     <div className="bg-gray-100 text-gray-700">
       {/* Hero Section */}
-      <section className="text-center py-20 bg-blue-600 text-white">
+      <section className="text-center py-20 bg-indigo-600 text-white">
         <h1 className="text-4xl font-bold">About Our Web Services</h1>
         <p className="mt-4 text-lg max-w-xl mx-auto">
           We are committed to delivering top-notch web solutions to help your business thrive online.
@@ -36,7 +37,7 @@ const page = () => {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="bg-blue-600 text-white py-16">
+      <section className="bg-indigo-600 text-white py-16">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-3xl font-semibold">Why Choose Us</h2>
           <p className="mt-4 max-w-2xl mx-auto text-lg">
@@ -79,15 +80,17 @@ const page = () => {
       </section>
 
       {/* Call to Action Section */}
-      <section className="bg-blue-600 text-white py-16">
+      <section className="bg-indigo-600 text-white py-16">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-3xl font-semibold">Ready to Grow Your Business?</h2>
           <p className="mt-4 max-w-lg mx-auto text-lg">
             Contact us today to discuss how we can help bring your vision to life with tailored web solutions.
           </p>
+          <Link href='/contact'>
           <button className="mt-6 px-6 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-200 transition">
             Get in Touch
           </button>
+          </Link>
         </div>
       </section>
     </div>

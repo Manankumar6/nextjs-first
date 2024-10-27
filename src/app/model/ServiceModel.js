@@ -1,20 +1,21 @@
 import mongoose from "mongoose";
 
-const ServiceSchema = new mongoose.Schema({
-    title:{
+const ContactSchema = new mongoose.Schema({
+    fullname:{
         type:String,
         required:true 
     },
-    des:{
+    email:{
         type:String,
         required:true
     },
-    img:{
+    message:{
         type:String,
+        required:true
         
     }
 
 })
 
-const Service = mongoose.model.Service|| new mongoose.model("Service",ServiceSchema)
-export default Service;
+const Contact = mongoose.model.Contact|| new mongoose.model("Contact",ContactSchema)
+export default Contact;
