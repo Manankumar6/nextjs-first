@@ -33,12 +33,12 @@ const Navbar = () => {
        </>
         :
         <>
-        <Link href='/'>{user&& user.name}</Link>
+        
       <Button bg='transparent' _hover={{bg:"transparent"}}   onClick={logout}>Log out</Button >
         </>
       }
         </nav>
-
+        
       </div>
     </header>
   )

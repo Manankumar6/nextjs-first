@@ -56,7 +56,7 @@ const SignupPage = () => {
         }
         
     } catch (error) {
-        console.log(error)
+        console.log(error,"Sing up error")
         toast({
           title: "User not add",
           description: "Internal server error ",

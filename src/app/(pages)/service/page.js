@@ -1,13 +1,21 @@
+'use client'
 import Link from 'next/link';
-import React from 'react';
-
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const Page = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: false, // Repeat animation on every scroll
+    });
+  }, []);
   return (
     <div className="bg-gray-50 text-gray-800">
       {/* Header Section */}
       <section className="text-center py-20 bg-indigo-600 text-white">
-        <h1 className="text-4xl font-bold">Our Professional Services</h1>
-        <p className="mt-4 text-lg max-w-2xl mx-auto">
+        <h1 className="text-4xl font-bold slide-in">Our Professional Services</h1>
+        <p className="mt-4 text-lg max-w-2xl mx-auto slide-in" style={{ animationDelay: '0.2s' }}>
           We offer comprehensive web solutions to help your business grow. Explore our different plans below.
         </p>
       </section>
@@ -18,7 +26,8 @@ const Page = () => {
         
         <div className="flex flex-wrap justify-center">
           {/* Basic Plan */}
-          <div className="w-full md:w-1/3 p-4">
+          <div className="w-full md:w-1/3 p-4" data-aos="fade-up"
+        data-aos-delay={100}>
             <div className="bg-white shadow-lg rounded-lg p-8 text-center">
               <h3 className="text-2xl font-semibold text-gray-800 mb-2">Basic Plan</h3>
               <p className="text-4xl font-bold text-gray-900 mb-4">₹15,000</p>
@@ -48,7 +57,8 @@ const Page = () => {
           </div>
 
           {/* Premium Plan */}
-          <div className="w-full md:w-1/3 p-4">
+          <div className="w-full md:w-1/3 p-4" data-aos="fade-up"
+        data-aos-delay={200}>
             <div className="bg-white shadow-lg rounded-lg p-8 text-center">
               <h3 className="text-2xl font-semibold text-gray-800 mb-2">Premium Plan</h3>
               <p className="text-4xl font-bold text-gray-900 mb-4">₹25,000</p>
@@ -86,7 +96,8 @@ const Page = () => {
           </div>
 
           {/* Custom Plan */}
-          <div className="w-full md:w-1/3 p-4">
+          <div className="w-full md:w-1/3 p-4" data-aos="fade-up"
+        data-aos-delay={300}>
             <div className="bg-white shadow-lg rounded-lg p-8 text-center">
               <h3 className="text-2xl font-semibold text-gray-800 mb-2">Custom Plan</h3>
               <p className="text-4xl font-bold text-gray-900 mb-4">Pricing Varies</p>

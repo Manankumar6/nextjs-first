@@ -1,6 +1,14 @@
+'use client'
 import Link from 'next/link';
 import Card from '../_components/Card'
 import React from 'react';
+import 'aos/dist/aos.css';
+import AOS from 'aos';
+import { useEffect } from 'react';
+
+
+
+
 
 const Offer = () => {
 
@@ -36,7 +44,12 @@ const Offer = () => {
     }
   ]
 
-
+  useEffect(() => {
+    AOS.init({
+      duration: 600, // Animation duration in ms
+      once: false, // Only animate once on scroll
+    });
+  }, []);
   return (
     <div className="w-full  mx-auto px-4 ">
       <div className="flex flex-wrap w-full mb-20 px-10">
@@ -49,7 +62,12 @@ const Offer = () => {
        <div className="flex flex-wrap justify-center gap-4 p-4"> {/* Flex container with wrapping */}
     {cards.map((card,ind)=>{
       return (
-        <div key={ind} className="flex-none w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
+        <div 
+        key={ind} 
+        className="flex-none w-full sm:w-1/2 md:w-1/3 lg:w-1/4"
+        data-aos="fade-up"
+        data-aos-delay={ind * 100} // Stagger animation by index
+        >
         <Card title={card.title} text={card.text} img={card.img} />
         </div>
 
@@ -62,7 +80,8 @@ const Offer = () => {
           {/* Card  */}
 
           <div className="flex flex-wrap -m-4">
-            <div className="xl:w-1/4 md:w-1/2  p-4">
+            <div className="xl:w-1/4 md:w-1/2  p-4"  data-aos="fade-up"
+        data-aos-delay={100}>
               <div className="bg-gray-100 p-6 h-[30rem] rounded-lg">
                 <img className="h-40 rounded w-full object-cover object-center mb-6" src="/image/fullstack.jpg" alt="content" />
                 <h3 className="tracking-widest text-indigo-500 text-xs font-medium title-font">Full-Stack Development Expertise</h3>
@@ -73,7 +92,8 @@ const Offer = () => {
                 </ul>
               </div>
             </div>
-            <div className="xl:w-1/4 md:w-1/2  p-4">
+            <div className="xl:w-1/4 md:w-1/2  p-4"  data-aos="fade-up"
+        data-aos-delay={2 * 100}>
               <div className="bg-gray-100 p-6 h-[30rem] rounded-lg">
                 <img className="h-40 rounded w-full object-cover object-center mb-6" src="/image/responsive.jpg" alt="content" />
                 <h3 className="tracking-widest text-indigo-500 text-xs font-medium title-font">Responsive & Modern Design</h3>
@@ -83,7 +103,8 @@ const Offer = () => {
                 </ul>
               </div>
             </div>
-            <div className="xl:w-1/4 md:w-1/2  p-4">
+            <div className="xl:w-1/4 md:w-1/2  p-4"  data-aos="fade-up"
+        data-aos-delay={3 * 100}>
               <div className="bg-gray-100 p-6 h-[30rem] rounded-lg">
                 <img className="h-40 rounded w-full object-cover object-center mb-6" src="/image/scalable.jpg" alt="content" />
                 <h3 className="tracking-widest text-indigo-500 text-xs font-medium title-font">Scalable, Robust Backend Solutions</h3>
@@ -94,7 +115,8 @@ const Offer = () => {
                 </ul>
               </div>
             </div>
-            <div className="xl:w-1/4 md:w-1/2  p-4">
+            <div className="xl:w-1/4 md:w-1/2  p-4"  data-aos="fade-up"
+        data-aos-delay={4 * 100}>
               <div className="bg-gray-100 p-6 h-[30rem] rounded-lg">
                 <img className="h-40 rounded w-full object-cover object-center mb-6" src="/image/database.jpg" alt="content" />
                 <h3 className="tracking-widest text-indigo-500 text-xs font-medium title-font">Database Management</h3>
@@ -104,7 +126,8 @@ const Offer = () => {
                 </ul>
               </div>
             </div>
-            <div className="xl:w-1/4 md:w-1/2  p-4">
+            <div className="xl:w-1/4 md:w-1/2  p-4"  data-aos="fade-up"
+        data-aos-delay={5 * 100}>
               <div className="bg-gray-100 p-6 h-[30rem] rounded-lg">
                 <img className="h-40 rounded w-full object-cover object-center mb-6" src="/image/devops.jpg" alt="content" />
                 <h3 className="tracking-widest text-indigo-500 text-xs font-medium title-font">Cloud Deployment & DevOps</h3>
@@ -118,9 +141,9 @@ const Offer = () => {
         </div>
       </section>
      
-      <section className="py-16 bg-indigo-700 text-white text-center">
-    <h2 className="text-3xl font-bold">Explore Our Services</h2>
-    <p className="mt-4 text-lg max-w-2xl mx-auto">
+      <section className="py-16 bg-indigo-700 text-white text-center ">
+    <h2 className="text-3xl font-bold slide-in">Explore Our Services</h2>
+    <p className="mt-4 text-lg max-w-2xl mx-auto slide-in" style={{animationDelay:"0.2s"}}>
         Discover how our tailored solutions can help your business thrive. From web development to digital marketing, we have you covered!
     </p>
     <Link href='/service'>

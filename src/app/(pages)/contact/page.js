@@ -7,7 +7,8 @@ import { AiFillInstagram } from "react-icons/ai";
 import { IoLogoLinkedin } from "react-icons/io5";
 import { useAuth } from '@/app/context/AuthContext';
 import { useRouter } from 'next/navigation';
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const Contact = () => {
   const form = useRef();
   const { authenticate, user } = useAuth();
@@ -17,9 +18,9 @@ const Contact = () => {
     name: '',
     email: '',
     message: '',
-    siteType:'business',
-    plan:'basic',
-    phone:''
+    siteType: 'business',
+    plan: 'basic',
+    phone: ''
   });
   const [loading, setLoading] = useState(false);
   const [responseMessage, setResponseMessage] = useState('');
@@ -64,11 +65,17 @@ const Contact = () => {
         name: '',
         email: '',
         message: '',
-        phone:''
+        phone: ''
       });
     }
   };
 
+  useEffect(() => {
+    AOS.init({
+      duration: 800, // Set animation duration in milliseconds
+      once: false,   // Allows animations to repeat on every scroll
+    });
+  }, []);
   useEffect(() => {
     if (user) {
       setFormData((prevData) => ({
@@ -90,7 +97,8 @@ const Contact = () => {
 
         <div className="flex flex-wrap justify-center">
           <div className="w-full lg:w-1/2 p-4">
-            <div className="bg-white shadow-lg rounded-lg p-8">
+            <div className="bg-white shadow-lg rounded-lg p-8" data-aos="fade-up"
+        data-aos-delay={100}>
               <h2 className="text-2xl font-semibold text-gray-800 mb-6">Get in Touch</h2>
               <form ref={form} onSubmit={sendEmail}>
                 <div className="mb-4">
@@ -152,7 +160,7 @@ const Contact = () => {
                       className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
                       required
                     >
-                    
+
                       <option value="basic" selected>Basic</option>
                       <option value="premium">Premium</option>
                       <option value="custom">Custom</option>
@@ -170,7 +178,7 @@ const Contact = () => {
                       className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
                       required
                     >
-                   
+
                       <option value="business" selected>Business</option>
                       <option value="ecommerce">E-commerce</option>
                       <option value="portfolio">Portfolio</option>
@@ -209,7 +217,8 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="w-full lg:w-1/2 p-4">
+          <div className="w-full lg:w-1/2 p-4" data-aos="fade-up"
+        data-aos-delay={200}>
             <div className="bg-white shadow-lg rounded-lg p-8">
               <h2 className="text-2xl font-semibold text-gray-800 mb-6">Contact Information</h2>
               <ul className="list-none space-y-4">

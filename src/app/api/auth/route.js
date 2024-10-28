@@ -13,51 +13,60 @@ export async function POST(req) {
         const {action} = formData;
         const cookieStore = cookies();
         if (action === 'signup') {
-
-            const { email, name, password } = formData;
-            // Check if required fields are present
-            if (!email || !name || !password) {
-                return NextResponse.json({ message: "All fields are required" }, { status: 400 });
+            try {
+                const { email, name, password } = formData;
+                // Check if required fields are present
+                if (!email || !name || !password) {
+                    return NextResponse.json({ message: "All fields are required" }, { status: 400 });
+                }
+                const user = await User.findOne({ email });
+                if (user) {
+                    return NextResponse.json({ message: "User Already Exist" }, { status: 409 })
+                }
+                const newUser = new User({
+                    email: email,
+                    name: name,
+                    password: password
+                })
+    
+                await newUser.save();
+                return NextResponse.json({ message: "User created successfully!" }, { status: 200 });
+    
+            } catch (error) {
+                return NextResponse.json({message:"Server Error", error})
             }
-            const user = await User.findOne({ email });
-            if (user) {
-                return NextResponse.json({ message: "User Already Exist" }, { status: 409 })
-            }
-            const newUser = new User({
-                email: email,
-                name: name,
-                password: password
-            })
-
-            await newUser.save();
-            return NextResponse.json({ message: "User created successfully!" }, { status: 200 });
-
-        } else if (action === 'login') {
-            const { email, password } = formData;
-
-            // Check if required fields are present
-            if (!email || !password) {
-                return NextResponse.json({ message: "Email and password are required" }, { status: 400 });
-            }
-            const user = await User.findOne({ email });
-            if (!user) {
-                return NextResponse.json({ message: "Invaild credentials" },{status:400})
-            }
-            const isMatch = await user.comparePassword(password);
-            if (!isMatch) {
-                return NextResponse.json({ message: "Invalid credentials" }, { status: 401 });
-            }
-            const token = await  user.generateAuthToken();
            
-            cookieStore.set('token', token, {
-              httpOnly: true,
-              secure: process.env.NODE_ENV === 'production',
-              sameSite: 'Strict', // Set to 'None' if you need cross-site support
-              path: '/',
-              maxAge: 2592000 , // Cookie will expire in 1 hour
-            });
-            
-            return NextResponse.json({ message: "Login successful!" }, { status: 200 });
+        } else if (action === 'login') {
+            try {
+                const { email, password } = formData;
+
+                // Check if required fields are present
+                if (!email || !password) {
+                    return NextResponse.json({ message: "Email and password are required" }, { status: 400 });
+                }
+                const user = await User.findOne({ email });
+                if (!user) {
+                    return NextResponse.json({ message: "Invaild credentials" },{status:400})
+                }
+                const isMatch = await user.comparePassword(password);
+                if (!isMatch) {
+                    return NextResponse.json({ message: "Invalid credentials" }, { status: 401 });
+                }
+                const token = await  user.generateAuthToken();
+               
+                cookieStore.set('token', token, {
+                  httpOnly: true,
+                  secure: process.env.NODE_ENV === 'production',
+                  sameSite: 'Strict', // Set to 'None' if you need cross-site support
+                  path: '/',
+                  maxAge: 2592000 , // Cookie will expire in 1 hour
+                });
+                
+                return NextResponse.json({ message: "Login successful!" }, { status: 200 });
+            } catch (error) {
+                return NextResponse.json({message:"Server Error", error})
+            }
+           
         }else if(action == 'logout'){
            
             cookieStore.set('token', '', { // Clear the token cookie
