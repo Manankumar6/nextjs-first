@@ -115,10 +115,11 @@ const Contact = () => {
         </div>
 
         <div className="flex flex-wrap justify-center">
-          <div className="w-full lg:w-1/2 p-4">
-            <div className="bg-white shadow-lg rounded-lg p-8" data-aos="fade-up"
+          <div className="w-full lg:w-1/2 md:p-4 ">
+            <div className="bg-white shadow-lg rounded-lg p-4 md:p-8" data-aos="fade-up"
         data-aos-delay={100}>
               <h2 className="text-2xl font-semibold text-gray-800 mb-6">Get in Touch</h2>
+              
               <form ref={form} onSubmit={sendEmail}>
                 <div className="mb-4">
                   <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
@@ -236,9 +237,9 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="w-full lg:w-1/2 p-4" data-aos="fade-up"
+          <div className="w-full lg:w-1/2 md:p-4 mt-2" data-aos="fade-up"
         data-aos-delay={200}>
-            <div className="bg-white shadow-lg rounded-lg p-8">
+            <div className="bg-white shadow-lg rounded-lg p-4 md:p-8">
               <h2 className="text-2xl font-semibold text-gray-800 mb-6">Contact Information</h2>
               <ul className="list-none space-y-4">
                 <li className="flex items-center">

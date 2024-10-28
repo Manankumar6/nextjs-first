@@ -50,7 +50,8 @@ const Offer = () => {
       once: false, // Only animate once on scroll
     });
   }, []);
-  return (
+  return (<>
+  
     <div className="w-full  mx-auto px-4 ">
       <div className="flex flex-wrap w-full mb-20 px-10">
             <div className="lg:w-1/2 w-full mb-6 lg:mb-0   lg:ps-16">
@@ -141,6 +142,7 @@ const Offer = () => {
         </div>
       </section>
      
+    </div>
       <section className="py-16 bg-indigo-700 text-white text-center ">
     <h2 className="text-3xl font-bold slide-in">Explore Our Services</h2>
     <p className="mt-4 text-lg max-w-2xl mx-auto slide-in" style={{animationDelay:"0.2s"}}>
@@ -154,11 +156,10 @@ const Offer = () => {
 </section>
 
 
+</>
 
 
 
-
-    </div>
 
   );
 };
