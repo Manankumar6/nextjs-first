@@ -1,17 +1,25 @@
 'use client';
 import Link from 'next/link';
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { CgMail } from "react-icons/cg";
 import { FaPhone } from "react-icons/fa6";
 import { AiFillInstagram } from "react-icons/ai";
 import { IoLogoLinkedin } from "react-icons/io5";
+import { useAuth } from '@/app/context/AuthContext';
+import { useRouter } from 'next/navigation';
 
 const Contact = () => {
   const form = useRef();
+  const { authenticate, user } = useAuth();
+  console.log(user)
+  const router = useRouter();
   const [formData, setFormData] = useState({
     name: '',
-    user_email: '',
+    email: '',
     message: '',
+    siteType:'business',
+    plan:'basic',
+    phone:''
   });
   const [loading, setLoading] = useState(false);
   const [responseMessage, setResponseMessage] = useState('');
@@ -28,17 +36,18 @@ const Contact = () => {
   // Submit handler for the form
   const sendEmail = async (e) => {
     e.preventDefault();
+    if (!authenticate) {
+      router.push('/login')
+
+      return;
+    }
     setLoading(true);
 
     try {
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          fullname: formData.name,
-          email: formData.user_email,
-          message: formData.message,
-        }),
+        body: JSON.stringify(formData),
       });
 
       if (response.ok) {
@@ -53,12 +62,22 @@ const Contact = () => {
       setLoading(false);
       setFormData({
         name: '',
-        user_email: '',
+        email: '',
         message: '',
+        phone:''
       });
     }
   };
 
+  useEffect(() => {
+    if (user) {
+      setFormData((prevData) => ({
+        ...prevData,
+        name: user.name,
+        email: user.email
+      }));
+    }
+  }, [user]);
   return (
     <div className="bg-gray-100 py-12">
       <div className="container mx-auto px-4">
@@ -78,12 +97,12 @@ const Contact = () => {
                   <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
                     Full Name
                   </label>
-                  <input 
-                    type="text" 
-                    id="name" 
-                    name="name" 
-                    value={formData.name} 
-                    onChange={inputHandler} 
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={inputHandler}
                     className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
                     placeholder="Your Name"
                     required
@@ -93,35 +112,92 @@ const Contact = () => {
                   <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
                     Email Address
                   </label>
-                  <input 
-                    type="email" 
-                    id="email" 
-                    name="user_email" 
-                    value={formData.user_email} 
-                    onChange={inputHandler} 
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={inputHandler}
                     className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
                     placeholder="Your Email"
                     required
                   />
                 </div>
                 <div className="mb-4">
+                  <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="text">
+                    Phone
+                  </label>
+                  <input
+                    type="phone"
+                    id="phone"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={inputHandler}
+                    className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    placeholder="Your Phone no"
+                    required
+                  />
+                </div>
+                <div className='flex '>
+
+                  <div className="mb-4 w-1/2 me-2 ">
+                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="plan">
+                      Select Plan
+                    </label>
+                    <select
+                      id="plan"
+                      name="plan"
+                      value={formData.plan}
+                      onChange={inputHandler}
+                      className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                      required
+                    >
+                    
+                      <option value="basic" selected>Basic</option>
+                      <option value="premium">Premium</option>
+                      <option value="custom">Custom</option>
+                    </select>
+                  </div>
+                  <div className="mb-4 w-1/2">
+                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="siteType">
+                      Type of Site
+                    </label>
+                    <select
+                      id="siteType"
+                      name="siteType"
+                      value={formData.siteType}
+                      onChange={inputHandler}
+                      className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                      required
+                    >
+                   
+                      <option value="business" selected>Business</option>
+                      <option value="ecommerce">E-commerce</option>
+                      <option value="portfolio">Portfolio</option>
+                      <option value="blog">Blog</option>
+                      <option value="blog">Other</option>
+                    </select>
+                  </div>
+                </div>
+                <div className="mb-4">
                   <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="message">
                     Message
                   </label>
-                  <textarea 
-                    id="message" 
-                    name="message" 
-                    rows="5" 
-                    value={formData.message} 
-                    onChange={inputHandler} 
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    value={formData.message}
+                    onChange={inputHandler}
                     className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
                     placeholder="Your Message"
                     required
                   ></textarea>
                 </div>
+
                 <div className="text-center">
-                  <button 
-                    type="submit" 
+                  <button
+                    type="submit"
                     className="bg-indigo-500 text-white font-bold py-2 px-6 rounded-lg hover:bg-indigo-600 transition duration-300"
                     disabled={loading}
                   >
@@ -138,11 +214,11 @@ const Contact = () => {
               <h2 className="text-2xl font-semibold text-gray-800 mb-6">Contact Information</h2>
               <ul className="list-none space-y-4">
                 <li className="flex items-center">
-                  <FaPhone className='text-indigo-500 w-5 h-5 mr-2'/>
+                  <FaPhone className='text-indigo-500 w-5 h-5 mr-2' />
                   <span>+91 6398401607</span>
                 </li>
                 <li className="flex items-center">
-                  <CgMail className='text-indigo-500 w-6 h-6 mr-2'/>
+                  <CgMail className='text-indigo-500 w-6 h-6 mr-2' />
                   <span>support@techcanva.com</span>
                 </li>
               </ul>
@@ -151,10 +227,10 @@ const Contact = () => {
                 <h2 className="text-xl font-semibold text-gray-800">Follow Us</h2>
                 <div className="flex space-x-4 mt-4">
                   <Link target='_blank' href="https://www.instagram.com/manankumar_06/?igsh=NzQxYzZiM3o3aWdw" className="text-gray-500 hover:text-indigo-500 transition">
-                    <AiFillInstagram className='w-6 h-6'/>
+                    <AiFillInstagram className='w-6 h-6' />
                   </Link>
                   <Link target='_blank' href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile" className="text-gray-500 hover:text-indigo-500 transition">
-                    <IoLogoLinkedin className='w-6 h-6'/>
+                    <IoLogoLinkedin className='w-6 h-6' />
                   </Link>
                 </div>
               </div>

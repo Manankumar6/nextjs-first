@@ -39,9 +39,11 @@ const Page = () => {
                 <li>✔ 1 Year Free Technical Support For Website</li>
                 <li>✔ Annual Renewal For Hosting ₹5000</li>
               </ul>
+              <Link href='/contact'>
               <button className="bg-indigo-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-indigo-600 transition duration-300">
                 Choose Basic
               </button>
+              </Link>
             </div>
           </div>
 
@@ -75,9 +77,11 @@ const Page = () => {
                 <li>✔ 1 Year Free Technical Support For Website</li>
                 <li>✔ Annual Renewal For Hosting ₹6000</li>
               </ul>
+              <Link href='/contact'>
               <button className="bg-indigo-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-indigo-600 transition duration-300">
                 Choose Premium
               </button>
+              </Link>
             </div>
           </div>
 
@@ -107,7 +111,7 @@ const Page = () => {
                 <li>✔ Call Button Integration</li>
                 <li>✔ WhatsApp Button Integration</li>
                 <li>✔ Inquiry Form</li>
-                <li>✔ Woocommerce Features</li>
+                {/* <li>✔ Woocommerce Features</li> */}
                 <li>✔ 1 Year 24/7 Free Support For Website</li>
                 <li>✔ Annual Renewal ₹6000</li>
               </ul>

@@ -8,10 +8,14 @@ export async function POST(req) {
     await connectDb();
 
     // Parse the JSON body from the request
-    const body = await req.json();
+    const body = await req.json(); // Assuming this works without issues
+   
+    // Destructure the required fields
+    const { name, email, phone, message, plan, siteType } = body;
+
+    // Log the extracted values for debugging
     
-    // Create a new contact entry
-    const newContact = new Contact(body);
+    const newContact = new Contact({ name, email,phone, plan, siteType, message });
 
     // Save the new contact to the database
     await newContact.save();
@@ -29,16 +33,18 @@ export async function POST(req) {
 
     // Prepare email options
     const mailOptions = {
-      from: body.email, // User's email as the "from" address
+      from: email, // User's email as the "from" address
       to: "manankumar2019@gmail.com", // Your business email
-      subject: "New Contact Form Submission",
+      subject: "New Inquiry from TechCanva",
       text: `
         You have received a new contact form submission.
 
-        Name: ${body.fullname}
-        Email: ${body.email}
-        Phone: ${body.phone}
-        Message: ${body.message}
+        Name: ${name}
+        Email: ${email}
+        Phone: ${phone}
+        Plan: ${plan}
+        SiteType: ${siteType}
+        Message: ${message}
       `,
     };
 

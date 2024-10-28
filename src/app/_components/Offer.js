@@ -39,12 +39,12 @@ const Offer = () => {
 
   return (
     <div className="w-full  mx-auto px-4 ">
-      <div class="flex flex-wrap w-full mb-20 px-10">
-            <div class="lg:w-1/2 w-full mb-6 lg:mb-0   lg:ps-16">
-              <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">What We Offer ?</h1>
-              <div class="h-1 w-20 bg-indigo-500 rounded"></div>
+      <div className="flex flex-wrap w-full mb-20 px-10">
+            <div className="lg:w-1/2 w-full mb-6 lg:mb-0   lg:ps-16">
+              <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">What We Offer ?</h1>
+              <div className="h-1 w-20 bg-indigo-500 rounded"></div>
             </div>
-            <p class="lg:w-1/2 w-full leading-relaxed text-gray-500">  We specialize in delivering high-quality web development solutions tailored to meet the unique needs of each client. From full-stack development to responsive design and cloud deployment, We ensure that your digital presence stands out and performs seamlessly across all platforms.</p>
+            <p className="lg:w-1/2 w-full leading-relaxed text-gray-500">  We specialize in delivering high-quality web development solutions tailored to meet the unique needs of each client. From full-stack development to responsive design and cloud deployment, We ensure that your digital presence stands out and performs seamlessly across all platforms.</p>
           </div>
        <div className="flex flex-wrap justify-center gap-4 p-4"> {/* Flex container with wrapping */}
     {cards.map((card,ind)=>{
@@ -56,16 +56,16 @@ const Offer = () => {
       )
     })}
     </div>
-      <section class="text-gray-600 body-font">
-        <div class="container px-5 py-24 mx-auto">
+      <section className="text-gray-600 body-font">
+        <div className="container px-5 py-24 mx-auto">
           
           {/* Card  */}
 
-          <div class="flex flex-wrap -m-4">
-            <div class="xl:w-1/4 md:w-1/2  p-4">
-              <div class="bg-gray-100 p-6 h-[30rem] rounded-lg">
-                <img class="h-40 rounded w-full object-cover object-center mb-6" src="/image/fullstack.jpg" alt="content" />
-                <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">Full-Stack Development Expertise</h3>
+          <div className="flex flex-wrap -m-4">
+            <div className="xl:w-1/4 md:w-1/2  p-4">
+              <div className="bg-gray-100 p-6 h-[30rem] rounded-lg">
+                <img className="h-40 rounded w-full object-cover object-center mb-6" src="/image/fullstack.jpg" alt="content" />
+                <h3 className="tracking-widest text-indigo-500 text-xs font-medium title-font">Full-Stack Development Expertise</h3>
                 <ul className="list-disc list-inside text-gray-600 space-y-1">
                   <li>End-to-end development using the MERN stack (MongoDB, Express.js, React, and Node.js).</li>
                   <li>Custom web applications tailored to your unique requirements.</li>
@@ -73,20 +73,20 @@ const Offer = () => {
                 </ul>
               </div>
             </div>
-            <div class="xl:w-1/4 md:w-1/2  p-4">
-              <div class="bg-gray-100 p-6 h-[30rem] rounded-lg">
-                <img class="h-40 rounded w-full object-cover object-center mb-6" src="/image/responsive.jpg" alt="content" />
-                <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">Responsive & Modern Design</h3>
+            <div className="xl:w-1/4 md:w-1/2  p-4">
+              <div className="bg-gray-100 p-6 h-[30rem] rounded-lg">
+                <img className="h-40 rounded w-full object-cover object-center mb-6" src="/image/responsive.jpg" alt="content" />
+                <h3 className="tracking-widest text-indigo-500 text-xs font-medium title-font">Responsive & Modern Design</h3>
                 <ul className="list-disc list-inside text-gray-600 space-y-1">
                   <li>Mobile-first design approach to ensure your application looks great and functions perfectly on all devices.</li>
                   <li>Pixel-perfect, UI/UX-optimized interfaces that enhance user interaction.</li>
                 </ul>
               </div>
             </div>
-            <div class="xl:w-1/4 md:w-1/2  p-4">
-              <div class="bg-gray-100 p-6 h-[30rem] rounded-lg">
-                <img class="h-40 rounded w-full object-cover object-center mb-6" src="/image/scalable.jpg" alt="content" />
-                <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">Scalable, Robust Backend Solutions</h3>
+            <div className="xl:w-1/4 md:w-1/2  p-4">
+              <div className="bg-gray-100 p-6 h-[30rem] rounded-lg">
+                <img className="h-40 rounded w-full object-cover object-center mb-6" src="/image/scalable.jpg" alt="content" />
+                <h3 className="tracking-widest text-indigo-500 text-xs font-medium title-font">Scalable, Robust Backend Solutions</h3>
                 <ul className="list-disc list-inside text-gray-600 space-y-1">
                   <li>RESTful APIs and GraphQL for efficient data handling and communication.</li>
                   <li>Secure authentication, authorization, and user management systems with JWT or OAuth.</li>
@@ -94,20 +94,20 @@ const Offer = () => {
                 </ul>
               </div>
             </div>
-            <div class="xl:w-1/4 md:w-1/2  p-4">
-              <div class="bg-gray-100 p-6 h-[30rem] rounded-lg">
-                <img class="h-40 rounded w-full object-cover object-center mb-6" src="/image/database.jpg" alt="content" />
-                <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">Database Management</h3>
+            <div className="xl:w-1/4 md:w-1/2  p-4">
+              <div className="bg-gray-100 p-6 h-[30rem] rounded-lg">
+                <img className="h-40 rounded w-full object-cover object-center mb-6" src="/image/database.jpg" alt="content" />
+                <h3 className="tracking-widest text-indigo-500 text-xs font-medium title-font">Database Management</h3>
                 <ul className="list-disc list-inside text-gray-600 space-y-1">
                   <li>Efficient data modeling and management using MongoDB with Mongoose for seamless database integration.</li>
                   <li>Optimized database performance and reliable data storage for your growing application.</li>
                 </ul>
               </div>
             </div>
-            <div class="xl:w-1/4 md:w-1/2  p-4">
-              <div class="bg-gray-100 p-6 h-[30rem] rounded-lg">
-                <img class="h-40 rounded w-full object-cover object-center mb-6" src="/image/devops.jpg" alt="content" />
-                <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">Cloud Deployment & DevOps</h3>
+            <div className="xl:w-1/4 md:w-1/2  p-4">
+              <div className="bg-gray-100 p-6 h-[30rem] rounded-lg">
+                <img className="h-40 rounded w-full object-cover object-center mb-6" src="/image/devops.jpg" alt="content" />
+                <h3 className="tracking-widest text-indigo-500 text-xs font-medium title-font">Cloud Deployment & DevOps</h3>
                 <ul className="list-disc list-inside text-gray-600 space-y-1">
                   <li>Expertise in cloud platforms like AWS, Heroku, and Vercel to deploy and manage your web applications.</li>
                   <li>Continuous integration and delivery (CI/CD) pipelines to ensure fast, reliable deployments.</li>
