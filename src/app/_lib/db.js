@@ -11,7 +11,7 @@ export const connectDb = async()=>{
         return;
     }
     try {
-        await mongoose.connect("mongodb://127.0.0.1:27017/nextjs");
+        await mongoose.connect(process.env.NEXT_PUBLIC_MONGO_URI);
         isConnected=true;
         console.log("Database connection successfully")
         
