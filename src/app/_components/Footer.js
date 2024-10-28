@@ -6,15 +6,15 @@ const Footer = () => {
   return (
     <footer className="text-gray-600 body-font">
       <div className="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
-      <div className="w-64 flex flex-col items-center md:mx-0 mx-auto text-center md:text-center">
-  <Link href="/" className="flex title-font font-medium items-center justify-center text-gray-900">
-    <span className="logo font-bold text-indigo-500">
-      <Image src='/image/logo4.png' width={70} height={70} alt='logo' />
-    </span>
-  </Link>
-  <b className='text-xl mt-2'>TechCanva</b>
-  <p className="text-[10px] tracking-widest mt-1">Your Vision, Our Canvas</p>
-</div>
+        <div className="w-64 flex flex-col items-center md:mx-0 mx-auto text-center md:text-center">
+          <Link href="/" className="flex title-font font-medium items-center justify-center text-gray-900">
+            <span className="logo font-bold text-indigo-500">
+              <Image src='/image/logo4.png' width={70} height={70} alt='logo' />
+            </span>
+          </Link>
+          <b className='text-xl mt-2'>TechCanva</b>
+          <p className="text-[10px] tracking-widest mt-1">Your Vision, Our Canvas</p>
+        </div>
 
         <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
 

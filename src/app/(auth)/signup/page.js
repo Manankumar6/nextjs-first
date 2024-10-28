@@ -43,7 +43,7 @@ const SignupPage = () => {
     e.preventDefault();
     const { name, email, password, confirmPassword } = formData;
     try {
-        const {data} = await axios.post("http://localhost:3000/api/auth",{name,email,password, action: 'signup',})
+        const {data} = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/api/auth`,{name,email,password, action: 'signup',})
         if(data){
             console.log(data)
             toast({
