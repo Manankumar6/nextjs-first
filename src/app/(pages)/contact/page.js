@@ -9,10 +9,11 @@ import { useAuth } from '@/app/context/AuthContext';
 import { useRouter } from 'next/navigation';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { useToast } from '@chakra-ui/react';
 const Contact = () => {
   const form = useRef();
   const { authenticate, user } = useAuth();
-  console.log(user)
+  const toast = useToast();
   const router = useRouter();
   const [formData, setFormData] = useState({
     name: '',
@@ -52,13 +53,31 @@ const Contact = () => {
       });
 
       if (response.ok) {
-        setResponseMessage('Message sent successfully!');
+        toast({
+          title: "Message sent successfully!",
+          status: "success",
+          duration: 3000,
+          isClosable: true,
+      });
+       
       } else {
-        setResponseMessage('An error occurred while sending your message.');
+        toast({
+          title: "An error occurred while sending your message.",
+          status: "erro",
+          duration: 3000,
+          isClosable: true,
+      });
+        
       }
     } catch (error) {
       console.error('Failed to send message:', error);
-      setResponseMessage('An error occurred while sending your message.');
+      toast({
+        title: "An error occurred while sending your message.",
+        status: "erro",
+        duration: 3000,
+        isClosable: true,
+    });
+    
     } finally {
       setLoading(false);
       setFormData({
