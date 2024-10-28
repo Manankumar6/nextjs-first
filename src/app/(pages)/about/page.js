@@ -5,7 +5,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 
-const Page = () => {
+const About = () => {
   useEffect(() => {
     AOS.init({
       duration: 800, // Set animation duration in milliseconds
@@ -110,4 +110,4 @@ const Page = () => {
   )
 }
 
-export default Page
+export default About
