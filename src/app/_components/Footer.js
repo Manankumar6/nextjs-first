@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { IoMail } from "react-icons/io5";
 const Footer = () => {
   return (
-    <footer className="text-gray-600 body-font">
+    <footer className="text-gray-600 body-font bg-gray-100">
       <div className="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
         <div className="w-64 flex flex-col items-center md:mx-0 mx-auto text-center md:text-center">
           <Link href="/" className="flex title-font font-medium items-center justify-center text-gray-900">

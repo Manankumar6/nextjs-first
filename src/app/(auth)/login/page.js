@@ -14,6 +14,7 @@ import {
   FormHelperText,
   InputGroup,
   InputRightElement,
+  Spinner,
 } from "@chakra-ui/react";
 import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
 
@@ -22,7 +23,7 @@ import { useAuth } from "@/app/context/AuthContext";
 
 const LoginPage = () => {
   const router = useRouter(); // This should work now
-  const { authenticate,login } = useAuth();
+  const { authenticate,login,loading } = useAuth();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -106,7 +107,7 @@ const LoginPage = () => {
               mt={4}
               w="full"
             >
-              Login
+              {loading?<Spinner/>:"Login"}
             </Button>
           </Stack>
         </form>

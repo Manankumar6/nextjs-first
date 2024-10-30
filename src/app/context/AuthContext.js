@@ -11,7 +11,7 @@ export const AuthProvider = ({ children }) => {
     const [authenticate, setAuthenticate] = useState(false);
     const [user, setUser] = useState({});
     const toast = useToast();
-
+    const [loading,setLoading] = useState(false);
     const checkAuth = async () => {
         try {
 
@@ -29,6 +29,7 @@ export const AuthProvider = ({ children }) => {
     }
 
     const login = async (email, password) => {
+        setLoading(false);
         setAuthenticate(false);
         const API_URL = process.env.NEXT_PUBLIC_API_URL;
         try {
@@ -47,9 +48,11 @@ export const AuthProvider = ({ children }) => {
                 });
                 router.push('/'); // Redirect to home or dashboard
                 setAuthenticate(true);
+                setLoading(true);
             }
 
         } catch (error) {
+            setLoading(false);
             console.log(error);
             toast({
                 title: "Login failed",
@@ -63,6 +66,7 @@ export const AuthProvider = ({ children }) => {
     }
 
     const logout = async () => {
+        setLoading(true);
         try {
             const { data } = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/api/auth`, { action: 'logout' })
             if (data) {
@@ -77,6 +81,7 @@ export const AuthProvider = ({ children }) => {
             }
         } catch (error) {
             console.log(error)
+            setLoading(false);
             toast({
                 title: error.response.data.message,
                 status: "error",
@@ -94,7 +99,7 @@ export const AuthProvider = ({ children }) => {
 
 
     return (
-        <AuthContext.Provider value={{ authenticate, user,login, logout }}>
+        <AuthContext.Provider value={{ authenticate, user,login, logout ,loading}}>
             {children}
         </AuthContext.Provider>
     )

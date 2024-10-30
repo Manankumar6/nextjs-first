@@ -8,7 +8,7 @@ const nextConfig = {
                 headers: [
                     {
                         key: 'Access-Control-Allow-Origin',
-                        value: 'https://nextjs-first-phpx.vercel.app', // Adjust to your frontend URL or use '*' for all
+                        value: 'https://techcanva.in', // Adjust to your frontend URL or use '*' for all
                     },
                     {
                         key: 'Access-Control-Allow-Methods',
