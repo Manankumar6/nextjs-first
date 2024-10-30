@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { CgMail } from "react-icons/cg";
 import { FaPhone } from "react-icons/fa6";
 import { AiFillInstagram } from "react-icons/ai";
-import { IoLogoLinkedin } from "react-icons/io5";
+import { IoLogoLinkedin, IoMail } from "react-icons/io5";
 import { useAuth } from '@/app/context/AuthContext';
 import { useRouter } from 'next/navigation';
 import AOS from 'aos';
@@ -58,16 +58,16 @@ const Contact = () => {
           status: "success",
           duration: 3000,
           isClosable: true,
-      });
-       
+        });
+
       } else {
         toast({
           title: "An error occurred while sending your message.",
           status: "erro",
           duration: 3000,
           isClosable: true,
-      });
-        
+        });
+
       }
     } catch (error) {
       console.error('Failed to send message:', error);
@@ -76,8 +76,8 @@ const Contact = () => {
         status: "erro",
         duration: 3000,
         isClosable: true,
-    });
-    
+      });
+
     } finally {
       setLoading(false);
       setFormData({
@@ -117,9 +117,9 @@ const Contact = () => {
         <div className="flex flex-wrap justify-center">
           <div className="w-full lg:w-1/2 md:p-4 ">
             <div className="bg-white shadow-lg rounded-lg p-4 md:p-8" data-aos="fade-up"
-        data-aos-delay={100}>
+              data-aos-delay={100}>
               <h2 className="text-2xl font-semibold text-gray-800 mb-6">Get in Touch</h2>
-              
+
               <form ref={form} onSubmit={sendEmail}>
                 <div className="mb-4">
                   <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
@@ -238,7 +238,7 @@ const Contact = () => {
           </div>
 
           <div className="w-full lg:w-1/2 md:p-4 mt-2" data-aos="fade-up"
-        data-aos-delay={200}>
+            data-aos-delay={200}>
             <div className="bg-white shadow-lg rounded-lg p-4 md:p-8">
               <h2 className="text-2xl font-semibold text-gray-800 mb-6">Contact Information</h2>
               <ul className="list-none space-y-4">
@@ -248,7 +248,15 @@ const Contact = () => {
                 </li>
                 <li className="flex items-center">
                   <CgMail className='text-indigo-500 w-6 h-6 mr-2' />
-                  <span>support@techcanva.com</span>
+                  <Link target='_blank' href="https://mail.google.com/mail/?view=cm&fs=1&to=support@techcanva.in&su=Support&body=Hello,%0A%0AI%20would%20like%20to%20inquire%20about..." className="text-indigo-500 hover:underline">
+                    support@techcanva.in
+                  </Link>
+                </li>
+                <li className="flex items-center">
+                  <CgMail className='text-indigo-500 w-6 h-6 mr-2' />
+                  <Link target='_blank' href="https://mail.google.com/mail/?view=cm&fs=1&to=info@techcanva.in&su=Support&body=Hello,%0A%0AI%20would%20like%20to%20inquire%20about..." className="text-indigo-500 hover:underline">
+                    info@techcanva.in
+                  </Link>
                 </li>
               </ul>
 
@@ -260,6 +268,13 @@ const Contact = () => {
                   </Link>
                   <Link target='_blank' href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile" className="text-gray-500 hover:text-indigo-500 transition">
                     <IoLogoLinkedin className='w-6 h-6' />
+                  </Link>
+                  <Link
+                    href="https://mail.google.com/mail/?view=cm&fs=1&to=support@techcanva.com&su=Support&body=Hello,%0A%0AI%20would%20like%20to%20inquire%20about..."
+                    target="_blank"
+                    className="text-gray-500 hover:text-indigo-500 transition"
+                  >
+                    <IoMail className='w-6 h-6' />
                   </Link>
                 </div>
               </div>
