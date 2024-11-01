@@ -1,9 +1,19 @@
+'use client'
 import React from 'react';
-
+import 'aos/dist/aos.css';
+import AOS from 'aos';
+import { useEffect } from 'react';
 const Client = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 600, // Animation duration in ms
+      once: false, // Only animate once on scroll
+    });
+  }, []);
   return (
-    <section className="text-gray-600 body-font  py-12">
-        <h1 className='text-center text-4xl font-semibold text-indigo-600'>Client Feedback</h1>
+    <section className="text-gray-600 body-font  py-12"   data-aos="fade-up"
+    data-aos-delay={ 100}>
+        <h1 className='text-center text-2xl font-bold text-indigo-600'>Our Completed Projects</h1>
   
       <div className="container mx-auto flex flex-col md:flex-row items-center mt-5">
         {/* Image Column */}

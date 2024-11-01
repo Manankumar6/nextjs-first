@@ -1,7 +1,27 @@
 import Image from 'next/image';
 import React from 'react';
+import LimitedOffer from './LimitedOffer';
+
 
 const Hero = () => {
+  const offers = [
+    {
+      id: 1,
+      title: "Limited Time Offer",
+      regularPrice: 15000,
+      offerPrice: 6999,
+      features: [
+        '5-page stunning and responsive website design',
+        '1 year of free hosting and domain',
+        '1 business email setup',
+        'Fast loading speed and SEO optimized',
+        'Contact form integration',
+        '1 month of free maintenance and support',
+      ],
+    },
+    // Future offers can be added here
+  ];
+
   return (
     <section className="text-gray-600 body-font">
       <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
@@ -26,6 +46,25 @@ const Hero = () => {
           </p>
         </div>
       </div>
+
+      {/* Special Offer Banner */}
+      <section className="text-center py-20 bg-indigo-700 text-white">
+        <h1 className="text-5xl font-bold">Special Offer This Month!</h1>
+        <p className="mt-4 text-lg max-w-2xl mx-auto">
+          Get your stunning static website developed for just <span className="font-bold text-xl">₹6,999!</span>
+        </p>
+      </section>
+
+      {/* Dynamic Offer Sections */}
+      {offers.map((offer) => (
+        <LimitedOffer
+          key={offer.id}
+          title={offer.title}
+          regularPrice={offer.regularPrice}
+          offerPrice={offer.offerPrice}
+          features={offer.features}
+        />
+      ))}
     </section>
   );
 };

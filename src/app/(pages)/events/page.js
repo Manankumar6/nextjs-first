@@ -1,4 +1,6 @@
+import Link from 'next/link';
 import React from 'react';
+import { FaArrowRightLong } from "react-icons/fa6";
 
 const EventPage = () => {
     return (
@@ -15,9 +17,9 @@ const EventPage = () => {
             <section className="container mx-auto px-6 py-16 text-center">
                 <h2 className="text-3xl font-semibold mb-4">Limited Time Offer</h2>
                 <p className="text-lg max-w-3xl mx-auto text-gray-700">
-                    Our regular price for a static website is 
-                    <span className="line-through text-red-600 ml-1">₹15,000</span>. 
-                    This month, you can avail it for only 
+                    Our regular price for a static website is
+                    <span className="line-through text-red-600 ml-1">₹15,000</span>.
+                    This month, you can avail it for only
                     <span className="font-bold text-xl">₹6,999!</span>
                 </p>
                 <div className="mt-8 p-6 bg-white rounded-lg shadow-lg max-w-md mx-auto">
@@ -31,13 +33,14 @@ const EventPage = () => {
                         <li>1 month of free maintenance and support</li>
                     </ul>
                 </div>
-                <div className="mt-10">
-                    <a 
-                        href="/contact" 
-                        className="inline-block px-8 py-4 bg-indigo-600 text-white rounded-lg font-semibold shadow-md hover:bg-indigo-500 transition duration-300"
+                <div className="mt-10 flex justify-center">
+                    <Link
+                        href="/contact"
+                        className="flex items-center px-8 py-4 bg-indigo-600 text-white rounded-lg font-semibold shadow-md hover:bg-indigo-500 transition duration-300 space-x-2"
                     >
-                        Claim Your Offer Now
-                    </a>
+                       <span> Claim Your Offer Now</span>
+                       <FaArrowRightLong />
+                    </Link>
                 </div>
             </section>
 
@@ -45,7 +48,7 @@ const EventPage = () => {
             <section className="container mx-auto px-6 py-16 text-center">
                 <h2 className="text-3xl font-semibold mb-4">Why Choose Us?</h2>
                 <p className="text-lg max-w-3xl mx-auto text-gray-700">
-                    We are dedicated to delivering high-quality websites that not only look great but also perform excellently. 
+                    We are dedicated to delivering high-quality websites that not only look great but also perform excellently.
                     Our team of experienced professionals ensures that your project is completed on time and meets all your requirements.
                 </p>
             </section>
@@ -55,12 +58,20 @@ const EventPage = () => {
                 <div className="container mx-auto px-6 text-center">
                     <h2 className="text-3xl font-semibold">Need More Information?</h2>
                     <p className="mt-4 max-w-2xl mx-auto text-lg">
-                        If you have any questions regarding this offer, feel free to reach out to us at 
-                        <a href="mailto:support@techcanva.com" className="underline"> support@techcanva.com</a> or visit our 
+                        If you have any questions regarding this offer, feel free to reach out to us at
+                        <a href="mailto:support@techcanva.com" className="underline"> support@techcanva.com</a> or visit our
                         <a href="/contact" className="underline"> Contact Us</a> page.
                     </p>
                 </div>
             </section>
+            <div className="mt-10 flex justify-center">
+                <Link href="/service" className="flex items-center px-8 py-4 bg-indigo-600 text-white rounded-lg font-semibold shadow-md hover:bg-indigo-500 transition duration-300 space-x-2">
+                    <span>Explore More</span>
+                    <FaArrowRightLong />
+                </Link>
+            </div>
+
+
         </div>
     );
 };

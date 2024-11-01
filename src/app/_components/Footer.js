@@ -14,9 +14,10 @@ const Footer = () => {
           </Link>
           <b className='text-xl mt-2'>TechCanva</b>
           <p className="text-[10px] tracking-widest mt-1">Your Vision, Our Canvas</p>
+          <p className='text-[1rem] text-balance'>TechCanva: India’s #1 in Web Development, offering unique, quality websites and engaging animations at affordable prices.</p>
         </div>
 
-        <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
+        <div className="flex-grow flex  flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
 
           <div className="lg:w-1/4 md:w-1/2 w-full px-4 text-center">
             <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">SUPPORT</h2>
@@ -78,7 +79,7 @@ const Footer = () => {
       <div className="bg-gray-100">
         <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
           <p className="text-gray-500 text-sm text-center sm:text-left">© 2024 TechCanva —
-            <Link href="https://twitter.com/knyttneve" rel="noopener noreferrer" className="text-gray-600 ml-1" target="_blank">@knyttneve</Link>
+           <span>All Right Reserved</span>
           </p>
           <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
             <Link href="#" className="text-gray-500">
@@ -87,7 +88,7 @@ const Footer = () => {
               </svg>
             </Link>
             <Link
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=support@techcanva.com&su=Inquiry&body=Hello,%0A%0AI%20would%20like%20to%20inquire%20about..."
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=support@techcanva.in&su=Inquiry&body=Hello,%0A%0AI%20would%20like%20to%20inquire%20about..."
               target="_blank"
               className="ml-3 text-gray-500"
             >

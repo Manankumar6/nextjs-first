@@ -31,7 +31,7 @@ const Page = () => {
             <div className="bg-white shadow-lg rounded-lg p-8 text-center">
               <h3 className="text-2xl font-semibold text-gray-800 mb-2">Basic Plan</h3>
               <p className="text-4xl font-bold text-gray-900 mb-4">₹15,000</p>
-              <p className="text-sm text-gray-600 mb-4">(+ 18% GST ₹ 2700 )</p>
+              {/* <p className="text-sm text-gray-600 mb-4">(+ 18% GST ₹ 2700 )</p> */}
               <p className="text-gray-600 mb-4">Perfect for small businesses or startups.</p>
               <ul className="mb-4 text-left">
                 <li>✔ 5 pages Website</li>
@@ -62,7 +62,7 @@ const Page = () => {
             <div className="bg-white shadow-lg rounded-lg p-8 text-center">
               <h3 className="text-2xl font-semibold text-gray-800 mb-2">Premium Plan</h3>
               <p className="text-4xl font-bold text-gray-900 mb-4">₹25,000</p>
-              <p className="text-sm text-gray-600 mb-4">(+ 18% GST ₹ 4500 )</p>
+              {/* <p className="text-sm text-gray-600 mb-4">(+ 18% GST ₹ 4500 )</p> */}
               <p className="text-gray-600 mb-4">Ideal for growing businesses looking to scale.</p>
               <ul className="mb-4 text-left">
                 <li>✔ 12 pages Website</li>
@@ -101,7 +101,7 @@ const Page = () => {
             <div className="bg-white shadow-lg rounded-lg p-8 text-center">
               <h3 className="text-2xl font-semibold text-gray-800 mb-2">Custom Plan</h3>
               <p className="text-4xl font-bold text-gray-900 mb-4">Pricing Varies</p>
-              <p className="text-sm text-gray-600 mb-4">(+ 18% GST Applicable )</p>
+              {/* <p className="text-sm text-gray-600 mb-4">(+ 18% GST Applicable )</p> */}
               <p className="text-gray-600 mb-4">Tailored solutions based on your unique requirements.</p>
               <ul className="mb-4 text-left">
                 <li>✔ Pages: According to Requirement</li>

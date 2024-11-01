@@ -34,7 +34,7 @@ export async function POST(req) {
     // Prepare email options
     const mailOptions = {
       from: email, // User's email as the "from" address
-      to: "manankumar2019@gmail.com", // Your business email
+      to: "contact@techcanva.in", // Your business email
       subject: "New Inquiry from TechCanva",
       text: `
         You have received a new contact form submission.

@@ -41,8 +41,8 @@ export const AuthProvider = ({ children }) => {
 
             if (data) {
                 toast({
-                    title: "Login successfully",
-                    status: "success",
+                    title: "Welcome to TechCanva",
+                    status: "info",
                     duration: 3000,
                     isClosable: true,
                 });
