@@ -145,7 +145,7 @@ const Offer = () => {
       </section>
      
     </div>
-      <section className="py-16 bg-indigo-700 text-white text-center ">
+      <section className="py-16 px-4 bg-indigo-700 text-white text-center ">
     <h2 className="text-3xl font-bold slide-in">Explore Our Services</h2>
     <p className="mt-4 text-lg max-w-2xl mx-auto slide-in" style={{animationDelay:"0.2s"}}>
         Discover how our tailored solutions can help your business thrive. From web development to digital marketing, we have you covered!

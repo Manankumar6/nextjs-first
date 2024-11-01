@@ -15,8 +15,8 @@ const About = () => {
   return (
     <div className="bg-gray-100 text-gray-700">
       {/* Hero Section */}
-      <section className="text-center py-20 bg-indigo-600 text-white">
-        <h1 className="text-4xl font-bold slide-in">About Our Web Services</h1>
+      <section className="text-center py-20 px-4 bg-indigo-600 text-white">
+        <h1 className="text-2xl md:text-4xl font-bold slide-in">About Our Web Services</h1>
         <p className="mt-4 text-lg max-w-xl mx-auto slide-in" style={{ animationDelay: '0.2s' }}>
           We are committed to delivering top-notch web solutions to help your business thrive online.
         </p>

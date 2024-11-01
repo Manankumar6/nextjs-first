@@ -13,8 +13,8 @@ const Page = () => {
   return (
     <div className="bg-gray-50 text-gray-800">
       {/* Header Section */}
-      <section className="text-center py-20 bg-indigo-600 text-white">
-        <h1 className="text-4xl font-bold slide-in">Our Professional Services</h1>
+      <section className="text-center py-20 px-4 bg-indigo-600 text-white">
+        <h1 className="text-2xl md:text-4xl font-bold slide-in">Our Professional Services</h1>
         <p className="mt-4 text-lg max-w-2xl mx-auto slide-in" style={{ animationDelay: '0.2s' }}>
           We offer comprehensive web solutions to help your business grow. Explore our different plans below.
         </p>

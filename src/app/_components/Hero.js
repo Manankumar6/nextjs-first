@@ -49,7 +49,7 @@ const Hero = () => {
 
       {/* Special Offer Banner */}
       <section className="text-center py-20 bg-indigo-700 text-white">
-        <h1 className="text-5xl font-bold">Special Offer This Month!</h1>
+        <h1 className="text-2xl md:text-5xl font-bold">Special Offer This Month!</h1>
         <p className="mt-4 text-lg max-w-2xl mx-auto">
           Get your stunning static website developed for just <span className="font-bold text-xl">₹6,999!</span>
         </p>
