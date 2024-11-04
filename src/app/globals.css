@@ -1,6 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* In your global CSS file (e.g., globals.css) */
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
 
 :root {
   --background: #ffffff;
@@ -44,4 +47,17 @@ body {
 
 .slide-in {
   animation: slideInRight 0.8s ease-out forwards;
+}
+.slick-slide {
+  margin: 0 10px; /* Add margin for spacing */
+}
+.feedback-card {
+  min-height: 250px; /* Adjust this height as needed */
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-between;
+  overflow: hidden; /* Hide overflowing content */
+}
+.slick-list{
+  height: 250px;
 }

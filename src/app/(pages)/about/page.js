@@ -1,17 +1,71 @@
-'use client'
-import Link from 'next/link'
-import React, { useEffect } from 'react'
+"use client";
+import Link from 'next/link';
+import React, { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-
+import Slider from 'react-slick';
+import {
+  Box,
+  Button,
+  Flex,
+  Heading,
+  Text,
+  VStack,
+  useBreakpointValue,
+} from '@chakra-ui/react';
 
 const About = () => {
+  const [feedbackList, setFeedbackList] = useState([]); // State for storing feedback data
+
+  // Fetch feedback data from API
+  const fetchFeedback = async () => {
+    try {
+      const response = await fetch('/api/feedback');
+      const data = await response.json();
+
+      if (response.ok) {
+        setFeedbackList(data); // Update state with fetched feedback
+      } else {
+        console.error("Failed to fetch feedback:", data.message);
+      }
+    } catch (error) {
+      console.error("Error fetching feedback:", error);
+    }
+  };
+
   useEffect(() => {
     AOS.init({
-      duration: 800, // Set animation duration in milliseconds
-      once: false,   // Allows animations to repeat on every scroll
+      duration: 800,
+      once: false,
     });
+    fetchFeedback(); // Fetch feedback on component mount
   }, []);
+
+  // Slider settings
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3, // Show 3 slides at once
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    responsive: [
+      {
+        breakpoint: 1024, // Adjust for medium screens
+        settings: {
+          slidesToShow: 2, // Show 2 slides at once on medium screens
+        },
+      },
+      {
+        breakpoint: 768, // Adjust for smaller screens
+        settings: {
+          slidesToShow: 1, // Show 1 slide at a time on mobile
+        },
+      },
+    ],
+  };
+
   return (
     <div className="bg-gray-100 text-gray-700">
       {/* Hero Section */}
@@ -31,8 +85,7 @@ const About = () => {
       </section>
 
       {/* Services Section */}
-      <section className="container mx-auto px-6 py-12 grid gap-8 md:grid-cols-3" data-aos="fade-up"
-        data-aos-delay={100}>
+      <section className="container mx-auto px-6 py-12 grid gap-8 md:grid-cols-3" data-aos="fade-up" data-aos-delay={100}>
         <div className="p-6 bg-white rounded-lg shadow-md">
           <h3 className="text-2xl font-bold text-blue-600">Custom Web Development</h3>
           <p className="mt-4">Developing modern, responsive websites that deliver exceptional user experiences and meet business goals effectively.</p>
@@ -46,7 +99,6 @@ const About = () => {
           <p className="mt-4">Enhancing your website’s speed and security to ensure fast load times and secure data handling.</p>
         </div>
       </section>
-
 
       {/* Why Choose Us Section */}
       <section className="bg-indigo-600 text-white py-16">
@@ -73,23 +125,38 @@ const About = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="container mx-auto px-6 py-12 text-center" >
+      <section className="container mx-auto px-6 py-12 text-center">
         <h2 className="text-3xl font-semibold">What Our Clients Say</h2>
-        <div className="mt-8 grid gap-8 md:grid-cols-2" data-aos="fade-up"
-          data-aos-delay={100}>
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <p className="text-lg">
-              "This team is amazing! They transformed our website and boosted our online traffic significantly."
-            </p>
-            <p className="mt-4 font-semibold">- Client A</p>
-          </div>
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <p className="text-lg">
-              "Professional, efficient, and always goes above and beyond. Highly recommend their services!"
-            </p>
-            <p className="mt-4 font-semibold">- Client B</p>
-          </div>
-        </div>
+        <Box mt={8}>
+          {feedbackList.length > 0 ? (
+            <Slider {...sliderSettings}>
+              {feedbackList.map((feedback, index) => (
+                <Box
+                  key={index}
+                  p={4}
+                  borderWidth={1}
+                  borderColor="gray.300"
+                  borderRadius="md"
+                  bg="white"
+                  display="flex"
+                  flexDirection="column"
+                  justifyContent="space-between"
+                  height="250px" // Set a fixed height to keep all cards the same height
+                  m={2} // Margin between cards
+                >
+                  <Text fontSize="lg" overflowWrap="break-word" textAlign="left" flexGrow={1}>
+                    "{feedback.feedback}"
+                  </Text>
+                  <Text mt={2} fontWeight="bold" textAlign="right">
+                    - {feedback.name}
+                  </Text>
+                </Box>
+              ))}
+            </Slider>
+          ) : (
+            <Text>No feedback available yet.</Text>
+          )}
+        </Box>
       </section>
 
       {/* Call to Action Section */}
@@ -100,14 +167,14 @@ const About = () => {
             Contact us today to discuss how we can help bring your vision to life with tailored web solutions.
           </p>
           <Link href='/contact'>
-            <button className="mt-6 px-6 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-200 transition">
+            <Button mt={6} px={6} py={3} colorScheme="whiteAlpha" variant="outline">
               Get in Touch
-            </button>
+            </Button>
           </Link>
         </div>
       </section>
     </div>
-  )
+  );
 }
 
-export default About
+export default About;

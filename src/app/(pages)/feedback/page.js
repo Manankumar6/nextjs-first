@@ -5,6 +5,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useAuth } from '@/app/context/AuthContext';
 import { useToast } from '@chakra-ui/react';
+import Slider from 'react-slick';
 
 const Feedback = () => {
     const { authenticate, user } = useAuth();
@@ -16,9 +17,8 @@ const Feedback = () => {
         feedback: ''
     });
 
-    const [feedbackList, setFeedbackList] = useState([]); // State for storing feedback data
+    const [feedbackList, setFeedbackList] = useState([]);
 
-    // Function to handle input change
     const inputHandle = (e) => {
         const { name, value } = e.target;
         setFormData({
@@ -27,7 +27,6 @@ const Feedback = () => {
         });
     };
 
-    // Function to handle form submission
     const submitHandle = async (e) => {
         e.preventDefault();
 
@@ -42,7 +41,6 @@ const Feedback = () => {
         }
 
         try {
-            // Make a POST request to the backend route
             const response = await fetch('/api/feedback', {
                 method: 'POST',
                 headers: {
@@ -66,7 +64,7 @@ const Feedback = () => {
                     email: '',
                     feedback: ''
                 });
-                fetchFeedback(); // Refresh the feedback list after submission
+                fetchFeedback();
             } else {
                 toast({
                     title: data.message || "Failed to submit feedback",
@@ -86,14 +84,13 @@ const Feedback = () => {
         }
     };
 
-    // Fetch feedback data from API
     const fetchFeedback = async () => {
         try {
             const response = await fetch('/api/feedback');
             const data = await response.json();
 
             if (response.ok) {
-                setFeedbackList(data); // Update state with fetched feedback
+                setFeedbackList(data);
             } else {
                 console.error("Failed to fetch feedback:", data.message);
             }
@@ -107,7 +104,7 @@ const Feedback = () => {
             duration: 800,
             once: false,
         });
-        fetchFeedback(); // Fetch feedback on component mount
+        fetchFeedback();
     }, []);
 
     useEffect(() => {
@@ -120,11 +117,37 @@ const Feedback = () => {
         }
     }, [user]);
 
+    const sliderSettings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            }
+        ]
+    };
+
     return (
         <div className="bg-gray-100 text-gray-700">
             <section className="text-center py-20 px-4 bg-indigo-600 text-white">
-                <h1 className="text-2xl md:text-4xl font-bold slide-in">We Value Your Feedback</h1>
-                <p className="mt-4 text-lg max-w-xl mx-auto slide-in" style={{ animationDelay: '0.2s' }}>
+                <h1 className="text-2xl md:text-4xl font-bold">We Value Your Feedback</h1>
+                <p className="mt-4 text-lg max-w-xl mx-auto">
                     Let us know how we can improve our services and make your experience even better.
                 </p>
             </section>
@@ -171,14 +194,13 @@ const Feedback = () => {
                 </form>
             </section>
 
-            {/* Testimonials Section */}
             <section className="container mx-auto px-6 py-12 text-center">
                 <h2 className="text-3xl font-semibold">What Our Clients Say</h2>
-                <div className="mt-8 grid gap-8 md:grid-cols-2" data-aos="fade-up" data-aos-delay={100}>
+                <Slider {...sliderSettings} className="mt-8">
                     {feedbackList.length > 0 ? (
                         feedbackList.map((feedback) => (
-                            <div key={feedback._id} className="bg-white p-6 rounded-lg shadow-md">
-                                <p className="text-lg">
+                            <div key={feedback._id} className="bg-white p-6 rounded-lg shadow-md mx-2 md:mx-4 flex flex-col feedback-card" style={{ minHeight: '250px' }}>
+                                <p className="text-lg flex-grow overflow-hidden" style={{ display: '-webkit-box', WebkitLineClamp: 4, WebkitBoxOrient: 'vertical' }}>
                                     "{feedback.feedback}"
                                 </p>
                                 <p className="mt-4 font-semibold">- {feedback.name}</p>
@@ -187,7 +209,7 @@ const Feedback = () => {
                     ) : (
                         <p>No feedback available yet.</p>
                     )}
-                </div>
+                </Slider>
             </section>
 
             <section className="bg-indigo-600 text-white py-16">
