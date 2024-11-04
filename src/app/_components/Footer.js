@@ -14,7 +14,7 @@ const Footer = () => {
           </Link>
           <b className='text-xl mt-2'>TechCanva</b>
           <p className="text-[10px] tracking-widest mt-1">Your Vision, Our Canvas</p>
-          <p className='text-[1rem] text-balance'>TechCanva: India’s #1 in Web Development, offering unique, quality websites and engaging animations at affordable prices.</p>
+          <p className='text-[1rem] text-balance'>India’s no. 1 in Web Development, offering unique, quality websites and engaging animations at affordable prices.</p>
         </div>
 
         <div className="flex-grow flex  flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">

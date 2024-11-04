@@ -6,7 +6,7 @@ const TermsAndConditions = () => {
     <div className="bg-gray-100 text-gray-800 font-sans leading-relaxed tracking-wide">
       {/* Hero Section */}
       <section className="text-center py-20 bg-indigo-700 text-white">
-        <h1 className="text-5xl font-bold">Terms and Conditions</h1>
+        <h1 className="text-5xl font-bold">Terms & Conditions</h1>
         <p className="mt-4 text-lg max-w-2xl mx-auto">
           Welcome to TechCanva. Please read these terms and conditions carefully before using our services.
         </p>

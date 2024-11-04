@@ -5,7 +5,7 @@ const Blog = () => {
         <div className="bg-gray-100 text-gray-800 font-sans leading-relaxed tracking-wide">
             {/* Blog Header Section */}
             <header className="text-center py-20 bg-gradient-to-r from-indigo-600 to-indigo-800 text-white">
-                <h1 className="text-6xl font-bold">Our Blog</h1>
+                <h1 className="text-4xl md:text-5xl font-bold">Our Blog</h1>
                 <p className="mt-4 text-xl max-w-2xl mx-auto">
                     Insights, tips, and stories from our team to help your business thrive.
                 </p>
@@ -91,7 +91,7 @@ const Blog = () => {
             </section>
 
             {/* Comments Section */}
-            <section className="container mx-auto px-6 py-10">
+            {/* <section className="container mx-auto px-6 py-10">
                 <h3 className="text-3xl font-semibold mb-4">Leave a Comment</h3>
                 <div className="bg-white p-6 rounded-lg shadow-md">
                     <textarea 
@@ -103,7 +103,7 @@ const Blog = () => {
                         Submit
                     </button>
                 </div>
-            </section>
+            </section> */}
         </div>
     );
 };
