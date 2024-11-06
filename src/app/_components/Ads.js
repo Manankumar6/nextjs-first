@@ -1,4 +1,4 @@
-// components/Ads.js
+'use client'
 
 import React, { useEffect } from 'react';
 
