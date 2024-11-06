@@ -1,8 +1,14 @@
+import Head from 'next/head';
 import React from 'react';
 
 const Blog = () => {
-    return (
+    return (<>
+    <Head>
+                <title>Our Blog - Stay Updated with the Latest News</title>
+                <meta name="description" content="Read our latest blog posts on web development, design, and business strategies. Stay updated with valuable insights." />
+            </Head>
         <div className="bg-gray-100 text-gray-800 font-sans leading-relaxed tracking-wide">
+            
             {/* Blog Header Section */}
             <header className="text-center py-20 bg-gradient-to-r from-indigo-600 to-indigo-800 text-white">
                 <h1 className="text-4xl md:text-5xl font-bold">Our Blog</h1>
@@ -20,7 +26,7 @@ const Blog = () => {
                     <article className="bg-white rounded-lg shadow-lg p-6">
                         <h3 className="text-2xl font-bold mb-2">The Importance of SEO for Your Business</h3>
                         <p className="text-gray-700 mb-4">
-                            Discover how search engine optimization can improve your online presence and drive more traffic to your website. 
+                            Discover how search engine optimization can improve your online presence and drive more traffic to your website.
                             SEO is a crucial part of your digital marketing strategy, allowing you to reach a broader audience and convert visitors into customers.
                         </p>
                         <p className="text-gray-700 mb-4">
@@ -102,9 +108,10 @@ const Blog = () => {
                     <button className="px-6 py-2 bg-indigo-600 text-white rounded-lg font-semibold shadow-md hover:bg-indigo-700 transition duration-300">
                         Submit
                     </button>
-                </div>
+                    </div>
             </section> */}
         </div>
+                    </>
     );
 };
 

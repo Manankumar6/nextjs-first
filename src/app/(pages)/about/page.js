@@ -13,6 +13,7 @@ import {
   VStack,
   useBreakpointValue,
 } from '@chakra-ui/react';
+import Head from 'next/head';
 
 const About = () => {
   const [feedbackList, setFeedbackList] = useState([]); // State for storing feedback data
@@ -68,6 +69,12 @@ const About = () => {
 
   return (
     <div className="bg-gray-100 text-gray-700">
+      <Head>
+      <title>About Us - TechCanva</title>
+      <meta name="description" content="Learn more about TechCanva, the web development services we offer, and how we help businesses grow online." />
+      </Head>
+
+
       {/* Hero Section */}
       <section className="text-center py-20 px-4 bg-indigo-600 text-white">
         <h1 className="text-2xl md:text-4xl font-bold slide-in">About Our Web Services</h1>
