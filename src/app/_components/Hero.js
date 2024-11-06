@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import LimitedOffer from './LimitedOffer';
+import Ads from './Ads';
 
 
 const Hero = () => {
@@ -65,6 +66,7 @@ const Hero = () => {
           features={offer.features}
         />
       ))}
+      <Ads/>
     </section>
   );
 };
