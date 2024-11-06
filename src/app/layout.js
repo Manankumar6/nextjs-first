@@ -5,6 +5,7 @@ import { ChakraProvider } from '@chakra-ui/react'
 import { AuthProvider } from "./context/AuthContext";
 import ProtectedRoute from "./_components/ProtectiveRoute";
 import Footer from "./_components/Footer";
+import Head from "next/head";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -25,7 +26,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-       
+      <Head>
+
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5317982228910759"
+          crossorigin="anonymous"></script>
+      </Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
@@ -34,9 +39,9 @@ export default function RootLayout({ children }) {
           <ChakraProvider>
             <ProtectedRoute>
 
-          <Navbar />
-         {children}
-         <Footer/>
+              <Navbar />
+              {children}
+              <Footer />
             </ProtectedRoute>
           </ChakraProvider>
         </AuthProvider>
