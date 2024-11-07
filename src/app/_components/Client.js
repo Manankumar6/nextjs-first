@@ -38,8 +38,8 @@ const Client = () => {
     <section className="text-gray-600 body-font  py-12" data-aos="fade-up"
       data-aos-delay={100}>
       <div className="lg:w-1/2 w-full mb-6 lg:mb-0   lg:ps-16">
-        <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Our Completed Projects</h1>
-        <div className="h-1 w-20 bg-indigo-500 rounded"></div>
+        <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900 ms-5">Our Completed Projects</h1>
+        <div className="h-1 w-20 bg-indigo-500 rounded ms-5"></div>
       </div>
 
      {projects.map((project,ind)=>{
