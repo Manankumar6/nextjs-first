@@ -35,7 +35,7 @@ const Footer = () => {
                 <Link href="/refund" className="text-gray-600 hover:text-gray-800">Refund Policy</Link>
               </li>
               <li>
-                <Link href="/support/privacy" className="text-gray-600 hover:text-gray-800">Privacy Policy</Link>
+                <Link href="/privacy" className="text-gray-600 hover:text-gray-800">Privacy Policy</Link>
               </li>
             </nav>
           </div>

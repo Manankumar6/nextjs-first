@@ -10,6 +10,7 @@ import { useRouter } from 'next/navigation';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useToast } from '@chakra-ui/react';
+import Image from 'next/image';
 const Contact = () => {
   const form = useRef();
   const { authenticate, user } = useAuth();
@@ -279,7 +280,13 @@ const Contact = () => {
                 </div>
               </div>
             </div>
+            <div className='w-full lg:w-1/2 mt-2 bg-white shadow-lg rounded-lg p-4 md:p-8 relative' style={{ width: '100%', height: "350px", borderRadius: '0.5rem',  // Apply the border radius
+    overflow: 'hidden', }}>
+              <Image src='/image/contact.jpg' alt='contactjpg' layout='fill' objectFit='cover ' />
+            </div>
+
           </div>
+
         </div>
       </div>
     </div>
