@@ -280,8 +280,10 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-            <div className='w-full lg:w-1/2 mt-2 bg-white shadow-lg rounded-lg p-4 md:p-8 relative' style={{ width: '100%', height: "350px", borderRadius: '0.5rem',  // Apply the border radius
-    overflow: 'hidden', }}>
+            <div className='w-full lg:w-1/2 mt-2 bg-white shadow-lg rounded-lg p-4 md:p-8 relative' style={{
+              width: '100%', height: "350px", borderRadius: '0.5rem',  // Apply the border radius
+              overflow: 'hidden',
+            }}>
               <Image src='/image/contact.jpg' alt='contactjpg' layout='fill' objectFit='cover ' />
             </div>
 

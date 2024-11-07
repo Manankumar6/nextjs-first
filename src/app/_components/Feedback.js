@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Feedback = ({img,projectName,madeFor,feedback,client,ind}) => {
+const Feedback = ({img,projectName,madeFor,feedback,client}) => {
   return (
-    <div className="container mx-auto flex flex-col md:flex-row items-center mt-5 px-4" key={ind}>
+    <div className="container mx-auto flex flex-col md:flex-row items-center mt-5 px-4" >
         
         {/* Image Column */}
         <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0 p-4">

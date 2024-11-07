@@ -44,7 +44,7 @@ const Client = () => {
 
      {projects.map((project,ind)=>{
       return(
-        <Feedback img={project.img} projectName={project.projectName} madeFor={project.madeFor} feedback={project.feedback} client={project.client} ind={ind} />
+        <Feedback img={project.img} projectName={project.projectName} madeFor={project.madeFor} feedback={project.feedback} client={project.client}  key={ind}/>
       )
      })}
     </section>
