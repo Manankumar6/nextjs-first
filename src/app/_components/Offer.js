@@ -5,7 +5,9 @@ import React from 'react';
 import 'aos/dist/aos.css';
 import AOS from 'aos';
 import { useEffect } from 'react';
-import Technology from './Technology';
+
+import Client from './Client';
+import OurProject from './OurProject';
 
 
 
@@ -80,15 +82,47 @@ const Offer = () => {
           )
         })}
       </div>
-
-      {/* Technology Feild  */}
-   
-        
-        <Technology/>
+      <Client/>
+       
      
+    </div>
 
-      {/* Technology Details Cards  */}
-      <section className="text-gray-600 body-font">
+     
+      {/* Our Projects  */}
+
+  
+    <section className="py-16 px-4 bg-indigo-700 text-white text-center ">
+      <h2 className="text-3xl font-bold slide-in">Our Projects</h2>
+      <p className="mt-4 text-lg max-w-2xl mx-auto slide-in" style={{ animationDelay: "0.2s" }}>
+      Explore our diverse portfolio of innovative projects, each designed to meet the unique needs of our clients. From e-commerce platforms to custom web applications, we specialize in crafting digital solutions that drive success. Our expertise spans various industries, ensuring that every project is tailored to deliver exceptional results and empower businesses to reach their full potential.
+      </p>
+      {/* <Link href='/service'>
+        <button className="mt-8 px-8 py-4 bg-white text-indigo-700 font-semibold rounded-lg shadow-md hover:bg-gray-200">
+          View Our Services
+        </button>
+      </Link> */}
+    </section>
+        <OurProject/>
+ 
+
+
+
+   
+      {/* Explore Our Services */}
+
+      <section className="py-16 px-4 bg-indigo-700 text-white text-center ">
+      <h2 className="text-3xl font-bold slide-in">Explore Our Services</h2>
+      <p className="mt-4 text-lg max-w-2xl mx-auto slide-in" style={{ animationDelay: "0.2s" }}>
+        Discover how our tailored solutions can help your business thrive. From web development to digital marketing, we have you covered!
+      </p>
+      <Link href='/service'>
+        <button className="mt-8 px-8 py-4 bg-white text-indigo-700 font-semibold rounded-lg shadow-md hover:bg-gray-200">
+          View Our Services
+        </button>
+      </Link>
+    </section>
+    {/* Technology Details Cards  */}
+ <section className="text-gray-600 body-font">
         <div className="container px-5 py-24 mx-auto">
 
 
@@ -153,24 +187,6 @@ const Offer = () => {
           </div>
         </div>
       </section>
-    </div>
-
-
-    {/* Explore Our Services */}
-
-    <section className="py-16 px-4 bg-indigo-700 text-white text-center ">
-      <h2 className="text-3xl font-bold slide-in">Explore Our Services</h2>
-      <p className="mt-4 text-lg max-w-2xl mx-auto slide-in" style={{ animationDelay: "0.2s" }}>
-        Discover how our tailored solutions can help your business thrive. From web development to digital marketing, we have you covered!
-      </p>
-      <Link href='/service'>
-        <button className="mt-8 px-8 py-4 bg-white text-indigo-700 font-semibold rounded-lg shadow-md hover:bg-gray-200">
-          View Our Services
-        </button>
-      </Link>
-    </section>
-
-
   </>
 
 
