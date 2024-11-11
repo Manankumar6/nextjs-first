@@ -1,6 +1,7 @@
+import Link from 'next/link'
 import React from 'react'
 
-const Feedback = ({img,projectName,madeFor,feedback,client}) => {
+const Feedback = ({img,projectName,madeFor,feedback,client, url}) => {
   return (
     <div className="container mx-auto flex flex-col md:flex-row items-center mt-5 px-4" >
         
@@ -23,7 +24,11 @@ const Feedback = ({img,projectName,madeFor,feedback,client}) => {
           <p className="mb-8 leading-relaxed text-lg text-gray-700">
             {feedback}
           </p>
+          <div className='flex gap-4 items-center'>
           <p className="font-bold italic text-indigo-700 mt-4">- {client} </p>
+          <Link href={url} target='_blank' className=" italic text-gray-500 mt-4 text-sm">View Demo -&gt; </Link>
+
+          </div>
 
 
         </div>
