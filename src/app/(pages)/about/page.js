@@ -3,14 +3,18 @@ import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Slider from 'react-slick';
 
+import { Card, CardContent } from "@/components/ui/card"
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
 import {
   Box,
   Button,
-
-
-  Text,
 
 } from '@chakra-ui/react';
 import Head from 'next/head';
@@ -22,7 +26,7 @@ import Technology from '@/app/_components/Technology';
 
 const About = () => {
   const [feedbackList, setFeedbackList] = useState([]); // State for storing feedback data
-
+  console.log(feedbackList)
   // Fetch feedback data from API
   const fetchFeedback = async () => {
     try {
@@ -48,30 +52,30 @@ const About = () => {
   }, []);
 
   // Slider settings
-  const sliderSettings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 4, // Show 3 slides at once
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 5000,
-    
-    responsive: [
-      {
-        breakpoint: 1024, // Adjust for medium screens
-        settings: {
-          slidesToShow: 2, // Show 2 slides at once on medium screens
-        },
-      },
-      {
-        breakpoint: 768, // Adjust for smaller screens
-        settings: {
-          slidesToShow: 2, // Show 1 slide at a time on mobile
-        },
-      },
-    ],
-  };
+  // const sliderSettings = {
+  //   dots: true,
+  //   infinite: true,
+  //   speed: 500,
+  //   slidesToShow: 4, // Show 3 slides at once
+  //   slidesToScroll: 1,
+  //   autoplay: true,
+  //   autoplaySpeed: 5000,
+
+  //   responsive: [
+  //     {
+  //       breakpoint: 1024, // Adjust for medium screens
+  //       settings: {
+  //         slidesToShow: 2, // Show 2 slides at once on medium screens
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 768, // Adjust for smaller screens
+  //       settings: {
+  //         slidesToShow: 2, // Show 1 slide at a time on mobile
+  //       },
+  //     },
+  //   ],
+  // };
 
   return (
     <div className="bg-gray-100 text-gray-700">
@@ -143,40 +147,33 @@ const About = () => {
       <section className="container mx-auto px-6 py-12 text-center">
   <h2 className="text-3xl font-semibold">What Our Clients Say</h2>
   <Box mt={8}>
-    {feedbackList.length > 0 ? (
-      <Slider
-        {...sliderSettings}
-        className="relative w-full"
-      >
-        {feedbackList.map((feedback, index) => (
-          <Box
-            key={index}
-            p={4}
-            borderWidth={1}
-            borderColor="gray.300"
-            borderRadius="md"
-            bg="white"
-            display="flex"
-            flexDirection="column"
-            justifyContent="space-between"
-            height="250px" // Set a fixed height to keep all cards the same height
-            m={2} // Margin between cards
-            className="w-full sm:w-5/12 md:w-4/12 lg:w-3/12 xl:w-1/4" // Responsive width for cards
-          >
-            <Text fontSize="lg" overflowWrap="break-word" textAlign="left" flexGrow={1}>
-              "{feedback.feedback}"
-            </Text>
-            <Text mt={2} fontWeight="bold" textAlign="right">
-              - {feedback.name}
-            </Text>
-          </Box>
+    <Carousel
+      opts={{
+        align: "start",
+      }}
+      className="w-full max-w-[90%] sm:max-w-[40rem] md:max-w-[55rem] mx-auto"
+    >
+      <CarouselContent>
+        {feedbackList.map((feed, index) => (
+          <CarouselItem key={index} className="sm:basis-3/4 md:basis-1/2 lg:basis-1/3 px-2">
+            <div className="p-4">
+              <Card className="w-full max-w-[300px] sm:max-w-[250px] h-[200px] mx-auto">
+                <CardContent className="flex flex-col h-full items-center justify-center p-4">
+                  <span>{feed.feedback}</span>
+                  <p className='text-right italic '>-{feed.name}</p>
+                </CardContent>
+              </Card>
+            </div>
+          </CarouselItem>
         ))}
-      </Slider>
-    ) : (
-      <Text>No feedback available yet.</Text>
-    )}
+      </CarouselContent>
+      <CarouselPrevious />
+      <CarouselNext />
+    </Carousel>
   </Box>
 </section>
+
+
 
       {/* Call to Action Section */}
       <section className="bg-indigo-600 text-white py-16">

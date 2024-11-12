@@ -60,7 +60,7 @@ const RefundPolicy = () => {
                 <div className="container mx-auto px-6 text-center">
                     <h2 className="text-3xl font-semibold">Refund Process</h2>
                     <p className="mt-4 max-w-3xl mx-auto text-lg">
-                        To request a refund, please contact us at <Link href="mailto:support@techcanva.com" className="underline">support@techcanva.in</Link>. Provide details of the service, reason for the request, and any relevant documentation.
+                        To request a refund, please contact us at <Link href="mailto:support@techcanva.in" className="underline">support@techcanva.in</Link>. Provide details of the service, reason for the request, and any relevant documentation.
                     </p>
                     <ul className="mt-8 grid gap-8 md:grid-cols-3 text-left">
                         <li className="flex items-start">

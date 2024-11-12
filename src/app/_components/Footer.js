@@ -25,9 +25,7 @@ const Footer = () => {
               <li>
                 <Link href="/contact" className="text-gray-600 hover:text-gray-800">Contact Us</Link>
               </li>
-              {/* <li>
-                <Link href="/support/faq" className="text-gray-600 hover:text-gray-800">FAQ</Link>
-              </li> */}
+             
               <li>
                 <Link href="/termandcondition" className="text-gray-600 hover:text-gray-800">Terms of Service</Link>
               </li>

@@ -9,7 +9,7 @@ import { usePathname } from 'next/navigation'
 
 const Navbar = () => {
   const pathname = usePathname();
-  console.log(pathname);
+
   const {authenticate,user,logout} = useAuth();
   return (
     <header className="text-gray-600 body-font">

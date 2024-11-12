@@ -96,11 +96,7 @@ const Offer = () => {
       <p className="mt-4 text-lg max-w-2xl mx-auto slide-in" style={{ animationDelay: "0.2s" }}>
       Explore our diverse portfolio of innovative projects, each designed to meet the unique needs of our clients. From e-commerce platforms to custom web applications, we specialize in crafting digital solutions that drive success. Our expertise spans various industries, ensuring that every project is tailored to deliver exceptional results and empower businesses to reach their full potential.
       </p>
-      {/* <Link href='/service'>
-        <button className="mt-8 px-8 py-4 bg-white text-indigo-700 font-semibold rounded-lg shadow-md hover:bg-gray-200">
-          View Our Services
-        </button>
-      </Link> */}
+   
     </section>
         <OurProject/>
  
