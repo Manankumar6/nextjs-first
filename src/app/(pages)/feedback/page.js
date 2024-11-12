@@ -5,7 +5,14 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useAuth } from '@/app/context/AuthContext';
 import { useToast } from '@chakra-ui/react';
-import Slider from 'react-slick';
+import { Card, CardContent } from "@/components/ui/card"
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
+} from "@/components/ui/carousel"
 
 const Feedback = () => {
     const { authenticate, user } = useAuth();
@@ -117,32 +124,7 @@ const Feedback = () => {
         }
     }, [user]);
 
-    const sliderSettings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 3000,
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                }
-            }
-        ]
-    };
-
+  
     return (
         <div className="bg-gray-100 text-gray-700">
             <section className="text-center py-20 px-4 bg-indigo-600 text-white">
@@ -196,20 +178,29 @@ const Feedback = () => {
 
             <section className="container mx-auto px-6 py-12 text-center">
                 <h2 className="text-3xl font-semibold">What Our Clients Say</h2>
-                <Slider {...sliderSettings} className="mt-8">
-                    {feedbackList.length > 0 ? (
-                        feedbackList.map((feedback) => (
-                            <div key={feedback._id} className="bg-white p-6 rounded-lg shadow-md mx-2 md:mx-4 flex flex-col feedback-card" style={{ minHeight: '250px' }}>
-                                <p className="text-lg flex-grow overflow-hidden" style={{ display: '-webkit-box', WebkitLineClamp: 4, WebkitBoxOrient: 'vertical' }}>
-                                    "{feedback.feedback}"
-                                </p>
-                                <p className="mt-4 font-semibold">- {feedback.name}</p>
-                            </div>
-                        ))
-                    ) : (
-                        <p>No feedback available yet.</p>
-                    )}
-                </Slider>
+                <Carousel
+                    opts={{
+                        align: "start",
+                    }}
+                    className="w-full max-w-[90%] sm:max-w-[40rem] md:max-w-[55rem] mx-auto"
+                >
+                    <CarouselContent>
+                        {feedbackList.map((feed, index) => (
+                            <CarouselItem key={index} className="sm:basis-3/4 md:basis-1/2 lg:basis-1/3 px-2">
+                                <div className="p-4">
+                                    <Card className="w-full max-w-[300px] sm:max-w-[250px] h-[200px] mx-auto">
+                                        <CardContent className="flex flex-col h-full items-center justify-center p-4">
+                                            <span>{feed.feedback}</span>
+                                            <p className='text-right italic '>-{feed.name}</p>
+                                        </CardContent>
+                                    </Card>
+                                </div>
+                            </CarouselItem>
+                        ))}
+                    </CarouselContent>
+                    <CarouselPrevious />
+                    <CarouselNext />
+                </Carousel>
             </section>
 
             <section className="bg-indigo-600 text-white py-16">

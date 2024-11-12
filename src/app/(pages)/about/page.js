@@ -26,7 +26,7 @@ import Technology from '@/app/_components/Technology';
 
 const About = () => {
   const [feedbackList, setFeedbackList] = useState([]); // State for storing feedback data
-  console.log(feedbackList)
+
   // Fetch feedback data from API
   const fetchFeedback = async () => {
     try {
