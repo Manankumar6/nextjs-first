@@ -38,14 +38,14 @@ const Offer = () => {
       img: '/image/responsive.gif'
     },
     {
-      title: "Content Writing",
-      text: "We provide content writing services to cater to all your content requirements under one roof. It includes blog writing for websites, web content writing, marketing content, research articles, press release, product descriptions, etc.",
-      img: '/image/content.gif'
+      title: "SEO-Optimized Web Content",
+      text: "Enhance your website's visibility with our professional web content services. We specialize in creating SEO-friendly website content, engaging blog posts, marketing copy, landing page text, and compelling product descriptions to drive traffic and boost conversions.",
+      img: '/image/seo.webp'
     },
     {
-      title: "Logo Designs",
-      text: "Our logo design service is for multiple industries, such as real estate, education, financial institutions, food, hospitality, information technology, fashion, and more. We also provide custom logo design services.",
-      img: '/image/logo.gif'
+      title: "Custom Website Designs",
+      text: "Elevate your brand's online presence with our custom web design services. We craft responsive and visually appealing websites tailored for industries such as tech, e-commerce, healthcare, education, and more, ensuring a seamless user experience.",
+      img: '/image/custom.webp'
     }
   ]
 
@@ -74,7 +74,7 @@ const Offer = () => {
               key={ind}
               className="flex-none w-full sm:w-1/2 md:w-1/3 lg:w-1/4"
               data-aos="fade-up"
-              data-aos-delay={ind * 100} // Stagger animation by index
+              data-aos-delay={10} // Stagger animation by index
             >
               <Card title={card.title} text={card.text} img={card.img} />
             </div>
@@ -82,34 +82,34 @@ const Offer = () => {
           )
         })}
       </div>
-      <Client/>
-       
-     
+      <Client />
+
+
     </div>
 
-     
-      {/* Our Projects  */}
 
-  
+    {/* Our Projects  */}
+
+
     <section className="py-16 px-4 bg-indigo-700 text-white text-center ">
       <h2 className="text-3xl font-bold slide-in">Our Projects</h2>
       <p className="mt-4 text-lg max-w-2xl mx-auto slide-in" style={{ animationDelay: "0.2s" }}>
-      Explore our diverse portfolio of innovative projects, each designed to meet the unique needs of our clients. From e-commerce platforms to custom web applications, we specialize in crafting digital solutions that drive success. Our expertise spans various industries, ensuring that every project is tailored to deliver exceptional results and empower businesses to reach their full potential.
+        Explore our diverse portfolio of innovative projects, each designed to meet the unique needs of our clients. From e-commerce platforms to custom web applications, we specialize in crafting digital solutions that drive success. Our expertise spans various industries, ensuring that every project is tailored to deliver exceptional results and empower businesses to reach their full potential.
       </p>
-   
+
     </section>
-        <OurProject/>
- 
+    <OurProject />
 
 
 
-   
-      {/* Explore Our Services */}
 
-      <section className="py-16 px-4 bg-indigo-700 text-white text-center ">
+
+    {/* Explore Our Services */}
+
+    <section className="py-16 px-4 bg-indigo-700 text-white text-center ">
       <h2 className="text-3xl font-bold slide-in">Explore Our Services</h2>
       <p className="mt-4 text-lg max-w-2xl mx-auto slide-in" style={{ animationDelay: "0.2s" }}>
-        Discover how our tailored solutions can help your business thrive. From web development to digital marketing, we have you covered!
+      "Discover our expertise in custom web services, including e-commerce sites, portfolios, blogs, and more. We specialize in crafting tailored solutions to meet your unique online needs and help your business shine!"
       </p>
       <Link href='/service'>
         <button className="mt-8 px-8 py-4 bg-white text-indigo-700 font-semibold rounded-lg shadow-md hover:bg-gray-200">
@@ -118,71 +118,71 @@ const Offer = () => {
       </Link>
     </section>
     {/* Technology Details Cards  */}
- <section className="text-gray-600 body-font">
-        <div className="container px-5 py-24 mx-auto">
+    <section className="text-gray-600 body-font">
+      <div className="container px-5 py-24 mx-auto">
 
 
-          <div className="flex flex-wrap -m-4">
-            <div className="xl:w-1/4 md:w-1/2  p-4" data-aos="fade-up"
-              data-aos-delay={100}>
-              <div className="bg-gray-100 p-6 h-[30rem] rounded-lg">
-                <img className="h-40 rounded w-full object-cover object-center mb-6" src="/image/fullstack.jpg" alt="content" />
-                <h3 className="tracking-widest text-indigo-500 text-xs font-medium title-font">Full-Stack Development Expertise</h3>
-                <ul className="list-disc list-inside text-gray-600 space-y-1">
-                  <li>End-to-end development using the MERN stack (MongoDB, Express.js, React, and Node.js).</li>
-                  <li>Custom web applications tailored to your unique requirements.</li>
-                  <li>Seamless integration of frontend and backend technologies for fast, secure, and efficient web solutions.</li>
-                </ul>
-              </div>
+        <div className="flex flex-wrap -m-4">
+          <div className="xl:w-1/4 md:w-1/2  p-4" data-aos="fade-up"
+            data-aos-delay={10}>
+            <div className="bg-gray-100 p-6 h-[30rem] rounded-lg">
+              <img className="h-40 rounded w-full object-cover object-center mb-6" src="/image/fullstack.jpg" alt="content" />
+              <h3 className="tracking-widest text-indigo-500 text-xs font-medium title-font">Full-Stack Development Expertise</h3>
+              <ul className="list-disc list-inside text-gray-600 space-y-1">
+                <li>End-to-end development using the MERN stack (MongoDB, Express.js, React, and Node.js).</li>
+                <li>Custom web applications tailored to your unique requirements.</li>
+                <li>Seamless integration of frontend and backend technologies for fast, secure, and efficient web solutions.</li>
+              </ul>
             </div>
-            <div className="xl:w-1/4 md:w-1/2  p-4" data-aos="fade-up"
-              data-aos-delay={2 * 100}>
-              <div className="bg-gray-100 p-6 h-[30rem] rounded-lg">
-                <img className="h-40 rounded w-full object-cover object-center mb-6" src="/image/responsive.jpg" alt="content" />
-                <h3 className="tracking-widest text-indigo-500 text-xs font-medium title-font">Responsive & Modern Design</h3>
-                <ul className="list-disc list-inside text-gray-600 space-y-1">
-                  <li>Mobile-first design approach to ensure your application looks great and functions perfectly on all devices.</li>
-                  <li>Pixel-perfect, UI/UX-optimized interfaces that enhance user interaction.</li>
-                </ul>
-              </div>
+          </div>
+          <div className="xl:w-1/4 md:w-1/2  p-4" data-aos="fade-up"
+            data-aos-delay={10}>
+            <div className="bg-gray-100 p-6 h-[30rem] rounded-lg">
+              <img className="h-40 rounded w-full object-cover object-center mb-6" src="/image/responsive.jpg" alt="content" />
+              <h3 className="tracking-widest text-indigo-500 text-xs font-medium title-font">Responsive & Modern Design</h3>
+              <ul className="list-disc list-inside text-gray-600 space-y-1">
+                <li>Mobile-first design approach to ensure your application looks great and functions perfectly on all devices.</li>
+                <li>Pixel-perfect, UI/UX-optimized interfaces that enhance user interaction.</li>
+              </ul>
             </div>
-            <div className="xl:w-1/4 md:w-1/2  p-4" data-aos="fade-up"
-              data-aos-delay={3 * 100}>
-              <div className="bg-gray-100 p-6 h-[30rem] rounded-lg">
-                <img className="h-40 rounded w-full object-cover object-center mb-6" src="/image/scalable.jpg" alt="content" />
-                <h3 className="tracking-widest text-indigo-500 text-xs font-medium title-font">Scalable, Robust Backend Solutions</h3>
-                <ul className="list-disc list-inside text-gray-600 space-y-1">
-                  <li>RESTful APIs and GraphQL for efficient data handling and communication.</li>
-                  <li>Secure authentication, authorization, and user management systems with JWT or OAuth.</li>
-                  <li>Robust, high-performance Node.js and Express.js backends to handle all your data needs.</li>
-                </ul>
-              </div>
+          </div>
+          <div className="xl:w-1/4 md:w-1/2  p-4" data-aos="fade-up"
+            data-aos-delay={10}>
+            <div className="bg-gray-100 p-6 h-[30rem] rounded-lg">
+              <img className="h-40 rounded w-full object-cover object-center mb-6" src="/image/scalable.jpg" alt="content" />
+              <h3 className="tracking-widest text-indigo-500 text-xs font-medium title-font">Scalable, Robust Backend Solutions</h3>
+              <ul className="list-disc list-inside text-gray-600 space-y-1">
+                <li>RESTful APIs and GraphQL for efficient data handling and communication.</li>
+                <li>Secure authentication, authorization, and user management systems with JWT or OAuth.</li>
+                <li>Robust, high-performance Node.js and Express.js backends to handle all your data needs.</li>
+              </ul>
             </div>
-            <div className="xl:w-1/4 md:w-1/2  p-4" data-aos="fade-up"
-              data-aos-delay={4 * 100}>
-              <div className="bg-gray-100 p-6 h-[30rem] rounded-lg">
-                <img className="h-40 rounded w-full object-cover object-center mb-6" src="/image/database.jpg" alt="content" />
-                <h3 className="tracking-widest text-indigo-500 text-xs font-medium title-font">Database Management</h3>
-                <ul className="list-disc list-inside text-gray-600 space-y-1">
-                  <li>Efficient data modeling and management using MongoDB with Mongoose for seamless database integration.</li>
-                  <li>Optimized database performance and reliable data storage for your growing application.</li>
-                </ul>
-              </div>
+          </div>
+          <div className="xl:w-1/4 md:w-1/2  p-4" data-aos="fade-up"
+            data-aos-delay={10}>
+            <div className="bg-gray-100 p-6 h-[30rem] rounded-lg">
+              <img className="h-40 rounded w-full object-cover object-center mb-6" src="/image/database.jpg" alt="content" />
+              <h3 className="tracking-widest text-indigo-500 text-xs font-medium title-font">Database Management</h3>
+              <ul className="list-disc list-inside text-gray-600 space-y-1">
+                <li>Efficient data modeling and management using MongoDB with Mongoose for seamless database integration.</li>
+                <li>Optimized database performance and reliable data storage for your growing application.</li>
+              </ul>
             </div>
-            <div className="xl:w-1/4 md:w-1/2  p-4" data-aos="fade-up"
-              data-aos-delay={5 * 100}>
-              <div className="bg-gray-100 p-6 h-[30rem] rounded-lg">
-                <img className="h-40 rounded w-full object-cover object-center mb-6" src="/image/devops.jpg" alt="content" />
-                <h3 className="tracking-widest text-indigo-500 text-xs font-medium title-font">Cloud Deployment & DevOps</h3>
-                <ul className="list-disc list-inside text-gray-600 space-y-1">
-                  <li>Expertise in cloud platforms like AWS, Heroku, and Vercel to deploy and manage your web applications.</li>
-                  <li>Continuous integration and delivery (CI/CD) pipelines to ensure fast, reliable deployments.</li>
-                </ul>
-              </div>
+          </div>
+          <div className="xl:w-1/4 md:w-1/2  p-4" data-aos="fade-up"
+            data-aos-delay={10}>
+            <div className="bg-gray-100 p-6 h-[30rem] rounded-lg">
+              <img className="h-40 rounded w-full object-cover object-center mb-6" src="/image/devops.jpg" alt="content" />
+              <h3 className="tracking-widest text-indigo-500 text-xs font-medium title-font">Cloud Deployment & DevOps</h3>
+              <ul className="list-disc list-inside text-gray-600 space-y-1">
+                <li>Expertise in cloud platforms like AWS, Heroku, and Vercel to deploy and manage your web applications.</li>
+                <li>Continuous integration and delivery (CI/CD) pipelines to ensure fast, reliable deployments.</li>
+              </ul>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
   </>
 
 

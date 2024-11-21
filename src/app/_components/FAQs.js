@@ -25,6 +25,37 @@ const FAQ = () => {
       answer:
         "Web design and development each play a crucial role in building websites but have different focuses. Web design centers on the look and feel of a website, creating layouts and visual elements that enhance user experience. Designers work on the aesthetics, often using tools like Photoshop or Illustrator to craft appealing and user-friendly interfaces. Web development, on the other hand, focuses on the functionality behind the scenes. Developers write code—using languages like HTML, CSS, JavaScript, and PHP—to implement the interactive and structural aspects of a site, connecting it to databases and enabling complex features. In short, design shapes the appearance and usability, while development powers the functionality and performance.",
     },
+    {
+      question: "What is an e-commerce website?",
+      answer:
+        "An e-commerce website is a platform that allows businesses to sell products or services online. These websites include features like shopping carts, secure payment gateways, product catalogs, and user accounts, providing a seamless shopping experience for customers. E-commerce sites are essential for businesses looking to reach a global audience and operate 24/7.",
+    },
+    {
+      question: "Why is SEO important for websites?",
+      answer:
+        "SEO (Search Engine Optimization) is crucial for improving a website's visibility on search engines like Google. By optimizing your website's content, structure, and performance, SEO helps attract organic traffic, enhance user experience, and ultimately drive more leads or sales. A well-optimized website ensures that your business reaches the right audience effectively.",
+    },
+    {
+      question: "What is a static website?",
+      answer:
+        "A static website is made up of fixed pages with pre-written content that does not change unless the developer manually updates it. These websites are typically faster and simpler to build, making them suitable for smaller projects like personal portfolios, landing pages, or informational sites where frequent updates are unnecessary.",
+    },
+    {
+      question: "What is the importance of website maintenance?",
+      answer:
+        "Website maintenance ensures that your site remains secure, up-to-date, and fully functional. Regular updates to software, content, and design help prevent vulnerabilities, improve performance, and keep users engaged. Maintenance is critical for maintaining a professional image and providing a seamless experience for your visitors.",
+    },
+    {
+      question: "What are custom web development services?",
+      answer:
+        "Custom web development involves creating a website tailored to the unique needs and goals of a business or individual. Unlike templated solutions, custom development allows for greater flexibility, scalability, and personalization, ensuring that the website aligns perfectly with the brand identity and functionality requirements.",
+    },
+    {
+      question: "What technologies do you use for web development?",
+      answer:
+        "We specialize in using modern technologies tailored to your project's requirements. For front-end development, we primarily use React.js and Next.js, which ensure high performance and seamless user experiences. For back-end development, we utilize Node.js with databases like MongoDB or MySQL. ",
+    },
+    
   ];
   useEffect(() => {
     AOS.init({

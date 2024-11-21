@@ -56,16 +56,26 @@ const Hero = () => {
         </p>
       </section>
 
+    <div className="flex w-full flex-col lg:flex-row  items-center">
+    <div className='w-full md:w-1/2'>
+
       {/* Dynamic Offer Sections */}
       {offers.map((offer) => (
         <LimitedOffer
-          key={offer.id}
-          title={offer.title}
-          regularPrice={offer.regularPrice}
-          offerPrice={offer.offerPrice}
-          features={offer.features}
+        key={offer.id}
+        title={offer.title}
+        regularPrice={offer.regularPrice}
+        offerPrice={offer.offerPrice}
+        features={offer.features}
         />
       ))}
+      </div>
+      <div className="w-full md:w-1/2 items-center  overflow-hidden">
+      <Image src={'/image/offer.gif'} width={100} height={100} alt='offer' className='w-full object-center md:p-10' />
+      </div>
+          </div>
+
+          {/* Google Ads  */}
       <Ads/>
     </section>
   );

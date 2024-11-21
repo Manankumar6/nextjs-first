@@ -5,6 +5,7 @@ const nextConfig = {
             {
                 // Apply these headers to all API routes
                 source: '/api/:path*',
+                
                 headers: [
                     {
                         key: 'Access-Control-Allow-Origin',
@@ -21,7 +22,9 @@ const nextConfig = {
                 ],
             },
         ];
-    },
+    }, images: {
+        domains: ['plus.unsplash.com'], // Add external image domains here
+      },
 };
 
 export default nextConfig;

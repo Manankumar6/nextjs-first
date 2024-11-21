@@ -4,6 +4,37 @@ import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 const Page = () => {
+  const features = [
+    {
+      icon: "/image/custom.webp",
+      title: "Tailored Solutions",
+      description: "We craft unique websites that reflect your brand's essence and vision.",
+      delay: 100,
+    },
+    {
+      icon: "/image/responsive.jpg",
+      title: "Device Compatibility",
+      description: "Enjoy flawless browsing across desktops, tablets, and smartphones.",
+      delay: 200,
+    },
+    {
+      icon: "/image/seo.jpg",
+      title: "Search Engine Optimized",
+      description: "Boost your online presence with websites built for higher rankings.",
+      delay: 300,
+    },
+    {
+      icon: "/image/service.gif",
+      title: "Dedicated Support",
+      description: "Our expert team is available round-the-clock to assist you.",
+      delay: 400,
+    },
+  ];
+
+
+
+
+
   useEffect(() => {
     AOS.init({
       duration: 800,
@@ -20,14 +51,37 @@ const Page = () => {
         </p>
       </section>
 
+     {/* Key Features Section */}
+<section className="py-16 bg-white">
+  <h2 className="text-3xl font-bold text-center text-indigo-600 mb-8">What Sets Us Apart?</h2>
+  <div className="flex flex-wrap justify-center gap-12">
+    {features.map((feature, index) => (
+      <div
+        key={index}
+        className="w-full md:w-1/3 lg:w-1/4 text-center"
+        data-aos="fade-up"
+        data-aos-delay={feature.delay}
+      >
+        <div className="flex flex-col items-center">
+          <div className="bg-indigo-100  rounded-full shadow-md">
+            <img src={feature.icon} alt={`${feature.title} Icon`} className="h-20 w-20 rounded-full" />
+          </div>
+          <h3 className="font-semibold text-lg mt-4 text-gray-800">{feature.title}</h3>
+          <p className="text-gray-600 mt-2 text-sm">{feature.description}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
       {/* Pricing Plans */}
       <div className="mt-12">
         <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">Pricing Plans</h2>
-        
+
         <div className="flex flex-wrap justify-center">
           {/* Basic Plan */}
           <div className="w-full md:w-1/3 p-4" data-aos="fade-up"
-        data-aos-delay={100}>
+            data-aos-delay={100}>
             <div className="bg-white shadow-lg rounded-lg p-8 text-center">
               <h3 className="text-2xl font-semibold text-gray-800 mb-2">Basic Plan</h3>
               <p className="text-4xl font-bold text-gray-900 mb-4">₹15,000</p>
@@ -49,16 +103,16 @@ const Page = () => {
                 <li>✔ Annual Renewal For Hosting ₹5000</li>
               </ul>
               <Link href='/contact'>
-              <button className="bg-indigo-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-indigo-600 transition duration-300">
-                Choose Basic
-              </button>
+                <button className="bg-indigo-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-indigo-600 transition duration-300">
+                  Choose Basic
+                </button>
               </Link>
             </div>
           </div>
 
           {/* Premium Plan */}
           <div className="w-full md:w-1/3 p-4" data-aos="fade-up"
-        data-aos-delay={200}>
+            data-aos-delay={200}>
             <div className="bg-white shadow-lg rounded-lg p-8 text-center">
               <h3 className="text-2xl font-semibold text-gray-800 mb-2">Premium Plan</h3>
               <p className="text-4xl font-bold text-gray-900 mb-4">₹25,000</p>
@@ -88,16 +142,18 @@ const Page = () => {
                 <li>✔ Annual Renewal For Hosting ₹6000</li>
               </ul>
               <Link href='/contact'>
-              <button className="bg-indigo-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-indigo-600 transition duration-300">
-                Choose Premium
-              </button>
+                <button className="bg-indigo-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-indigo-600 transition duration-300">
+                  Choose Premium
+                </button>
               </Link>
             </div>
           </div>
 
+
+
           {/* Custom Plan */}
           <div className="w-full md:w-1/3 p-4" data-aos="fade-up"
-        data-aos-delay={300}>
+            data-aos-delay={300}>
             <div className="bg-white shadow-lg rounded-lg p-8 text-center">
               <h3 className="text-2xl font-semibold text-gray-800 mb-2">Custom Plan</h3>
               <p className="text-4xl font-bold text-gray-900 mb-4">Pricing Varies</p>
@@ -127,14 +183,52 @@ const Page = () => {
                 <li>✔ Annual Renewal ₹6000</li>
               </ul>
               <Link href='/contact'>
-              <button className="bg-indigo-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-indigo-600 transition duration-300">
-             Get a Quote
-              </button>
+                <button className="bg-indigo-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-indigo-600 transition duration-300">
+                  Get a Quote
+                </button>
               </Link>
             </div>
           </div>
         </div>
       </div>
+
+
+      {/* Testimonials Section */}
+      <section className="py-16 bg-gray-50">
+        <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">What Our Clients Say</h2>
+        <div className="flex flex-wrap justify-center gap-8">
+          <div className="w-full md:w-1/3" data-aos="fade-up" data-aos-delay={100}>
+            <div className="bg-white shadow-lg rounded-lg p-6">
+              <p className="text-gray-600">"Excellent service! The team understood our requirements perfectly and delivered beyond expectations."</p>
+              <h4 className="font-semibold mt-4">- John Doe</h4>
+            </div>
+          </div>
+          <div className="w-full md:w-1/3" data-aos="fade-up" data-aos-delay={200}>
+            <div className="bg-white shadow-lg rounded-lg p-6">
+              <p className="text-gray-600">"Our new website looks amazing, and the performance is top-notch. Highly recommended!"</p>
+              <h4 className="font-semibold mt-4">- Sarah Smith</h4>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-16 px-4 bg-gray-100">
+        <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">Frequently Asked Questions</h2>
+        <div className="max-w-4xl mx-auto">
+          <div className="mb-6" data-aos="fade-up" data-aos-delay={100}>
+            <h4 className="font-semibold text-lg">Do you provide ongoing support?</h4>
+            <p className="text-gray-600 mt-2">Yes, all our plans include 24/7 support to assist you with any issues or updates.</p>
+          </div>
+          <div className="mb-6" data-aos="fade-up" data-aos-delay={200}>
+            <h4 className="font-semibold text-lg">How long does it take to build a website?</h4>
+            <p className="text-gray-600 mt-2">Depending on the complexity, websites typically take 2-4 weeks to develop.</p>
+          </div>
+        </div>
+      </section>
+
+  
+
 
       {/* Call to Action */}
       <section className="py-16 bg-indigo-700 text-white text-center">
@@ -143,11 +237,14 @@ const Page = () => {
           Contact us today to discuss how our plans can elevate your business.
         </p>
         <Link href='/contact'>
-        <button className="mt-8 px-8 py-4 bg-white text-indigo-700 font-semibold rounded-lg shadow-md hover:bg-gray-200">
-          Get in Touch
-        </button>
+          <button className="mt-8 px-8 py-4 bg-white text-indigo-700 font-semibold rounded-lg shadow-md hover:bg-gray-200">
+            Get in Touch
+          </button>
         </Link>
       </section>
+
+
+
     </div>
   );
 };
