@@ -73,32 +73,7 @@ const About = () => {
     fetchFeedback(); // Fetch feedback on component mount
   }, []);
 
-  // Slider settings
-  // const sliderSettings = {
-  //   dots: true,
-  //   infinite: true,
-  //   speed: 500,
-  //   slidesToShow: 4, // Show 3 slides at once
-  //   slidesToScroll: 1,
-  //   autoplay: true,
-  //   autoplaySpeed: 5000,
-
-  //   responsive: [
-  //     {
-  //       breakpoint: 1024, // Adjust for medium screens
-  //       settings: {
-  //         slidesToShow: 2, // Show 2 slides at once on medium screens
-  //       },
-  //     },
-  //     {
-  //       breakpoint: 768, // Adjust for smaller screens
-  //       settings: {
-  //         slidesToShow: 2, // Show 1 slide at a time on mobile
-  //       },
-  //     },
-  //   ],
-  // };
-
+  
   return (
     <div className="bg-gray-100 text-gray-700">
       <Head>
@@ -116,7 +91,7 @@ const About = () => {
       </section>
 
       {/* Our Mission Section */}
-      <section className="container w-1/2 mx-auto px-6 py-12 text-center">
+      <section className="container md:w-1/2 mx-auto px-6 py-12 text-center">
         <h2 className="text-4xl font-semibold">Our Mission</h2>
         <p className="mt-4 text-lg">
           To empower businesses with scalable, secure, and user-friendly web applications that meet industry standards and exceed customer expectations.
@@ -188,7 +163,7 @@ const About = () => {
             opts={{
               align: "start",
             }}
-            className="w-full max-w-[90%] sm:max-w-[40rem] md:max-w-[55rem] mx-auto"
+            className="w-full max-w-[90%] sm:max-w-[40rem] md:max-w-[55rem] mx-auto overflow-hidden md:overflow-visible"
           >
             <CarouselContent>
               {feedbackList.map((feed, index) => (
