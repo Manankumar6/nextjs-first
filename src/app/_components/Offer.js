@@ -57,32 +57,38 @@ const Offer = () => {
   }, []);
   return (<>
 
-    <div className="w-full  mx-auto px-4 ">
-      <div className="flex flex-wrap w-full mb-20 px-10">
-        <div className="lg:w-1/2 w-full mb-6 lg:mb-0   lg:ps-16">
-          <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">What We Offer ?</h1>
-          <div className="h-1 w-20 bg-indigo-500 rounded"></div>
+    <div className="w-full pt-3 bg-muted  dark:bg-gray-900 text-foreground  mx-auto ">
+      <div className="flex flex-wrap w-full mb-20 px-10 text-foreground">
+        {/* Heading Section */}
+        <div className="lg:w-1/2 w-full mb-6 lg:mb-0 lg:ps-16">
+          <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2">
+            What We Offer?
+          </h1>
+          <div className="h-1 w-20 bg-primary rounded"></div>
         </div>
-        <p className="lg:w-1/2 w-full leading-relaxed text-gray-500">  We specialize in delivering high-quality web development solutions tailored to meet the unique needs of each client. From full-stack development to responsive design and cloud deployment, We ensure that your digital presence stands out and performs seamlessly across all platforms.</p>
+        <p className="lg:w-1/2 w-full leading-relaxed text-muted-foreground">
+          We specialize in delivering high-quality web development solutions tailored to meet the unique needs of each client. From full-stack development to responsive design and cloud deployment, we ensure that your digital presence stands out and performs seamlessly across all platforms.
+        </p>
       </div>
 
       {/* What We Offer Cards */}
-      <div className="flex flex-wrap justify-center gap-4 p-4"> {/* Flex container with wrapping */}
-        {cards.map((card, ind) => {
-          return (
-            <div
-              key={ind}
-              className="flex-none w-full sm:w-1/2 md:w-1/3 lg:w-1/4"
-              data-aos="fade-up"
-              data-aos-delay={10} // Stagger animation by index
-            >
-              <Card title={card.title} text={card.text} img={card.img} />
-            </div>
-
-          )
-        })}
+      <div className="flex flex-wrap justify-center gap-4 p-4">
+        {cards.map((card, ind) => (
+          <div
+            key={ind}
+            className="flex-none rounded-lg w-full sm:w-1/2 md:w-1/3 lg:w-1/4 bg-background text-card-foreground shadow-md "
+            data-aos="fade-up"
+            data-aos-delay={10}
+          >
+            <Card title={card.title} text={card.text} img={card.img} />
+          </div>
+        ))}
       </div>
+
+
+      {/* client component (Our Completed Project ) */}
       <Client />
+
 
 
     </div>
@@ -91,13 +97,24 @@ const Offer = () => {
     {/* Our Projects  */}
 
 
-    <section className="py-16 px-4 bg-indigo-700 text-white text-center ">
-      <h2 className="text-3xl font-bold slide-in">Our Projects</h2>
-      <p className="mt-4 text-lg max-w-2xl mx-auto slide-in" style={{ animationDelay: "0.2s" }}>
-        Explore our diverse portfolio of innovative projects, each designed to meet the unique needs of our clients. From e-commerce platforms to custom web applications, we specialize in crafting digital solutions that drive success. Our expertise spans various industries, ensuring that every project is tailored to deliver exceptional results and empower businesses to reach their full potential.
-      </p>
+    <section className="py-16 px-4 bg-muted dark:bg-gray-900 text-foreground text-center">
+  <h2 className="text-3xl font-bold slide-in">
+    Our Projects
+  </h2>
+  <p
+    className="mt-4 text-lg max-w-2xl mx-auto slide-in dark:text-gray-400"
+    style={{ animationDelay: "0.2s" }}
+  >
+    Explore our diverse portfolio of innovative projects, each designed to meet
+    the unique needs of our clients. From e-commerce platforms to custom web
+    applications, we specialize in crafting digital solutions that drive
+    success. Our expertise spans various industries, ensuring that every
+    project is tailored to deliver exceptional results and empower businesses
+    to reach their full potential.
+  </p>
+</section>
 
-    </section>
+{/* our project part carousel  */}
     <OurProject />
 
 
@@ -106,29 +123,29 @@ const Offer = () => {
 
     {/* Explore Our Services */}
 
-    <section className="py-16 px-4 bg-indigo-700 text-white text-center ">
+    <section className="py-16 px-4 bg-muted dark:bg-gray-900 text-foreground text-center  ">
       <h2 className="text-3xl font-bold slide-in">Explore Our Services</h2>
       <p className="mt-4 text-lg max-w-2xl mx-auto slide-in" style={{ animationDelay: "0.2s" }}>
-      "Discover our expertise in custom web services, including e-commerce sites, portfolios, blogs, and more. We specialize in crafting tailored solutions to meet your unique online needs and help your business shine!"
+        "Discover our expertise in custom web services, including e-commerce sites, portfolios, blogs, and more. We specialize in crafting tailored solutions to meet your unique online needs and help your business shine!"
       </p>
       <Link href='/service'>
-        <button className="mt-8 px-8 py-4 bg-white text-indigo-700 font-semibold rounded-lg shadow-md hover:bg-gray-200">
-          View Our Services
+        <button className="mt-8 px-8 py-4 bg-white dark:bg-transparent dark:border-indigo-700 dark:border text-indigo-700 dark:text-indigo-200  font-semibold rounded-lg shadow-md hover:bg-gray-200 animate-bounce">
+          View Our Services 
         </button>
       </Link>
     </section>
     {/* Technology Details Cards  */}
-    <section className="text-gray-600 body-font">
+    <section className="text-foreground dotted-background body-font bg-background">
       <div className="container px-5 py-24 mx-auto">
 
 
         <div className="flex flex-wrap -m-4">
           <div className="xl:w-1/4 md:w-1/2  p-4" data-aos="fade-up"
             data-aos-delay={10}>
-            <div className="bg-gray-100 p-6 h-[30rem] rounded-lg">
+            <div className="bg-muted p-6 h-[30rem] rounded-lg">
               <img className="h-40 rounded w-full object-cover object-center mb-6" src="/image/fullstack.jpg" alt="content" />
               <h3 className="tracking-widest text-indigo-500 text-xs font-medium title-font">Full-Stack Development Expertise</h3>
-              <ul className="list-disc list-inside text-gray-600 space-y-1">
+              <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-1">
                 <li>End-to-end development using the MERN stack (MongoDB, Express.js, React, and Node.js).</li>
                 <li>Custom web applications tailored to your unique requirements.</li>
                 <li>Seamless integration of frontend and backend technologies for fast, secure, and efficient web solutions.</li>
@@ -137,10 +154,10 @@ const Offer = () => {
           </div>
           <div className="xl:w-1/4 md:w-1/2  p-4" data-aos="fade-up"
             data-aos-delay={10}>
-            <div className="bg-gray-100 p-6 h-[30rem] rounded-lg">
+            <div className="bg-muted p-6 h-[30rem] rounded-lg">
               <img className="h-40 rounded w-full object-cover object-center mb-6" src="/image/responsive.jpg" alt="content" />
               <h3 className="tracking-widest text-indigo-500 text-xs font-medium title-font">Responsive & Modern Design</h3>
-              <ul className="list-disc list-inside text-gray-600 space-y-1">
+              <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-1">
                 <li>Mobile-first design approach to ensure your application looks great and functions perfectly on all devices.</li>
                 <li>Pixel-perfect, UI/UX-optimized interfaces that enhance user interaction.</li>
               </ul>
@@ -148,10 +165,10 @@ const Offer = () => {
           </div>
           <div className="xl:w-1/4 md:w-1/2  p-4" data-aos="fade-up"
             data-aos-delay={10}>
-            <div className="bg-gray-100 p-6 h-[30rem] rounded-lg">
+            <div className="bg-muted p-6 h-[30rem] rounded-lg">
               <img className="h-40 rounded w-full object-cover object-center mb-6" src="/image/scalable.jpg" alt="content" />
               <h3 className="tracking-widest text-indigo-500 text-xs font-medium title-font">Scalable, Robust Backend Solutions</h3>
-              <ul className="list-disc list-inside text-gray-600 space-y-1">
+              <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-1">
                 <li>RESTful APIs and GraphQL for efficient data handling and communication.</li>
                 <li>Secure authentication, authorization, and user management systems with JWT or OAuth.</li>
                 <li>Robust, high-performance Node.js and Express.js backends to handle all your data needs.</li>
@@ -160,10 +177,10 @@ const Offer = () => {
           </div>
           <div className="xl:w-1/4 md:w-1/2  p-4" data-aos="fade-up"
             data-aos-delay={10}>
-            <div className="bg-gray-100 p-6 h-[30rem] rounded-lg">
+            <div className="bg-muted p-6 h-[30rem] rounded-lg">
               <img className="h-40 rounded w-full object-cover object-center mb-6" src="/image/database.jpg" alt="content" />
               <h3 className="tracking-widest text-indigo-500 text-xs font-medium title-font">Database Management</h3>
-              <ul className="list-disc list-inside text-gray-600 space-y-1">
+              <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-1">
                 <li>Efficient data modeling and management using MongoDB with Mongoose for seamless database integration.</li>
                 <li>Optimized database performance and reliable data storage for your growing application.</li>
               </ul>
@@ -171,10 +188,10 @@ const Offer = () => {
           </div>
           <div className="xl:w-1/4 md:w-1/2  p-4" data-aos="fade-up"
             data-aos-delay={10}>
-            <div className="bg-gray-100 p-6 h-[30rem] rounded-lg">
+            <div className="bg-muted p-6 h-[30rem] rounded-lg">
               <img className="h-40 rounded w-full object-cover object-center mb-6" src="/image/devops.jpg" alt="content" />
               <h3 className="tracking-widest text-indigo-500 text-xs font-medium title-font">Cloud Deployment & DevOps</h3>
-              <ul className="list-disc list-inside text-gray-600 space-y-1">
+              <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-1">
                 <li>Expertise in cloud platforms like AWS, Heroku, and Vercel to deploy and manage your web applications.</li>
                 <li>Continuous integration and delivery (CI/CD) pipelines to ensure fast, reliable deployments.</li>
               </ul>

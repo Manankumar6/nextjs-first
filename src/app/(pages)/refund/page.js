@@ -3,9 +3,9 @@ import React from 'react';
 
 const RefundPolicy = () => {
     return (
-        <div className="bg-gray-100 text-gray-800 font-sans leading-relaxed tracking-wide">
+        <div className="bg-gray-100 dark:bg-gray-900 dark:text-gray-300 text-gray-800 font-sans leading-relaxed tracking-wide">
             {/* Hero Section */}
-            <section className="text-center py-20 bg-indigo-700 text-white">
+            <section className="text-center py-20 bg-indigo-700 dark:bg-background dotted-background text-white">
                 <h1 className="md:text-5xl text-3xl font-bold">Refund Policy</h1>
                 <p className="mt-4 text-lg max-w-2xl mx-auto">
                     Our goal is to ensure complete satisfaction with every service we provide. Read our refund policy for more details.
@@ -15,7 +15,7 @@ const RefundPolicy = () => {
             {/* Overview Section */}
             <section className="container mx-auto px-6 py-16 text-center">
                 <h2 className="text-3xl font-semibold mb-4">Overview</h2>
-                <p className="text-lg max-w-3xl mx-auto text-gray-700">
+                <p className="text-lg max-w-3xl mx-auto text-gray-700 dark:text-gray-400">
                     This Refund Policy outlines the conditions under which you may request a refund for services purchased through TechCanva. We are committed to providing high-quality service and transparency for our clients.
                 </p>
             </section>
@@ -23,10 +23,10 @@ const RefundPolicy = () => {
             {/* Eligibility for Refund Section */}
             <section className="container mx-auto px-6 py-16 text-center">
                 <h2 className="text-3xl font-semibold mb-4">Eligibility for Refund</h2>
-                <p className="text-lg max-w-3xl mx-auto text-gray-700">
+                <p className="text-lg max-w-3xl mx-auto text-gray-700 dark:text-gray-400">
                     Refunds are available under certain conditions:
                 </p>
-                <ul className="mt-6 list-none list-inside  max-w-2xl mx-auto text-lg text-gray-700">
+                <ul className="mt-6 list-none list-inside  max-w-2xl mx-auto text-lg text-gray-700 dark:text-gray-400">
                     <li>Services were not rendered as outlined in the contract.</li>
                     <li>Quality of service did not meet the agreed standards.</li>
                     <li>Project cancellations requested before work has commenced.</li>
@@ -35,28 +35,28 @@ const RefundPolicy = () => {
 
             {/* Non-Refundable Services Section */}
             <section className="container mx-auto px-6 py-16 grid gap-10 md:grid-cols-3">
-                <div className="p-8 bg-white rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
+                <div className="p-8 bg-white dark:bg-background rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
                     <h3 className="text-2xl font-bold text-indigo-600">Custom Development</h3>
-                    <p className="mt-4 text-gray-700">
+                    <p className="mt-4 text-gray-700 dark:text-gray-400">
                         Custom development projects require considerable time and resources, making them non-refundable once work has begun.
                     </p>
                 </div>
-                <div className="p-8 bg-white rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
+                <div className="p-8 bg-white dark:bg-background rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
                     <h3 className="text-2xl font-bold text-indigo-600">Consultation Services</h3>
-                    <p className="mt-4 text-gray-700">
+                    <p className="mt-4 text-gray-700 dark:text-gray-400">
                         Fees for consultations are non-refundable, as they are rendered upon agreement of service.
                     </p>
                 </div>
-                <div className="p-8 bg-white rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
+                <div className="p-8 bg-white dark:bg-background rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
                     <h3 className="text-2xl font-bold text-indigo-600">Third-Party Fees</h3>
-                    <p className="mt-4 text-gray-700">
+                    <p className="mt-4 text-gray-700 dark:text-gray-400">
                         Costs incurred from third-party services are non-refundable as they are outside our control.
                     </p>
                 </div>
             </section>
 
             {/* Refund Process Section */}
-            <section className="bg-indigo-700 text-white py-16">
+            <section className="bg-indigo-700 dark:bg-background dotted-background text-white py-16">
                 <div className="container mx-auto px-6 text-center">
                     <h2 className="text-3xl font-semibold">Refund Process</h2>
                     <p className="mt-4 max-w-3xl mx-auto text-lg">
@@ -83,14 +83,14 @@ const RefundPolicy = () => {
             <section className="container mx-auto px-6 py-16 text-center">
                 <h2 className="text-3xl font-semibold">Timeframe for Refunds</h2>
                 <div className="mt-8 grid gap-10 md:grid-cols-2">
-                    <div className="bg-white p-8 rounded-lg shadow-lg">
-                        <p className="text-lg text-gray-700">
+                    <div className="bg-white dark:bg-background p-8 rounded-lg shadow-lg">
+                        <p className="text-lg text-gray-700 dark:text-gray-400">
                             Refunds are typically processed within 10-14 business days once approved. Processing times may vary depending on your financial institution.
                         </p>
                         <p className="mt-4 font-semibold">Standard Refund Period</p>
                     </div>
-                    <div className="bg-white p-8 rounded-lg shadow-lg">
-                        <p className="text-lg text-gray-700">
+                    <div className="bg-white dark:bg-background p-8 rounded-lg shadow-lg">
+                        <p className="text-lg text-gray-700 dark:text-gray-400">
                             In some cases, additional documentation may be requested, which could extend the processing time.
                         </p>
                         <p className="mt-4 font-semibold">Extended Processing Time</p>
@@ -99,7 +99,7 @@ const RefundPolicy = () => {
             </section>
 
             {/* Contact Information Section */}
-            <section className="bg-indigo-700 text-white py-16">
+            <section className="bg-indigo-700 dark:bg-background dotted-background text-white py-16">
                 <div className="container mx-auto px-6 text-center">
                     <h2 className="text-3xl font-semibold">Need Help?</h2>
                     <p className="mt-4 max-w-2xl mx-auto text-lg">

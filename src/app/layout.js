@@ -6,6 +6,7 @@ import { AuthProvider } from "./context/AuthContext";
 import ProtectedRoute from "./_components/ProtectiveRoute";
 import Footer from "./_components/Footer";
 import Head from "next/head";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -26,22 +27,31 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <Head>
 
+      <Head>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5317982228910759"
           crossorigin="anonymous"></script>
       </Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        
+
+         
         <AuthProvider>
 
           <ChakraProvider>
             <ProtectedRoute>
-
+            <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+            enableSystem
+            disableTransitionOnChange
+          >
               <Navbar />
               {children}
               <Footer />
+        </ThemeProvider>
             </ProtectedRoute>
           </ChakraProvider>
         </AuthProvider>

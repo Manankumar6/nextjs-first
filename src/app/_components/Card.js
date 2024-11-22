@@ -5,10 +5,10 @@ import React from 'react';
 const Card = ({title, text,img}) => {
   return (
     <div className="max-w-sm mx-auto relative">
-      <div className="bg-white shadow-lg rounded-lg overflow-hidden border-2 border-gray-200 group relative" style={{ height: '250px' }}>
+      <div className=" shadow-lg rounded-lg overflow-hidden border-2 border-gray-200 dark:border-gray-800 group relative" style={{ height: '250px' }}>
         {/* Title Section */}
         <Image src={img} alt='gif' width={150} height={100} className='mx-auto mt-5' />
-        <h1 className="text-2xl font-bold text-center  text-gray-800 transition-colors duration-300 cursor-pointer group-hover:text-indigo-600" style={{ height: '100px' }}>
+        <h1 className="text-2xl font-bold text-center  text-foreground pt-5 transition-colors duration-300 cursor-pointer group-hover:text-indigo-600" style={{ height: '100px' }}>
 
         {title}
         </h1>

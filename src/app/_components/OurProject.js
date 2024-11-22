@@ -38,13 +38,13 @@ const OurProject = () => {
       ]
   return (
 
-      <section className="container mx-auto px-6 py-12 text-center">
+      <section className=" bg-background dark:text-gray-400 dotted-background px-6 py-12 text-center">
         <div className="flex lg:flex-row flex-col">
 
           <div className='lg:w-1/2'>
 
           
-            <p className="mt-4 max-w-lg mx-auto text-left text-lg mb-4 text-gray-600">
+            <p className="mt-4 max-w-lg mx-auto text-left text-lg mb-4 ">
               At our company, we take pride in delivering innovative solutions across a range of industries, transforming visions into
               powerful digital experiences. With a portfolio that spans fields including e-commerce, healthcare, education, finance,
               and entertainment, we’re committed to crafting customized solutions that address specific challenges and unlock new opportunities.
@@ -60,7 +60,7 @@ const OurProject = () => {
             <CarouselContent>
               {projectData.map((project, index) => (
                 <CarouselItem key={index}>
-                  <div className="">
+                  <div >
                     <Card>
                       <CardContent className="flex aspect-square  items-center p-4 flex-col ">
                         <img src={project.img} />
@@ -69,7 +69,7 @@ const OurProject = () => {
                         <div className="mt-10">
                           <Link
                             href={project.link}
-                            className="inline-block px-8 py-4 border border-indigo-500 text-indigo-500 rounded-lg font-semibold shadow-md hover:bg-indigo-500 hover:text-white transition duration-300 ease-in-out"
+                            className="inline-block px-8 py-4 border border-indigo-500 text-indigo-500 dark:text-indigo-100 rounded-lg font-semibold shadow-md hover:bg-indigo-500 hover:text-white transition duration-300 ease-in-out"
                           >
                             View Live
                           </Link>

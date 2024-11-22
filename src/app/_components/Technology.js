@@ -16,10 +16,10 @@ const Technology = () => {
   ];
 
   return (
-    <section className="text-gray-700 body-font bg-gray-50">
+    <section className="text-gray-700  body-font dark:bg-background dotted-background">
       <div className="container px-6 py-24 mx-auto">
         <div className="lg:w-1/2 w-full mb-12 ">
-          <h1 className="sm:text-4xl text-3xl font-semibold text-gray-900">Technologies We Use</h1>
+          <h1 className="sm:text-4xl text-3xl font-semibold text-gray-900 dark:text-gray-300">Technologies We Use</h1>
           <div className="h-1 w-24 bg-indigo-500 rounded mt-4"></div>
         </div>
 
@@ -32,7 +32,7 @@ const Technology = () => {
                 src={tech.img}
               />
               <div className="px-6 py-4">
-                <h3 className="text-lg font-semibold text-gray-900 text-center">{tech.techName}</h3>
+                <h3 className="text-lg font-semibold text-gray-900  text-center">{tech.techName}</h3>
               </div>
             </div>
           ))}

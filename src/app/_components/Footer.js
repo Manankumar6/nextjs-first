@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { IoMail } from "react-icons/io5";
 const Footer = () => {
   return (
-    <footer className="text-gray-600 body-font bg-gray-100">
+    <footer className="text-foreground body-font bg-background dotted-background">
       <div className="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
         <div className="w-64 flex flex-col items-center md:mx-0 mx-auto text-center md:text-center">
           <Link href="/" className="flex title-font font-medium items-center justify-center text-gray-900">
@@ -20,7 +20,7 @@ const Footer = () => {
         <div className="flex-grow flex  flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
 
           <div className="lg:w-1/4 md:w-1/2 w-full px-4 text-center">
-            <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">SUPPORT</h2>
+            <h2 className="title-font font-medium text-gray-900 dark:text-gray-300 tracking-widest text-sm mb-3">SUPPORT</h2>
             <nav className="list-none mb-10">
               <li>
                 <Link href="/contact" className="text-gray-600 hover:text-gray-800">Contact Us</Link>
@@ -38,7 +38,7 @@ const Footer = () => {
             </nav>
           </div>
           <div className="lg:w-1/4 md:w-1/2 w-full px-4 text-center">
-            <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CONNECT</h2>
+            <h2 className="title-font font-medium text-gray-900 dark:text-gray-300  tracking-widest text-sm mb-3">CONNECT</h2>
             <nav className="list-none mb-10">
               <li>
                 <Link href="/contact" className="text-gray-600 hover:text-gray-800">Get in Touch</Link>
@@ -55,7 +55,7 @@ const Footer = () => {
             </nav>
           </div>
           <div className="lg:w-1/4 md:w-1/2 w-full px-4 text-center">
-            <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">ABOUT US</h2>
+            <h2 className="title-font font-medium text-gray-900 dark:text-gray-300  tracking-widest text-sm mb-3">ABOUT US</h2>
             <nav className="list-none mb-10">
               {/* <li>
                 <Link href="/about" className="text-gray-600 hover:text-gray-800">Our Story</Link>
@@ -74,7 +74,7 @@ const Footer = () => {
 
         </div>
       </div>
-      <div className="bg-gray-100">
+      <div className="bg-background">
         <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
           <p className="text-gray-500 text-sm text-center sm:text-left">© 2024 TechCanva —
            <span>All Right Reserved</span>
