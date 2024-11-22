@@ -1,18 +1,18 @@
-'use client'
+'use client';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useAuth } from '@/app/context/AuthContext';
 import { useToast } from '@chakra-ui/react';
-import { Card, CardContent } from "@/components/ui/card"
+import { Card, CardContent } from "@/components/ui/card";
 import {
     Carousel,
     CarouselContent,
     CarouselItem,
     CarouselNext,
     CarouselPrevious,
-} from "@/components/ui/carousel"
+} from "@/components/ui/carousel";
 
 const Feedback = () => {
     const { authenticate, user } = useAuth();
@@ -124,10 +124,9 @@ const Feedback = () => {
         }
     }, [user]);
 
-  
     return (
-        <div className="bg-gray-100 text-gray-700">
-            <section className="text-center py-20 px-4 bg-indigo-600 text-white">
+        <div className="bg-gray-100 text-gray-700 dark:bg-gray-900 dark:text-gray-100">
+            <section className="text-center py-20 px-4 bg-indigo-600 text-white dark:bg-background dotted-background">
                 <h1 className="text-2xl md:text-4xl font-bold">We Value Your Feedback</h1>
                 <p className="mt-4 text-lg max-w-xl mx-auto">
                     Let us know how we can improve our services and make your experience even better.
@@ -146,7 +145,7 @@ const Feedback = () => {
                         value={formData.name}
                         onChange={inputHandle}
                         placeholder="Your Name"
-                        className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:border-indigo-600"
+                        className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:border-indigo-600 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-100"
                         required
                     />
                     <input
@@ -155,7 +154,7 @@ const Feedback = () => {
                         value={formData.email}
                         onChange={inputHandle}
                         placeholder="Your Email"
-                        className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:border-indigo-600"
+                        className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:border-indigo-600 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-100"
                         required
                     />
                     <textarea
@@ -163,13 +162,13 @@ const Feedback = () => {
                         value={formData.feedback}
                         onChange={inputHandle}
                         placeholder="Your Feedback"
-                        className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:border-indigo-600"
+                        className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:border-indigo-600 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-100"
                         rows="5"
                         required
                     />
                     <button
                         type="submit"
-                        className="w-full py-2 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700 transition"
+                        className="w-full py-2 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700 transition dark:hover:bg-indigo-700"
                     >
                         Submit Feedback
                     </button>
@@ -191,7 +190,7 @@ const Feedback = () => {
                                     <Card className="w-full max-w-[300px] sm:max-w-[250px] h-[200px] mx-auto">
                                         <CardContent className="flex flex-col h-full items-center justify-center p-4">
                                             <span>{feed.feedback}</span>
-                                            <p className='text-right italic '>-{feed.name}</p>
+                                            <p className='text-right italic'>-{feed.name}</p>
                                         </CardContent>
                                     </Card>
                                 </div>
@@ -203,14 +202,14 @@ const Feedback = () => {
                 </Carousel>
             </section>
 
-            <section className="bg-indigo-600 text-white py-16">
+            <section className="bg-indigo-600 text-white py-16 dark:bg-background dotted-background">
                 <div className="container mx-auto px-6 text-center">
                     <h2 className="text-3xl font-semibold">Want to Share More?</h2>
                     <p className="mt-4 max-w-lg mx-auto text-lg">
                         We’re always here to listen and improve. Get in touch with us directly if you have more to share.
                     </p>
                     <Link href='/contact'>
-                        <button className="mt-6 px-6 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-200 transition">
+                        <button className="mt-6 px-6 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-200 transition dark:bg-gray-900 dark:text-white dark:hover:bg-gray-700">
                             Contact Us
                         </button>
                     </Link>

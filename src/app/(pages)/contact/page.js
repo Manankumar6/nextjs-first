@@ -106,63 +106,66 @@ const Contact = () => {
     }
   }, [user]);
   return (
-    <div className="bg-gray-100 py-12">
+    <div className="bg-gray-100 dark:bg-background dotted-background py-12">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-800">Contact Us</h1>
-          <p className="mt-4 text-gray-600">
+          <h1 className="text-4xl font-bold text-gray-800 dark:text-gray-200">Contact Us</h1>
+          <p className="mt-4 text-gray-600 dark:text-gray-300">
             We'd love to hear from you! Whether you have a question about services, pricing, or anything else, feel free to reach out.
           </p>
         </div>
 
         <div className="flex flex-wrap justify-center">
           <div className="w-full lg:w-1/2 md:p-4 ">
-            <div className="bg-white shadow-lg rounded-lg p-4 md:p-8" data-aos="fade-up"
+            <div className="bg-white dark:bg-gray-900 shadow-lg rounded-lg p-4 md:p-8" data-aos="fade-up"
               data-aos-delay={100}>
-              <h2 className="text-2xl font-semibold text-gray-800 mb-6">Get in Touch</h2>
+              <h2 className="text-2xl font-semibold text-gray-800 mb-6 dark:text-gray-300">Get in Touch</h2>
 
               <form ref={form} onSubmit={sendEmail}>
                 <div className="mb-4">
-                  <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
+                  <label className="block text-gray-700 dark:text-gray-400 text-sm font-bold mb-2" htmlFor="name">
                     Full Name
                   </label>
                   <input
+
                     type="text"
                     id="name"
                     name="name"
                     value={formData.name}
                     onChange={inputHandler}
-                    className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 "
                     placeholder="Your Name"
                     required
                   />
                 </div>
                 <div className="mb-4">
-                  <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
+                  <label className="block text-gray-700 dark:text-gray-400 text-sm font-bold mb-2" htmlFor="email">
                     Email Address
                   </label>
                   <input
+
                     type="email"
                     id="email"
                     name="email"
                     value={formData.email}
                     onChange={inputHandler}
-                    className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 "
                     placeholder="Your Email"
                     required
                   />
                 </div>
                 <div className="mb-4">
-                  <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="text">
+                  <label className="block text-gray-700 dark:text-gray-400 text-sm font-bold mb-2" htmlFor="text">
                     Phone
                   </label>
                   <input
+
                     type="phone"
                     id="phone"
                     name="phone"
                     value={formData.phone}
                     onChange={inputHandler}
-                    className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 "
                     placeholder="Your Phone no"
                     required
                   />
@@ -170,7 +173,7 @@ const Contact = () => {
                 <div className='flex '>
 
                   <div className="mb-4 w-1/2 me-2 ">
-                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="plan">
+                    <label className="block text-gray-700 dark:text-gray-400 text-sm font-bold mb-2" htmlFor="plan">
                       Select Plan
                     </label>
                     <select
@@ -178,7 +181,7 @@ const Contact = () => {
                       name="plan"
                       value={formData.plan}
                       onChange={inputHandler}
-                      className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                      className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 "
                       required
                     >
 
@@ -188,7 +191,7 @@ const Contact = () => {
                     </select>
                   </div>
                   <div className="mb-4 w-1/2">
-                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="siteType">
+                    <label className="block text-gray-700 dark:text-gray-400 text-sm font-bold mb-2" htmlFor="siteType">
                       Type of Site
                     </label>
                     <select
@@ -196,7 +199,7 @@ const Contact = () => {
                       name="siteType"
                       value={formData.siteType}
                       onChange={inputHandler}
-                      className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                      className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 "
                       required
                     >
 
@@ -209,7 +212,7 @@ const Contact = () => {
                   </div>
                 </div>
                 <div className="mb-4">
-                  <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="message">
+                  <label className="block text-gray-700 dark:text-gray-400 text-sm font-bold mb-2" htmlFor="message">
                     Message
                   </label>
                   <textarea
@@ -218,7 +221,7 @@ const Contact = () => {
                     rows="5"
                     value={formData.message}
                     onChange={inputHandler}
-                    className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 "
                     placeholder="Your Message"
                     required
                   ></textarea>
@@ -240,8 +243,8 @@ const Contact = () => {
 
           <div className="w-full lg:w-1/2 md:p-4 mt-2" data-aos="fade-up"
             data-aos-delay={200}>
-            <div className="bg-white shadow-lg rounded-lg p-4 md:p-8">
-              <h2 className="text-2xl font-semibold text-gray-800 mb-6">Contact Information</h2>
+            <div className="bg-white dark:bg-gray-900 shadow-lg dark:text-gray-300 rounded-lg p-4 md:p-8">
+              <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-300 mb-6">Contact Information</h2>
               <ul className="list-none space-y-4">
                 <li className="flex items-center">
                   <FaPhone className='text-indigo-500 w-5 h-5 mr-2' />
@@ -262,7 +265,7 @@ const Contact = () => {
               </ul>
 
               <div className="mt-8">
-                <h2 className="text-xl font-semibold text-gray-800">Follow Us</h2>
+                <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-300">Follow Us</h2>
                 <div className="flex space-x-4 mt-4">
                   <Link target='_blank' href="https://www.instagram.com/manankumar_06/?igsh=NzQxYzZiM3o3aWdw" className="text-gray-500 hover:text-indigo-500 transition">
                     <AiFillInstagram className='w-6 h-6' />

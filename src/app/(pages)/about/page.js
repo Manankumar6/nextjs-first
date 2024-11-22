@@ -83,7 +83,7 @@ const About = () => {
 
 
       {/* Hero Section */}
-      <section className="text-center py-20 px-4 bg-indigo-600 text-white">
+      <section className="text-center py-20 px-4 bg-indigo-600 dark:bg-background dotted-background text-white">
         <h1 className="text-2xl md:text-4xl font-bold slide-in">About Our Web Services</h1>
         <p className="mt-4 text-lg max-w-xl mx-auto slide-in" style={{ animationDelay: '0.2s' }}>
           We are committed to delivering top-notch web solutions to help your business thrive online.
@@ -91,23 +91,25 @@ const About = () => {
       </section>
 
       {/* Our Mission Section */}
-      <section className="container md:w-1/2 mx-auto px-6 py-12 text-center">
+      {/* <section className=" dark:bg-gray-900 dark:text-white  px-6 py-20 text-center">
+      <div className="w-1/2 mx-auto">
         <h2 className="text-4xl font-semibold">Our Mission</h2>
         <p className="mt-4 text-lg">
           To empower businesses with scalable, secure, and user-friendly web applications that meet industry standards and exceed customer expectations.
         </p>
-      </section>
+      </div>
+      </section> */}
 
       {/* Services Section */}
      
 
-      <div className="container mx-auto px-4">
+      <div className=" dark:bg-background dotted-background  px-4">
       {services.map((service, index) => (
         <div
           key={index}
           className={`w-full flex flex-col-reverse lg:flex-row ${
             index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
-          } items-center my-8`}
+          } items-center  p-4`}
         >
           {/* Image Section */}
           <div className="w-full lg:w-1/2 flex justify-center">
@@ -122,7 +124,7 @@ const About = () => {
           {/* Content Section */}
           <div className="w-full lg:w-1/2 px-4 text-center lg:text-left mb-5 lg:mb-0">
             <h3 className="text-2xl font-bold text-blue-600">{service.title}</h3>
-            <p className="mt-4 text-gray-600">{service.text}</p>
+            <p className="mt-4 text-gray-600 dark:text-gray-400">{service.text}</p>
           </div>
         </div>
       ))}
@@ -130,7 +132,7 @@ const About = () => {
 
      
       {/* Why Choose Us Section */}
-      <section className="bg-indigo-600 text-white py-16">
+      <section className="bg-indigo-600 dark:bg-gray-900 text-white py-16">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-3xl font-semibold">Why Choose Us</h2>
           <p className="mt-4 max-w-2xl mx-auto text-lg">
@@ -156,8 +158,8 @@ const About = () => {
       <Technology />
 
       {/* Testimonials Section */}
-      <section className="container mx-auto px-6 py-12 text-center">
-        <h2 className="text-3xl font-semibold">What Our Clients Say</h2>
+      <section className=" dark:bg-gray-900 px-6 py-12 text-center">
+        <h2 className="text-3xl font-semibold dark:text-gray-300">What Our Clients Say</h2>
         <Box mt={8}>
           <Carousel
             opts={{
@@ -188,7 +190,7 @@ const About = () => {
 
 
       {/* Call to Action Section */}
-      <section className="bg-indigo-600 text-white py-16">
+      <section className="bg-indigo-600 dark:bg-background dotted-background dark:text-gray-300 text-white py-16">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-3xl font-semibold">Ready to Grow Your Business?</h2>
           <p className="mt-4 max-w-lg mx-auto text-lg">
