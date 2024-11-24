@@ -54,7 +54,7 @@ export async function POST(req) {
                 }
                 const token = await  user.generateAuthToken();
                
-                cookieStore.set('token', token, {
+                cookieStore.set('techcanva', token, {
                   httpOnly: true,
                   secure: process.env.NODE_ENV === 'production',
                   sameSite: 'Strict', // Set to 'None' if you need cross-site support
@@ -69,7 +69,7 @@ export async function POST(req) {
            
         }else if(action == 'logout'){
            
-            cookieStore.set('token', '', { // Clear the token cookie
+            cookieStore.set('techcanva', '', { // Clear the token cookie
               httpOnly: true,
               secure: process.env.NODE_ENV === 'production',
               sameSite: 'Strict',

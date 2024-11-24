@@ -31,7 +31,7 @@ const Navbar = () => {
          
 
 
-          {/* {!authenticate ? <>
+          {!authenticate ? <>
             <Link href='/login' className="mr-5 hover:text-gray-500">Log in</Link>
             <Link href='/signup' className="mr-5 hover:text-gray-500">Sign up</Link>
           </>
@@ -40,7 +40,7 @@ const Navbar = () => {
 
               <Button className='bg-transparent hover:bg-transparent' onClick={logout}>Log out</Button >
             </>
-          } */}
+          }
         </nav>
 
       </div>
