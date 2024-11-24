@@ -48,6 +48,7 @@ const LoginPage = () => {
       minHeight="100vh"
       bg="gray.50"
       px={4}
+      className="dark:bg-background "
     >
       <Box
         maxW="md"
@@ -57,6 +58,7 @@ const LoginPage = () => {
         p={6}
         rounded="lg"
         textAlign="center"
+         className="dark:bg-gray-900 text-foreground"
       >
         <Heading as="h1" size="xl" mb={4}>
           Login
@@ -92,7 +94,7 @@ const LoginPage = () => {
                     variant={"ghost"}
                     onClick={() => setShowPassword(!showPassword)}
                   >
-                    {showPassword ? <ViewOffIcon /> : <ViewIcon />}
+                    {showPassword ? <ViewOffIcon className="dark:text-foreground" /> : <ViewIcon className="dark:text-foreground" />}
                   </Button>
                 </InputRightElement>
               </InputGroup>

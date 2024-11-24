@@ -54,7 +54,7 @@ export async function GET() {
     await connectDb();
 
     // Fetch all feedback entries
-    const feedbacks = await Feedback.find({});
+    const feedbacks = await Feedback.find({isDeleted:false});
 
     // Return the feedbacks as JSON
     return new Response(JSON.stringify(feedbacks), {
@@ -73,5 +73,40 @@ export async function GET() {
         "Content-Type": "application/json",
       },
     });
+  }
+}
+
+
+export async function PATCH(req) {
+  try {
+  const { searchParams } = new URL(req.url);
+  const id = searchParams.get('id');
+
+  if (!id) {
+    return new Response(JSON.stringify({ error: 'ID is required' }), { status: 400 });
+  }
+    await connectDb();
+    const feedback = await Feedback.findByIdAndUpdate(
+      id,
+      { $set: { isDeleted:true } }, // Update the isDeleted field
+      { new: true } // Return the updated document
+    );
+  
+
+    if (!feedback) {
+      return new Response(JSON.stringify({ error: 'Feedback not found or already deleted' }), { status: 404 });
+    }
+
+    // Return the updated feedback
+    return new Response(JSON.stringify(feedback), {
+      status: 200,
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+
+  } catch (error) {
+    console.log(error)
+    return new Response(JSON.stringify({ error: 'Internal Server Error' }), { status: 400 });
   }
 }

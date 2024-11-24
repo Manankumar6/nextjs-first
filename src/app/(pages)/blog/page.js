@@ -96,20 +96,7 @@ const Blog = () => {
                 </div>
             </section>
 
-            {/* Comments Section */}
-            {/* <section className="container mx-auto px-6 py-10">
-                <h3 className="text-3xl font-semibold mb-4">Leave a Comment</h3>
-                <div className="bg-white dark:bg-background p-6 rounded-lg shadow-md">
-                    <textarea 
-                        className="w-full p-4 border border-gray-300 rounded-lg mt-2 mb-4 focus:outline-none focus:ring-2 focus:ring-indigo-600" 
-                        rows="4" 
-                        placeholder="Write your comment here..."
-                    />
-                    <button className="px-6 py-2 bg-indigo-600 text-white rounded-lg font-semibold shadow-md hover:bg-indigo-700 transition duration-300">
-                        Submit
-                    </button>
-                    </div>
-            </section> */}
+           
         </div>
     </>);
 };

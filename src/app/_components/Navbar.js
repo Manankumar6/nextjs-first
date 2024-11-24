@@ -10,7 +10,7 @@ import { ModeToggle } from './ThemeButton'
 const Navbar = () => {
   const pathname = usePathname();
 
-  const {authenticate,logout} = useAuth();
+  const { authenticate, logout } = useAuth();
   return (
     <nav className=" body-font bg-background dark:bg-gray-900 dark:shadow-[0px_4px_10px_rgba(255,255,255,0.5)]   text-foreground">
       <div className="container mx-auto  flex flex-wrap p-5 flex-col md:flex-row items-center">
@@ -28,18 +28,21 @@ const Navbar = () => {
           <Link href='/about' className={pathname === '/about' ? "border-b-2 border-blue-500 mr-5 hover:text-gray-500" : "mr-5 hover:text-gray-500"}>About</Link>
           <Link href='/service' className={pathname === '/service' ? "border-b-2 border-blue-500 mr-5 hover:text-gray-500" : "mr-5 hover:text-gray-500"}>Service</Link>
           <Link href='/contact' className={pathname === '/contact' ? "border-b-2 border-blue-500 mr-5 hover:text-gray-500" : "mr-5 hover:text-gray-500"}>Contact</Link>
-          {!authenticate? <>
-       <Link href='/login' className="mr-5 hover:text-gray-500">Log in</Link>
-        <Link href='/signup' className="mr-5 hover:text-gray-500">Sign up</Link>
-       </>
-        :
-        <>
-        
-      <Button bg='transparent' _hover={{bg:"transparent"}}   onClick={logout}>Log out</Button >
-        </>
-      }
+         
+
+
+          {/* {!authenticate ? <>
+            <Link href='/login' className="mr-5 hover:text-gray-500">Log in</Link>
+            <Link href='/signup' className="mr-5 hover:text-gray-500">Sign up</Link>
+          </>
+            :
+            <>
+
+              <Button className='bg-transparent hover:bg-transparent' onClick={logout}>Log out</Button >
+            </>
+          } */}
         </nav>
-        
+
       </div>
     </nav>
   )

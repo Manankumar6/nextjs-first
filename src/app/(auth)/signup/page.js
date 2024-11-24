@@ -42,6 +42,17 @@ const SignupPage = () => {
   const handleSubmit =async (e) => {
     e.preventDefault();
     const { name, email, password, confirmPassword } = formData;
+     // Validation: Check if passwords match
+     if (password !== confirmPassword) {
+      toast({
+        title: "Error",
+        description: "Passwords don't match.",
+        status: "error",
+        duration: 3000,
+        isClosable: true,
+      });
+      return;
+    }
     try {
         const {data} = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/api/auth`,{name,email,password, action: 'signup',})
         if(data){
@@ -53,6 +64,7 @@ const SignupPage = () => {
               duration: 3000,
               isClosable: true,
             });
+            router.push('/login')
         }
         
     } catch (error) {
@@ -66,17 +78,7 @@ const SignupPage = () => {
         });
     }
 
-    // Validation: Check if passwords match
-    if (password !== confirmPassword) {
-      toast({
-        title: "Error",
-        description: "Passwords do not match.",
-        status: "error",
-        duration: 3000,
-        isClosable: true,
-      });
-      return;
-    }
+   
 
   };
   useEffect(()=>{
@@ -93,6 +95,7 @@ const SignupPage = () => {
       minHeight="100vh"
       bg="gray.50"
       px={4}
+      className="dark:bg-background"
     >
       <Box
         maxW="md"
@@ -102,13 +105,14 @@ const SignupPage = () => {
         p={6}
         rounded="lg"
         textAlign="center"
+        className="dark:bg-gray-900 text-foreground"
       >
         <Heading as="h1" size="xl" mb={4}>
           Sign Up
         </Heading>
         <Text mb={8}>Create a new account</Text>
 
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} >
           <Stack spacing={4}>
             {/* Name */}
             <FormControl id="name" isRequired>
@@ -150,7 +154,7 @@ const SignupPage = () => {
                     variant={"ghost"}
                     onClick={() => setShowPassword(!showPassword)}
                   >
-                    {showPassword ? <ViewOffIcon /> : <ViewIcon />}
+                    {showPassword ? <ViewOffIcon  className="dark:text-foreground" /> : <ViewIcon className="dark:text-foreground" />}
                   </Button>
                 </InputRightElement>
               </InputGroup>
@@ -172,7 +176,7 @@ const SignupPage = () => {
                     variant={"ghost"}
                     onClick={() => setShowPassword(!showPassword)}
                   >
-                    {showPassword ? <ViewOffIcon /> : <ViewIcon />}
+                    {showPassword ? <ViewOffIcon className="dark:text-foreground"/> : <ViewIcon className="dark:text-foreground"/>}
                   </Button>
                 </InputRightElement>
               </InputGroup>

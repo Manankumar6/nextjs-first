@@ -5,14 +5,15 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useAuth } from '@/app/context/AuthContext';
 import { useToast } from '@chakra-ui/react';
-import { Card, CardContent } from "@/components/ui/card";
-import {
-    Carousel,
-    CarouselContent,
-    CarouselItem,
-    CarouselNext,
-    CarouselPrevious,
-} from "@/components/ui/carousel";
+import WhatOurClientsSay from '@/app/_components/WhatOurClientsSay';
+// import { Card, CardContent } from "@/components/ui/card";
+// import {
+//     Carousel,
+//     CarouselContent,
+//     CarouselItem,
+//     CarouselNext,
+//     CarouselPrevious,
+// } from "@/components/ui/carousel";
 
 const Feedback = () => {
     const { authenticate, user } = useAuth();
@@ -24,7 +25,7 @@ const Feedback = () => {
         feedback: ''
     });
 
-    const [feedbackList, setFeedbackList] = useState([]);
+    // const [feedbackList, setFeedbackList] = useState([]);
 
     const inputHandle = (e) => {
         const { name, value } = e.target;
@@ -37,15 +38,15 @@ const Feedback = () => {
     const submitHandle = async (e) => {
         e.preventDefault();
 
-        if (!authenticate) {
-            toast({
-                title: "Please login",
-                status: "error",
-                duration: 3000,
-                isClosable: true,
-            });
-            return;
-        }
+        // if (!authenticate) {
+        //     toast({
+        //         title: "Please login",
+        //         status: "error",
+        //         duration: 3000,
+        //         isClosable: true,
+        //     });
+        //     return;
+        // }
 
         try {
             const response = await fetch('/api/feedback', {
@@ -175,7 +176,8 @@ const Feedback = () => {
                 </form>
             </section>
 
-            <section className="container mx-auto px-6 py-12 text-center">
+        <WhatOurClientsSay/>
+            {/* <section className="container mx-auto px-6 py-12 text-center">
                 <h2 className="text-3xl font-semibold">What Our Clients Say</h2>
                 <Carousel
                     opts={{
@@ -200,7 +202,7 @@ const Feedback = () => {
                     <CarouselPrevious />
                     <CarouselNext />
                 </Carousel>
-            </section>
+            </section> */}
 
             <section className="bg-indigo-600 text-white py-16 dark:bg-background dotted-background">
                 <div className="container mx-auto px-6 text-center">

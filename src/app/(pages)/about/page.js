@@ -4,22 +4,16 @@ import React, { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-import { Card, CardContent } from "@/components/ui/card"
+
 import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel"
-import {
-  Box,
+
   Button,
 
 } from '@chakra-ui/react';
 import Head from 'next/head';
 import Technology from '@/app/_components/Technology';
 import Image from 'next/image';
+import WhatOurClientsSay from '@/app/_components/WhatOurClientsSay';
 
 
 const services = [
@@ -158,7 +152,7 @@ const About = () => {
       <Technology />
 
       {/* Testimonials Section */}
-      <section className=" dark:bg-gray-900 px-6 py-12 text-center">
+      {/* <section className=" dark:bg-gray-900 px-6 py-12 text-center">
         <h2 className="text-3xl font-semibold dark:text-gray-300">What Our Clients Say</h2>
         <Box mt={8}>
           <Carousel
@@ -185,8 +179,8 @@ const About = () => {
             <CarouselNext />
           </Carousel>
         </Box>
-      </section>
-
+      </section> */}
+  <WhatOurClientsSay/>
 
 
       {/* Call to Action Section */}
@@ -197,9 +191,9 @@ const About = () => {
             Contact us today to discuss how we can help bring your vision to life with tailored web solutions.
           </p>
           <Link href='/contact'>
-            <Button mt={6} px={6} py={3} colorScheme="whiteAlpha" variant="outline">
-              Get in Touch
-            </Button>
+          <button className="bg-indigo-500 text-white font-bold py-4 px-4 rounded-lg hover:bg-indigo-600  mt-10 animate-bounce ">
+            Get in Touch
+          </button>
           </Link>
         </div>
       </section>
