@@ -3,7 +3,7 @@ import jwt from 'jsonwebtoken';
 
 export const authenticateToken = async (req) => {
   // Extract the token from the request's cookies
-  const token = req.cookies.get('token')?.value; // Access the token from Next.js cookies
+  const token = req.cookies.get('techcanva')?.value; // Access the token from Next.js cookies
  
 
   if (!token) {
