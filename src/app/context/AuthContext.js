@@ -10,6 +10,7 @@ export const AuthProvider = ({ children }) => {
     const router = useRouter();
     const [authenticate, setAuthenticate] = useState(false);
     const [user, setUser] = useState({});
+    console.log(user,"user data")
     const toast = useToast();
     const [loading,setLoading] = useState(false);
     const checkAuth = async () => {
@@ -29,7 +30,7 @@ export const AuthProvider = ({ children }) => {
     }
 
     const login = async (email, password) => {
-        setLoading(false);
+        setLoading(true);
         setAuthenticate(false);
         const API_URL = process.env.NEXT_PUBLIC_API_URL;
         try {
@@ -48,7 +49,7 @@ export const AuthProvider = ({ children }) => {
                 });
                 router.push('/'); // Redirect to home or dashboard
                 setAuthenticate(true);
-                setLoading(true);
+                setLoading(false);
             }
 
         } catch (error) {
@@ -62,6 +63,8 @@ export const AuthProvider = ({ children }) => {
                 isClosable: true,
             });
             setAuthenticate(false);
+        }finally{
+            setLoading(false);
         }
     }
 
@@ -78,6 +81,7 @@ export const AuthProvider = ({ children }) => {
                     isClosable: true,
                 });
                 setAuthenticate(false);
+                setLoading(false);
             }
         } catch (error) {
             console.log(error)
@@ -89,6 +93,8 @@ export const AuthProvider = ({ children }) => {
                 isClosable: true,
             });
            
+        }finally{
+            setLoading(false);
         }
 
     }

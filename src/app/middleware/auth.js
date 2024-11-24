@@ -12,6 +12,7 @@ export const authenticateToken = async (req) => {
 
   try {
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
+
     return { isValid: true, user: decoded }; // Return user info if token is valid
   } catch (error) {
     return { isValid: false, error: "Token is not valid" };

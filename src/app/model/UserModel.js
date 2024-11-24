@@ -13,6 +13,10 @@ const UserSchema = new mongoose.Schema({
     password:{
         type:String,
         required: [true, 'Password is required'], 
+    },
+    admin:{
+        type:Boolean,
+        default:false
     }
 },{timestamps:true})
 
@@ -35,8 +39,8 @@ UserSchema.methods.comparePassword = async function (candidatePassword) {
 };
 
 UserSchema.methods.generateAuthToken = async function () {
-    console.log(process.env.JWT_SECRET, "jwt secret key ")
-    const token =   jwt.sign({ id: this._id, email: this.email,name:this.name }, process.env.JWT_SECRET, { expiresIn: '30d' });
+ 
+    const token =   jwt.sign({ id: this._id, email: this.email,name:this.name,admin:this.admin }, process.env.JWT_SECRET, { expiresIn: '30d' });
     return token;
 };
 

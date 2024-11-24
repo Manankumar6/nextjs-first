@@ -92,7 +92,7 @@ export async function GET(req){
     await connectDb();
     try {
         const {isValid,user,error} = await authenticateToken(req);
-        
+           
         
         if(!isValid){
             return NextResponse.json({message:error},{status:400});

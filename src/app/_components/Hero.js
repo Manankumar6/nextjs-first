@@ -10,6 +10,7 @@ const Hero = () => {
       title: "Limited Time Offer",
       regularPrice: 15000,
       offerPrice: 6999,
+      durationInDays: 7, 
       features: [
         '5-page stunning and responsive website design',
         '1 year of free hosting and domain',
@@ -21,6 +22,20 @@ const Hero = () => {
     },
   ];
 
+  
+  // Calculate the remaining days in the current month
+  const now = new Date();
+  const endOfMonth = new Date(now.getFullYear(), now.getMonth() + 1, 0); // Last day of this month
+  const daysLeftInMonth = Math.ceil((endOfMonth - now) / (1000 * 60 * 60 * 24)); // Remaining days
+
+  // Update the offer duration dynamically
+  const updatedOffers = offers.map((offer) => ({
+    ...offer,
+    durationInDays: Math.min(offer.durationInDays, daysLeftInMonth),
+  }));
+
+
+  
   return (
     <section className="text-foreground bg-background body-font">
       <div className="container mx-auto justify-center flex px-5 py-24   items-center dark dotted-background">
@@ -34,7 +49,7 @@ const Hero = () => {
           />
         </div> */}
         <div className="  h-[20rem]  flex flex-col items-center justify-center text-center ">
-          <h1 className="text-4xl md:text-7xl font-bold mb-4 slide-in">
+          <h1 className="text-5xl md:text-7xl font-bold mb-4 slide-in">
             <span className="bg-gradient-to-r from-slate-600 via-slate-400 to-slate-600 text-transparent bg-clip-text">
               Welcome to
             </span>{' '}
@@ -44,7 +59,7 @@ const Hero = () => {
           </h1>
 
           <p
-            className="text-lg text-muted-foreground max-w-4xl slide-in"
+            className="text-sm md:text-lg  text-muted-foreground max-w-4xl slide-in"
             style={{ animationDelay: '0.2s' }}
           >
             Looking for an experienced MERN Stack developer to bring your web project to life? With over{' '}
@@ -60,20 +75,22 @@ const Hero = () => {
         <h1 className="text-2xl md:text-5xl font-bold">Special Offer This Month!</h1>
         <p className="mt-4 text-lg max-w-2xl mx-auto">
           Get your stunning static website developed for just{' '}
-          <span className="font-bold text-xl">₹6,999!</span>
+          <span className="font-bold text-xl">₹6,999 !</span>
         </p>
       </section>
 
       <div className="flex w-full justify-center items-center dotted-background">
         <div className="w-full md:w-1/2">
           {/* Dynamic Offer Sections */}
-          {offers.map((offer) => (
+          {updatedOffers.map((offer) => (
             <LimitedOffer
               key={offer.id}
               title={offer.title}
               regularPrice={offer.regularPrice}
               offerPrice={offer.offerPrice}
               features={offer.features}
+              durationInDays={offer.durationInDays}
+             
             />
           ))}
         </div>
@@ -89,7 +106,7 @@ const Hero = () => {
       </div>
 
       {/* Google Ads */}
-      {/* <Ads /> */}
+      <Ads />
     </section>
   );
 };

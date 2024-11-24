@@ -17,13 +17,12 @@ const Ads = () => {
 
   return (
     <div>
-      <ins
-        className="adsbygoogle"
-        style={{ display: "block", width: "100%", height: "250px" }}
-        data-ad-client="YOUR-AD-CLIENT-ID" // Replace with your AdSense client ID
-        data-ad-slot="YOUR-AD-SLOT-ID" // Replace with your specific ad slot ID
-        data-ad-format="auto"
-      ></ins>
+     <ins className="adsbygoogle"
+     style={{display:'block'}}
+     data-ad-client="ca-pub-5317982228910759"
+     data-ad-slot="7910152987"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
     </div>
   );
 };
