@@ -5,6 +5,7 @@ const nextConfig = {
             {
                 // Apply these headers to all API routes
                 source: '/api/:path*',
+               
                 
                 headers: [
                     {
@@ -23,7 +24,7 @@ const nextConfig = {
             },
         ];
     }, images: {
-        domains: ['plus.unsplash.com'], // Add external image domains here
+        domains: ['plus.unsplash.com','aceternity.com'], // Add external image domains here
       },
 };
 

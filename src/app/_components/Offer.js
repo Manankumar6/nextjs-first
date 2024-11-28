@@ -8,6 +8,7 @@ import { useEffect } from 'react';
 
 import Client from './Client';
 import OurProject from './OurProject';
+import { Button } from '@/components/ui/moving-border';
 
 
 
@@ -58,9 +59,9 @@ const Offer = () => {
   return (<>
 
     <div className="w-full pt-3 bg-muted  dark:bg-gray-900 text-foreground  mx-auto ">
-      <div className="flex flex-wrap w-full mb-20 px-10 text-foreground">
+      {/* <div className="flex flex-wrap w-full mb-20 px-10 text-foreground"> */}
         {/* Heading Section */}
-        <div className="lg:w-1/2 w-full mb-6 lg:mb-0 lg:ps-16">
+        {/* <div className="lg:w-1/2 w-full mb-6 lg:mb-0 lg:ps-16">
           <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2">
             What We Offer?
           </h1>
@@ -68,11 +69,11 @@ const Offer = () => {
         </div>
         <p className="lg:w-1/2 w-full leading-relaxed text-muted-foreground">
           We specialize in delivering high-quality web development solutions tailored to meet the unique needs of each client. From full-stack development to responsive design and cloud deployment, we ensure that your digital presence stands out and performs seamlessly across all platforms.
-        </p>
-      </div>
+        </p> */}
+      {/* </div> */}
 
       {/* What We Offer Cards */}
-      <div className="flex flex-wrap justify-center gap-4 p-4">
+      {/* <div className="flex flex-wrap justify-center gap-4 p-4">
         {cards.map((card, ind) => (
           <div
             key={ind}
@@ -83,7 +84,7 @@ const Offer = () => {
             <Card title={card.title} text={card.text} img={card.img} />
           </div>
         ))}
-      </div>
+      </div> */}
 
 
       {/* client component (Our Completed Project ) */}
@@ -125,15 +126,25 @@ const Offer = () => {
 
     <section className="py-16 px-4 bg-muted dark:bg-gray-900 text-foreground text-center  ">
       <h2 className="text-3xl font-bold slide-in">Explore Our Services</h2>
-      <p className="mt-4 text-lg max-w-2xl mx-auto slide-in" style={{ animationDelay: "0.2s" }}>
+      <p className="mt-4 text-lg max-w-2xl mx-auto slide-in mb-5" style={{ animationDelay: "0.2s" }}>
         "Discover our expertise in custom web services, including e-commerce sites, portfolios, blogs, and more. We specialize in crafting tailored solutions to meet your unique online needs and help your business shine!"
       </p>
-      <Link href='/service'>
-        <button className="mt-8 px-8 py-4 bg-white dark:bg-transparent dark:border-indigo-700 dark:border text-indigo-700 dark:text-indigo-200  font-semibold rounded-lg shadow-md hover:bg-gray-200 animate-bounce">
+      <Link href='/service' >
+        <Button  borderRadius="2rem" 
+        className="bg-white dark:bg-slate-900 font-bold text-black dark:text-white border-neutral-200 dark:border-slate-800">
           View Our Services 
-        </button>
+        </Button>
       </Link>
     </section>
+
+
+
+
+
+
+
+
+    
     {/* Technology Details Cards  */}
     <section className="text-foreground dotted-background body-font bg-background">
       <div className="container px-5 py-24 mx-auto">

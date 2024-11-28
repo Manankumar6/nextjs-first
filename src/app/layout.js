@@ -1,22 +1,17 @@
-import localFont from "next/font/local";
+import { Inter } from 'next/font/google';
 import "./globals.css";
 import Navbar from "./_components/Navbar";
-import { ChakraProvider } from '@chakra-ui/react'
+import { ChakraProvider } from '@chakra-ui/react';
 import { AuthProvider } from "./context/AuthContext";
 import ProtectedRoute from "./_components/ProtectiveRoute";
 import Footer from "./_components/Footer";
 import Head from "next/head";
 import { ThemeProvider } from "@/components/theme-provider";
+import StaticCallButton from './_components/CallButton';
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
 });
 
 export const metadata = {
@@ -27,31 +22,25 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-
       <Head>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5317982228910759"
           crossorigin="anonymous"></script>
       </Head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        
-
-         
+      <body className={inter.className}>
         <AuthProvider>
-
           <ChakraProvider>
             <ProtectedRoute>
-            <ThemeProvider
-            attribute="class"
-            defaultTheme="dark"
-            enableSystem
-            disableTransitionOnChange
-          >
-              <Navbar />
-              {children}
-              <Footer />
-        </ThemeProvider>
+              <ThemeProvider
+                attribute="class"
+                defaultTheme="dark"
+                enableSystem
+                disableTransitionOnChange
+              >
+                <Navbar />
+                {children}
+                <StaticCallButton/>
+                <Footer />
+              </ThemeProvider>
             </ProtectedRoute>
           </ChakraProvider>
         </AuthProvider>

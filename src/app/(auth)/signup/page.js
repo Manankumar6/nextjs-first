@@ -1,35 +1,26 @@
-// app/(auth)/signup/page.js (Next.js 13+ with app directory)
 "use client";
-import axios from "axios";
+
 import { useEffect, useState } from "react";
-import {
-  Box,
-  Button,
-  FormControl,
-  FormLabel,
-  Input,
-  Heading,
-  Text,
-  Stack,
-  useToast,
-  InputGroup,
-  InputRightElement,
-} from "@chakra-ui/react";
-import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
+import axios from "axios";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/app/context/AuthContext";
-
+import Link from "next/link";
+import { Input } from "@/components/ui/input";
+import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
+import { BackgroundBeams } from "@/components/ui/background-beams";
 const SignupPage = () => {
-  const router = useRouter(); // This should work now
-  const {authenticate} = useAuth();
-  const [showPassword, setShowPassword] = useState(false);
+  const router = useRouter();
+  const { authenticate } = useAuth();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     password: "",
     confirmPassword: "",
   });
-  const toast = useToast();
+  const [showPassword, setShowPassword] = useState({
+    password: false,
+    confirmPassword: false,
+  });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -39,164 +30,173 @@ const SignupPage = () => {
     }));
   };
 
-  const handleSubmit =async (e) => {
+  const togglePasswordVisibility = (field) => {
+    setShowPassword((prev) => ({
+      ...prev,
+      [field]: !prev[field],
+    }));
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const { name, email, password, confirmPassword } = formData;
-     // Validation: Check if passwords match
-     if (password !== confirmPassword) {
-      toast({
-        title: "Error",
-        description: "Passwords don't match.",
-        status: "error",
-        duration: 3000,
-        isClosable: true,
-      });
+
+    if (password !== confirmPassword) {
+      alert("Passwords do not match!");
       return;
     }
+
     try {
-        const {data} = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/api/auth`,{name,email,password, action: 'signup',})
-        if(data){
-          
-            toast({
-              title: "Success",
-              description: "Account created successfully!",
-              status: "success",
-              duration: 3000,
-              isClosable: true,
-            });
-            router.push('/login')
-        }
-        
+      const { data } = await axios.post(
+        `${process.env.NEXT_PUBLIC_API_URL}/api/auth`,
+        { name, email, password, action: "signup" }
+      );
+      if (data) {
+        alert("Account created successfully!");
+        router.push("/login");
+      }
     } catch (error) {
-        console.log(error,"Sing up error")
-        toast({
-          title: "User not add",
-          description: "Internal server error ",
-          status: "error",
-          duration: 3000,
-          isClosable: true,
-        });
+      console.error("Sign up error:", error);
+      alert("Internal server error. Please try again later.");
     }
-
-   
-
   };
-  useEffect(()=>{
-    if(authenticate){
-      router.push('/')
+
+  useEffect(() => {
+    if (authenticate) {
+      router.push("/");
     }
-      },[authenticate,router])
+  }, [authenticate, router]);
 
   return (
-    <Box
-      display="flex"
-      justifyContent="center"
-      alignItems="center"
-      minHeight="100vh"
-      bg="gray.50"
-      px={4}
-      className="dark:bg-background"
-    >
-      <Box
-        maxW="md"
-        w="full"
-        bg="white"
-        boxShadow="lg"
-        p={6}
-        rounded="lg"
-        textAlign="center"
-        className="dark:bg-gray-900 text-foreground"
-      >
-        <Heading as="h1" size="xl" mb={4}>
+    <div className="flex items-center justify-center min-h-screen bg-gray-50 dark:bg-gray-900 relative px-4">
+      <div className="w-full z-10 max-w-md bg-white dark:bg-transparent border border-opacity-50 border-slate-400  rounded-lg shadow-lg p-6">
+        <h1 className="text-2xl font-bold text-gray-800 dark:text-white text-center mb-4">
           Sign Up
-        </Heading>
-        <Text mb={8}>Create a new account</Text>
-
-        <form onSubmit={handleSubmit} >
-          <Stack spacing={4}>
-            {/* Name */}
-            <FormControl id="name" isRequired>
-              <FormLabel>Full Name</FormLabel>
-              <Input
-                type="text"
-                placeholder="Enter your name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-              />
-            </FormControl>
-
-            {/* Email */}
-            <FormControl id="email" isRequired>
-              <FormLabel>Email address</FormLabel>
-              <Input
-                type="email"
-                placeholder="Enter your email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-              />
-            </FormControl>
-
-            {/* Password */}
-            <FormControl id="password" isRequired>
-              <FormLabel>Password</FormLabel>
-              <InputGroup>
-                <Input
-                  type={showPassword ? "text" : "password"}
-                  placeholder="Enter your password"
-                  name="password"
-                  value={formData.password}
-                  onChange={handleChange}
-                />
-                <InputRightElement h={"full"}>
-                  <Button
-                    variant={"ghost"}
-                    onClick={() => setShowPassword(!showPassword)}
-                  >
-                    {showPassword ? <ViewOffIcon  className="dark:text-foreground" /> : <ViewIcon className="dark:text-foreground" />}
-                  </Button>
-                </InputRightElement>
-              </InputGroup>
-            </FormControl>
-
-            {/* Confirm Password */}
-            <FormControl id="confirmPassword" isRequired>
-              <FormLabel>Confirm Password</FormLabel>
-              <InputGroup>
-                <Input
-                  type={showPassword ? "text" : "password"}
-                  placeholder="Confirm your password"
-                  name="confirmPassword"
-                  value={formData.confirmPassword}
-                  onChange={handleChange}
-                />
-                <InputRightElement h={"full"}>
-                  <Button
-                    variant={"ghost"}
-                    onClick={() => setShowPassword(!showPassword)}
-                  >
-                    {showPassword ? <ViewOffIcon className="dark:text-foreground"/> : <ViewIcon className="dark:text-foreground"/>}
-                  </Button>
-                </InputRightElement>
-              </InputGroup>
-            </FormControl>
-
-            {/* Sign Up Button */}
-            <Button
-              type="submit"
-              colorScheme="blue"
-              size="lg"
-              fontSize="md"
-              mt={4}
-              w="full"
+        </h1>
+        <p className="text-gray-600 dark:text-gray-400 text-center mb-6">
+          Create a new account
+        </p>
+        <form onSubmit={handleSubmit}>
+          {/* Name */}
+          <div className="mb-4">
+            <label
+              htmlFor="name"
+              className="block text-sm font-medium text-gray-700 dark:text-gray-300"
             >
-              Sign Up
-            </Button>
-          </Stack>
+              Full Name
+            </label>
+            <Input
+              type="text"
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="Your Name"
+              required
+            />
+          </div>
+
+          {/* Email */}
+          <div className="mb-4">
+            <label
+              htmlFor="email"
+              className="block text-sm font-medium text-gray-700 dark:text-gray-300"
+            >
+              Email Address
+            </label>
+            <Input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="Your Email"
+              required
+            />
+          </div>
+
+          {/* Password */}
+          <div className="mb-4">
+            <label
+              htmlFor="password"
+              className="block text-sm font-medium text-gray-700 dark:text-gray-300"
+            >
+              Password
+            </label>
+            <div className="relative">
+              <Input
+                type={showPassword.password ? "text" : "password"}
+                id="password"
+                name="password"
+                value={formData.password}
+                onChange={handleChange}
+                className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                placeholder="Your Password"
+                required
+              />
+              <button
+                type="button"
+                className="absolute inset-y-0 right-3 flex items-center text-gray-500 dark:text-gray-400"
+                onClick={() => togglePasswordVisibility("password")}
+              >
+                {showPassword.password ?  <ViewOffIcon className="h-5 w-5" /> :  <ViewIcon className="h-5 w-5" />}
+              </button>
+            </div>
+          </div>
+
+          {/* Confirm Password */}
+          <div className="mb-4">
+            <label
+              htmlFor="confirmPassword"
+              className="block text-sm font-medium text-gray-700 dark:text-gray-300"
+            >
+              Confirm Password
+            </label>
+            <div className="relative">
+              <Input
+                type={showPassword.confirmPassword ? "text" : "password"}
+                id="confirmPassword"
+                name="confirmPassword"
+                value={formData.confirmPassword}
+                onChange={handleChange}
+                className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                placeholder="Confirm Your Password"
+                required
+              />
+              <button
+                type="button"
+                className="absolute inset-y-0 right-3 flex items-center text-gray-500 dark:text-gray-400"
+                onClick={() => togglePasswordVisibility("confirmPassword")}
+              >
+                {showPassword.confirmPassword ? <ViewOffIcon className="h-5 w-5" /> :  <ViewIcon className="h-5 w-5" />}
+              </button>
+            </div>
+          </div>
+
+          {/* Submit Button */}
+          <button
+            type="submit"
+            className="w-full py-2 text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          >
+            Sign Up
+          </button>
         </form>
-      </Box>
-    </Box>
+        <div className="flex items-center justify-center mt-6">
+          <p className="text-sm text-gray-600 dark:text-gray-400">
+            Already have an account?{" "}
+            <Link
+              href="/login"
+              className="text-blue-600 hover:underline dark:text-blue-400"
+            >
+              Sign In
+            </Link>
+          </p>
+        </div>
+      </div>
+      <BackgroundBeams/>
+    </div>
   );
 };
 

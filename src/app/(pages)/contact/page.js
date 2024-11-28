@@ -1,8 +1,8 @@
 'use client';
 import Link from 'next/link';
 import React, { useEffect, useRef, useState } from 'react';
-import { CgMail } from "react-icons/cg";
-import { FaPhone } from "react-icons/fa6";
+import { Phone, Mail } from 'lucide-react';
+
 import { AiFillInstagram } from "react-icons/ai";
 import { IoLogoLinkedin, IoMail } from "react-icons/io5";
 import { useAuth } from '@/app/context/AuthContext';
@@ -11,6 +11,10 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useToast } from '@chakra-ui/react';
 import Image from 'next/image';
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/moving-border';
+import Heading from '@/app/_components/Heading';
+
 const Contact = () => {
   const form = useRef();
   const { authenticate, user } = useAuth();
@@ -109,8 +113,9 @@ const Contact = () => {
     <div className="bg-gray-100 dark:bg-background dotted-background py-12">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-800 dark:text-gray-200">Contact Us</h1>
-          <p className="mt-4 text-gray-600 dark:text-gray-300">
+          <h1 className="text-4xl font-bold text-gray-800 dark:text-gray-200"></h1>
+          <Heading word={'Contact Us'} />
+          <p className="text-center text-lg md:text-xl font-medium text-gray-600 dark:text-gray-400 mt-4">
             We'd love to hear from you! Whether you have a question about services, pricing, or anything else, feel free to reach out.
           </p>
         </div>
@@ -119,14 +124,14 @@ const Contact = () => {
           <div className="w-full lg:w-1/2 md:p-4 ">
             <div className="bg-white dark:bg-gray-900 shadow-lg rounded-lg p-4 md:p-8" data-aos="fade-up"
               data-aos-delay={100}>
-              <h2 className="text-2xl font-semibold text-gray-800 mb-6 dark:text-gray-300">Get in Touch</h2>
+              <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-indigo-500 text-left">Get in Touch</h2>
 
               <form ref={form} onSubmit={sendEmail}>
                 <div className="mb-4">
                   <label className="block text-gray-700 dark:text-gray-400 text-sm font-bold mb-2" htmlFor="name">
                     Full Name
                   </label>
-                  <input
+                  <Input
 
                     type="text"
                     id="name"
@@ -142,7 +147,7 @@ const Contact = () => {
                   <label className="block text-gray-700 dark:text-gray-400 text-sm font-bold mb-2" htmlFor="email">
                     Email Address
                   </label>
-                  <input
+                  <Input
 
                     type="email"
                     id="email"
@@ -158,7 +163,7 @@ const Contact = () => {
                   <label className="block text-gray-700 dark:text-gray-400 text-sm font-bold mb-2" htmlFor="text">
                     Phone
                   </label>
-                  <input
+                  <Input
 
                     type="phone"
                     id="phone"
@@ -181,7 +186,11 @@ const Contact = () => {
                       name="plan"
                       value={formData.plan}
                       onChange={inputHandler}
-                      className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 "
+                      className="bg-gradient-to-br w-full dark:text-white rounded-md px-3 py-2 focus:outline-none focus:ring-2 
+                      dark:bg-zinc-800
+                      bg-neutral-200 text-gray-800
+                     
+                     "
                       required
                     >
 
@@ -199,7 +208,9 @@ const Contact = () => {
                       name="siteType"
                       value={formData.siteType}
                       onChange={inputHandler}
-                      className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 "
+                      className="bg-gradient-to-br w-full dark:text-white rounded-md px-3 py-2 focus:outline-none focus:ring-2 
+                      dark:bg-zinc-800
+                      bg-neutral-200 text-gray-800 "
                       required
                     >
 
@@ -221,20 +232,23 @@ const Contact = () => {
                     rows="5"
                     value={formData.message}
                     onChange={inputHandler}
-                    className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 "
+                    className="bg-gradient-to-br w-full dark:text-white rounded-md px-3 py-2 focus:outline-none focus:ring-2 
+                    dark:bg-zinc-800
+                    bg-neutral-200 text-gray-800 "
                     placeholder="Your Message"
                     required
                   ></textarea>
                 </div>
 
                 <div className="text-center">
-                  <button
+                  <Button
                     type="submit"
-                    className="bg-indigo-500 text-white font-bold py-2 px-6 rounded-lg hover:bg-indigo-600 transition duration-300"
+                    borderRadius="2rem"
+                    className="bg-indigo-200 dark:bg-background font-light text-black dark:text-white border-neutral-200 dark:border-slate-800"
                     disabled={loading}
                   >
                     {loading ? 'Sending...' : 'Send Message'}
-                  </button>
+                  </Button>
                 </div>
               </form>
               {responseMessage && <p className="mt-4 text-center text-green-600">{responseMessage}</p>}
@@ -244,20 +258,21 @@ const Contact = () => {
           <div className="w-full lg:w-1/2 md:p-4 mt-2" data-aos="fade-up"
             data-aos-delay={200}>
             <div className="bg-white dark:bg-gray-900 shadow-lg dark:text-gray-300 rounded-lg p-4 md:p-8">
-              <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-300 mb-6">Contact Information</h2>
+              <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-indigo-500 text-left mb-4">Contact Information</h2>
+
               <ul className="list-none space-y-4">
                 <li className="flex items-center">
-                  <FaPhone className='text-indigo-500 w-5 h-5 mr-2' />
+                  <Phone className='text-green-500 w-5 h-5 mr-2' />
                   <span>+91 6398401607</span>
                 </li>
                 <li className="flex items-center">
-                  <CgMail className='text-indigo-500 w-6 h-6 mr-2' />
+                <Mail className='text-blue-500 w-6 h-6 mr-2' /> 
                   <Link target='_blank' href="https://mail.google.com/mail/?view=cm&fs=1&to=support@techcanva.in&su=Support&body=Hello,%0A%0AI%20would%20like%20to%20inquire%20about..." className="text-indigo-500 hover:underline">
                     support@techcanva.in
                   </Link>
                 </li>
                 <li className="flex items-center">
-                  <CgMail className='text-indigo-500 w-6 h-6 mr-2' />
+                <Mail className='text-blue-500 w-6 h-6 mr-2' />
                   <Link target='_blank' href="https://mail.google.com/mail/?view=cm&fs=1&to=info@techcanva.in&su=Support&body=Hello,%0A%0AI%20would%20like%20to%20inquire%20about..." className="text-indigo-500 hover:underline">
                     info@techcanva.in
                   </Link>
@@ -267,7 +282,7 @@ const Contact = () => {
               <div className="mt-8">
                 <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-300">Follow Us</h2>
                 <div className="flex space-x-4 mt-4">
-                  <Link target='_blank' href="https://www.instagram.com/manankumar_06/?igsh=NzQxYzZiM3o3aWdw" className="text-gray-500 hover:text-indigo-500 transition">
+                  <Link target='_blank' href="https://www.instagram.com/manankumar_06/?igsh=NzQxYzZiM3o3aWdw" className="text-gray-500 hover:text-purple-500 transition">
                     <AiFillInstagram className='w-6 h-6' />
                   </Link>
                   <Link target='_blank' href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile" className="text-gray-500 hover:text-indigo-500 transition">
@@ -276,7 +291,7 @@ const Contact = () => {
                   <Link
                     href="https://mail.google.com/mail/?view=cm&fs=1&to=support@techcanva.com&su=Support&body=Hello,%0A%0AI%20would%20like%20to%20inquire%20about..."
                     target="_blank"
-                    className="text-gray-500 hover:text-indigo-500 transition"
+                    className="text-gray-500 hover:text-yellow-500 transition"
                   >
                     <IoMail className='w-6 h-6' />
                   </Link>
@@ -294,6 +309,7 @@ const Contact = () => {
 
         </div>
       </div>
+   
     </div>
   );
 };
