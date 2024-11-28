@@ -1,51 +1,44 @@
 'use client';
-import React from 'react';
+
+import React, { useState, useEffect } from 'react';
 import Countdown from 'react-countdown';
 
-// CountdownTimer component
-export const CountdownTimer = ({ durationInDays }) => {
+const CountdownTimer = ({ durationInDays }) => {
+  const [targetDate, setTargetDate] = useState(null);
 
-  // Function to calculate the target end date considering the current time
-  function getTargetEndDate(durationInDays) {
+  // Calculate the target date only on the client side
+  useEffect(() => {
     const now = new Date();
-   
-    const targetDate = new Date(now);
-    targetDate.setDate(now.getDate() + durationInDays);
-   
+    const calculatedDate = new Date(now);
+    calculatedDate.setDate(now.getDate() + durationInDays);
 
-    // If current time is before the target time, adjust to the current time
-    if (now.getHours() < targetDate.getHours()) {
-      targetDate.setHours(now.getHours(), now.getMinutes(), now.getSeconds());
-    } else {
-      // If current time is after the target time, set it to the end of the target day
-      targetDate.setHours(23, 59, 59); // End of day
-    }
-    
-    return targetDate;
+    // Adjust to the end of the day
+    calculatedDate.setHours(23, 59, 59);
+    setTargetDate(calculatedDate);
+  }, [durationInDays]);
+
+  // While the targetDate is being calculated, show a loading state
+  if (!targetDate) {
+    return <p className="text-gray-500 font-semibold mt-4">Loading...</p>;
   }
-
-  const targetDate = getTargetEndDate(durationInDays);
- 
 
   return (
     <div className="text-red-600 text-2xl dark:text-yellow-500 font-semibold mt-4">
-    
-      <Countdown 
-        date={targetDate} 
-        daysInHours={true} // Optional: This will show hours in days
+      <Countdown
+        date={targetDate}
+        daysInHours={true}
         renderer={({ days, hours, minutes, seconds, completed }) => {
           if (completed) {
             return (
               <p className="text-red-600 font-bold mt-4">
-                Offer ends in  : 
-                <span>  {days}d {hours}h {minutes}m {seconds}s</span>
+                Offer has ended!
               </p>
             );
           }
-          // This is the live countdown timer, displayed until the offer ends
+
           return (
             <p className="text-yellow-500 font-bold mt-4">
-              Offer ends in : 
+              Offer ends in:
               <span> {days}d {hours}h {minutes}m {seconds}s</span>
             </p>
           );

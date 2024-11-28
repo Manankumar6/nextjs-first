@@ -23,17 +23,17 @@ const Navbar = () => {
           </span>
         </Link>
         <nav className="md:ml-auto flex gap-2 flex-wrap items-center text-base justify-center">
-          <ModeToggle />
+          {/* <ModeToggle /> */}
           <Link href='/' className={pathname === '/' ? "border-b-2 border-blue-500 mr-5 hover:text-gray-500" : "mr-5 hover:text-gray-500"}>Home</Link>
           <Link href='/about' className={pathname === '/about' ? "border-b-2 border-blue-500 mr-5 hover:text-gray-500" : "mr-5 hover:text-gray-500"}>About</Link>
-          <Link href='/service' className={pathname === '/service' ? "border-b-2 border-blue-500 mr-5 hover:text-gray-500" : "mr-5 hover:text-gray-500"}>Service</Link>
+          <Link href='/pricing' className={pathname === '/pricing' ? "border-b-2 border-blue-500 mr-5 hover:text-gray-500" : "mr-5 hover:text-gray-500"}>Pricing</Link>
           <Link href='/contact' className={pathname === '/contact' ? "border-b-2 border-blue-500 mr-5 hover:text-gray-500" : "mr-5 hover:text-gray-500"}>Contact</Link>
          
 
 
           {!authenticate ? <>
             <Link href='/login' className="mr-5 hover:text-gray-500">Log in</Link>
-            <Link href='/signup' className="mr-5 hover:text-gray-500">Sign up</Link>
+            {/* <Link href='/signup' className="mr-5 hover:text-gray-500">Sign up</Link> */}
           </>
             :
             <>

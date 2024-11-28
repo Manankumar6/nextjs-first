@@ -55,7 +55,7 @@ export async function GET() {
 
     // Fetch all feedback entries
     const feedbacks = await Feedback.find({isDeleted:false});
-
+    
     // Return the feedbacks as JSON
     return new Response(JSON.stringify(feedbacks), {
       status: 200,

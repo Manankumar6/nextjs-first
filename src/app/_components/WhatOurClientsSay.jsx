@@ -62,7 +62,7 @@ const WhatOurClientsSay = () => {
 
   return (
     <section className="dark:bg-gray-900 px-6 py-12 text-center">
-      <h2 className="text-3xl text-foreground font-semibold">What Our Clients Say</h2>
+      <h2 className="text-4xl sm:text-6xl font-bold relative mt-5 z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-8  text-center">What Our Clients Say</h2>
       <Carousel
         opts={{
           align: 'start',
@@ -85,7 +85,7 @@ const WhatOurClientsSay = () => {
                   </button>}
                   <CardContent className="flex flex-col h-full items-center justify-center p-4">
                     <span>{feed.feedback}</span>
-                    <p className="text-right italic">-{feed.name}</p>
+                    <p className="text-right mt-2 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 italic">-{feed.name}</p>
                   </CardContent>
                 </Card>
               </div>
