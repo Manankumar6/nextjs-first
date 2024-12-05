@@ -66,7 +66,7 @@ const WhyChooseUs = () => {
               <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200">
                 {item.title}
               </h3>
-              <p className="text-gray-600 dark:text-gray-400 text-sm mt-2 text-pretty">
+              <p className="text-gray-600 dark:text-gray-400 text-sm mt-2 text-justify">
                 {item.description}
               </p>
             </div>
