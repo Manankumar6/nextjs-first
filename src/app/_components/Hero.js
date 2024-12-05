@@ -67,12 +67,10 @@ const Hero = () => {
               duration: 0.8,
               ease: "easeInOut",
             }}
-            className="text-sm md:text-lg text-muted-foreground max-w-4xl"
+            className="text-sm md:text-lg text-muted-foreground text-center max-w-4xl"
           >
-            Looking for an experienced MERN Stack developer to bring your web project to life? With over{' '}
-            <span className="font-bold">5</span> years of expertise in full-stack development, we specialize in
-            building dynamic, responsive, and scalable web applications that deliver exceptional user experiences
-            and meet the demands of modern businesses.
+           Crafting Modern Web Solutions with MERN Stack Expertise
+           We deliver high-quality, responsive, and scalable web applications to enhance your business's online presence.
           </motion.p>
         </LampContainer>
 

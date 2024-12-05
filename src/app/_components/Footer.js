@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { IoMail } from "react-icons/io5";
+import { Mail } from 'lucide-react';
 const Footer = () => {
   return (
     <footer className="text-foreground body-font bg-muted dark:bg-background dotted-background">
@@ -14,73 +15,85 @@ const Footer = () => {
           </Link>
           <b className='text-xl mt-2'>TechCanva</b>
           <p className="text-[10px] tracking-widest mt-1">Your Vision, Our Canvas</p>
-          <p className='text-[1rem] text-balance'>India’s no. 1 in Web Development, offering unique, quality websites and engaging animations at affordable prices.</p>
+          <p className='text-[1rem] text-balance'>India's #1 in Web Development, delivering quality websites with engaging animations at great prices.</p>
         </div>
 
         <div className="flex-grow flex  flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
-
-          <div className="lg:w-1/4 md:w-1/2 w-full px-4 text-center">
-            <h2 className="title-font font-medium text-gray-900 dark:text-gray-300 tracking-widest text-sm mb-3">SUPPORT</h2>
-            <nav className="list-none mb-10">
-              <li>
-                <Link href="/contact" className="text-gray-600 hover:text-gray-800">Contact Us</Link>
-              </li>
-             
-              <li>
-                <Link href="/termandcondition" className="text-gray-600 hover:text-gray-800">Terms of Service</Link>
-              </li>
-              <li>
-                <Link href="/refund" className="text-gray-600 hover:text-gray-800">Refund Policy</Link>
-              </li>
-              <li>
-                <Link href="/privacy" className="text-gray-600 hover:text-gray-800">Privacy Policy</Link>
-              </li>
-            </nav>
-          </div>
-          <div className="lg:w-1/4 md:w-1/2 w-full px-4 text-center">
-            <h2 className="title-font font-medium text-gray-900 dark:text-gray-300  tracking-widest text-sm mb-3">CONNECT</h2>
-            <nav className="list-none mb-10">
-              <li>
-                <Link href="/contact" className="text-gray-600 hover:text-gray-800">Get in Touch</Link>
-              </li>
-              <li>
-                <Link href="/feedback" className="text-gray-600 hover:text-gray-800">Feedback</Link>
-              </li>
-              {/* <li>
-                <Link href="/newsletter" className="text-gray-600 hover:text-gray-800">Newsletter</Link>
-              </li> */}
-              <li>
-                <Link href="/events" className="text-gray-600 hover:text-gray-800">Events</Link>
-              </li>
-            </nav>
-          </div>
-          <div className="lg:w-1/4 md:w-1/2 w-full px-4 text-center">
+        <div className="lg:w-1/4 md:w-1/2 w-full px-4 text-center md:text-left">
             <h2 className="title-font font-medium text-gray-900 dark:text-gray-300  tracking-widest text-sm mb-3">ABOUT US</h2>
             <nav className="list-none mb-10">
-              {/* <li>
-                <Link href="/about" className="text-gray-600 hover:text-gray-800">Our Story</Link>
-              </li> */}
-              {/* <li>
-                <Link href="/team" className="text-gray-600 hover:text-gray-800">Our Team</Link>
-              </li> */}
-              {/* <li>
-                <Link href="/careers" className="text-gray-600 hover:text-gray-800">Careers</Link>
-              </li> */}
+           
               <li>
-                <Link href="/blog" className="text-gray-600 hover:text-gray-800">Blog</Link>
+                <Link href="/about" className="text-gray-500 hover:text-gray-300">About</Link>
+              </li>
+              <li>
+                <Link href="/services" className="text-gray-500 hover:text-gray-300">Services</Link>
+              </li>
+              <li>
+                <Link href="/blog" className="text-gray-500 hover:text-gray-300">Blog</Link>
+              </li>
+              <li>
+                <Link href="/contact" className="text-gray-500 hover:text-gray-300">Contact Us</Link>
               </li>
             </nav>
           </div>
+          <div className="lg:w-1/4 md:w-1/2 w-full px-4 text-center md:text-left">
+            <h2 className="title-font font-medium text-gray-900 dark:text-gray-300  tracking-widest text-sm mb-3">CONNECT WITH US</h2>
+            <nav className="list-none mb-10">
+              <li>
+                <Link href="/contact" className="text-gray-500 hover:text-gray-300">Get in Touch</Link>
+              </li>
+              
+              <li>
+                <Link href="/feedback" className="text-gray-500 hover:text-gray-300">Feedback</Link>
+              </li>
+            
+              <li>
+                <Link href="/events" className="text-gray-500 hover:text-gray-300">Events</Link>
+              </li>
+              <li className="flex items-center">
+                <Mail className="text-gray-500 hover:text-gray-300" /> 
+                  <Link target='_blank' href="https://mail.google.com/mail/?view=cm&fs=1&to=support@techcanva.in&su=Support&body=Hello,%0A%0AI%20would%20like%20to%20inquire%20about..." className="text-indigo-500 hover:underline ms-2">
+                    support@techcanva.in
+                  </Link>
+                </li>
+                <li className="flex items-center">
+                <Mail className="text-gray-500 hover:text-gray-300" /> 
+                  <Link target='_blank' href="https://mail.google.com/mail/?view=cm&fs=1&to=support@techcanva.in&su=Support&body=Hello,%0A%0AI%20would%20like%20to%20inquire%20about..." className="text-indigo-500 hover:underlin ms-2">
+                    info@techcanva.in
+                  </Link>
+                </li>
+            </nav>
+          </div>
+          <div className="lg:w-1/4 md:w-1/2 w-full px-4 text-center md:text-left">
+            <h2 className="title-font font-medium text-gray-900 dark:text-gray-300 tracking-widest text-sm mb-3">SUPPORT</h2>
+            <nav className="list-none mb-10">
+             
+             
+             
+              <li>
+                <Link href="/refund" className="text-gray-500 hover:text-gray-300">Refund Policy</Link>
+              </li>
+              <li>
+                <Link href="/privacy" className="text-gray-500 hover:text-gray-300">Privacy Policy</Link>
+              </li>
+              <li>
+                <Link href="/termandcondition" className="text-gray-500 hover:text-gray-300">Terms of Service</Link>
+              </li>
+            </nav>
+          </div>
+        
+         
 
         </div>
       </div>
       <div className="bg-background">
-        <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+        <div className="container mx-auto py-4 px-5 my-auto flex flex-wrap flex-col sm:flex-row">
           <p className="text-gray-500 text-sm text-center sm:text-left">© 2024 TechCanva —
-           <span>All Right Reserved</span>
+           <span> techcanva.in</span>
           </p>
           <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
-            <Link href="#" className="text-gray-500">
+            <Link href="https://www.facebook.com/manan.kumar.144734/" target='_blank' className="text-gray-500">
               <svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
                 <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
               </svg>
