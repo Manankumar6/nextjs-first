@@ -27,7 +27,7 @@ const Footer = () => {
                 <Link href="/about" className="text-gray-500 hover:text-gray-300">About</Link>
               </li>
               <li>
-                <Link href="/services" className="text-gray-500 hover:text-gray-300">Services</Link>
+                <Link href="/about" className="text-gray-500 hover:text-gray-300">Services</Link>
               </li>
               <li>
                 <Link href="/blog" className="text-gray-500 hover:text-gray-300">Blog</Link>
@@ -51,13 +51,13 @@ const Footer = () => {
               <li>
                 <Link href="/events" className="text-gray-500 hover:text-gray-300">Events</Link>
               </li>
-              <li className="flex items-center">
+              <li className="flex items-center justify-center md:justify-normal">
                 <Mail className="text-gray-500 hover:text-gray-300" /> 
                   <Link target='_blank' href="https://mail.google.com/mail/?view=cm&fs=1&to=support@techcanva.in&su=Support&body=Hello,%0A%0AI%20would%20like%20to%20inquire%20about..." className="text-indigo-500 hover:underline ms-2">
                     support@techcanva.in
                   </Link>
                 </li>
-                <li className="flex items-center">
+                <li className="flex items-center justify-center md:justify-normal">
                 <Mail className="text-gray-500 hover:text-gray-300" /> 
                   <Link target='_blank' href="https://mail.google.com/mail/?view=cm&fs=1&to=support@techcanva.in&su=Support&body=Hello,%0A%0AI%20would%20like%20to%20inquire%20about..." className="text-indigo-500 hover:underlin ms-2">
                     info@techcanva.in

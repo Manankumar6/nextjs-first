@@ -13,9 +13,7 @@ export function TypewriterEffectSmoothDemo() {
     {
       text: "awesome",
     },
-    {
-      text: "web",
-    },
+
     {
       text: "apps",
     },
@@ -45,9 +43,9 @@ export function TypewriterEffectSmoothDemo() {
         The road to freedom starts from here
       </p>
       <TypewriterEffectSmooth words={words} />
-      <p className="text-lg text-gray-600 dark:text-gray-400">
-    Transforming your ideas into impactful digital solutions with expert web design, development, and marketing strategies.
-  </p>
+      <p className="text-lg text-justify text-gray-600 dark:text-gray-400 px-5">
+        Transforming your ideas into impactful digital solutions with expert web design, development, and marketing strategies.
+      </p>
       <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-4  px-10">
         {[
           {
