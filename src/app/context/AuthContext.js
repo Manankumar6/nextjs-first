@@ -10,7 +10,7 @@ export const AuthProvider = ({ children }) => {
     const router = useRouter();
     const [authenticate, setAuthenticate] = useState(false);
     const [user, setUser] = useState({});
-    console.log(user,"user data")
+    
     const toast = useToast();
     const [loading,setLoading] = useState(false);
     const checkAuth = async () => {
@@ -23,7 +23,7 @@ export const AuthProvider = ({ children }) => {
 
             }
         } catch (error) {
-            console.log(error);
+            // console.log(error);
             setAuthenticate(false);
 
         }
