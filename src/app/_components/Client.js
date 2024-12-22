@@ -37,7 +37,7 @@ const Client = () => {
     <section className="text-foreground body-font px-5  dark:bg-grid-small-white/[0.2] bg-background py-12 " >
       
        
-        <Heading word={'Our Completed Projects'}/>
+        <Heading word={'Our Projects Showcase'}/>
       
      
 

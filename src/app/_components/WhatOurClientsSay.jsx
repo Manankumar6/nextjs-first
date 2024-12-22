@@ -61,7 +61,7 @@ const WhatOurClientsSay = () => {
   }, [setFeedbackList]);
 
   return (
-    <section className="dark:bg-gray-900 px-6 py-12 text-center">
+    <section className="dark:bg-background dotted-background px-6 py-12 text-center">
       <h2 className="text-4xl sm:text-6xl font-bold relative mt-5 z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-8  text-center">What Our Clients Say</h2>
       <Carousel
         opts={{

@@ -6,6 +6,8 @@ import { Button } from "@/components/ui/button";
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { ModeToggle } from './ThemeButton'
+import { DropdownMenu, DropdownMenuContent, DropdownMenuTrigger ,DropdownMenuItem} from '@/components/ui/dropdown-menu';
+
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -25,22 +27,44 @@ const Navbar = () => {
         <nav className="md:ml-auto flex gap-2 flex-wrap items-center text-base justify-center">
           {/* <ModeToggle /> */}
           <Link href='/' className={pathname === '/' ? "border-b-2 border-blue-500 mr-5 hover:text-gray-500" : "mr-5 hover:text-gray-500"}>Home</Link>
-          <Link href='/about' className={pathname === '/about' ? "border-b-2 border-blue-500 mr-5 hover:text-gray-500" : "mr-5 hover:text-gray-500"}>About</Link>
+          {/* <DropdownMenu >
+            <DropdownMenuTrigger >Services</DropdownMenuTrigger>
+            <DropdownMenuContent className=' border-none'>
+              <DropdownMenuItem>
+                <Link href={'/about'}>
+                Web Development
+                </Link>
+                
+                </DropdownMenuItem>
+              <DropdownMenuItem>
+              <Link href={'/about'}>
+              Digital Marketing
+                </Link>
+             
+
+              </DropdownMenuItem>
+              <DropdownMenuItem>WordPress Site</DropdownMenuItem>
+             
+            </DropdownMenuContent>
+          </DropdownMenu> */}
+
+         
+          <Link href='/about' className={pathname === '/about' ? "border-b-2 border-blue-500 mr-5 hover:text-gray-500" : "mr-5 hover:text-gray-500"}>Services</Link>
           <Link href='/pricing' className={pathname === '/pricing' ? "border-b-2 border-blue-500 mr-5 hover:text-gray-500" : "mr-5 hover:text-gray-500"}>Pricing</Link>
-          <Link href='/contact' className={pathname === '/contact' ? "border-b-2 border-blue-500 mr-5 hover:text-gray-500" : "mr-5 hover:text-gray-500"}>Contact</Link>
+          <Link href='/contact' className={pathname === '/contact' ? "border-b-2 border-blue-500 mr-5 hover:text-gray-500" : "mr-5 hover:text-gray-500"}>Request a Quote</Link>
          
 
 
-          {!authenticate ? <>
+          {/* {!authenticate ? <>
             <Link href='/login' className="mr-5 hover:text-gray-500">Log in</Link>
-            {/* <Link href='/signup' className="mr-5 hover:text-gray-500">Sign up</Link> */}
+          
           </>
             :
             <>
 
               <Button className='bg-transparent hover:bg-transparent' onClick={logout}>Log out</Button >
             </>
-          }
+          } */}
         </nav>
 
       </div>

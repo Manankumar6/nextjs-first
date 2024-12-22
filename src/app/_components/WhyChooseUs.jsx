@@ -2,7 +2,8 @@
 
 import { SparklesCore } from "@/components/ui/sparkles";
 import React from "react";
-import { Eye, Users, Handshake, Award } from "lucide-react";
+import { Eye, Users, Handshake, Award,Globe, Monitor, Instagram, Facebook, } from "lucide-react";
+
 const WhyChooseUs = () => {
   return (
     <div className="relative flex flex-col bg-muted dark:bg-transparent  items-center justify-center h-auto pb-12 ">
@@ -57,6 +58,45 @@ const WhyChooseUs = () => {
                 "Quality is at the heart of everything we do. With a passion for innovation and a commitment to exceeding expectations, we ensure every project is executed to perfection.",
               icon: <Award className="w-8 h-8 text-yellow-500" />,
             },
+            {
+              title: "Web Design",
+              description:
+                "Craft visually stunning, user-friendly designs tailored to your brand’s identity and goals. From wireframes to prototypes, we ensure seamless user experiences that captivate and convert.",
+              icon: <Monitor className="w-8 h-8 text-blue-500" />,
+            },
+            {
+              title: "Web Development",
+              description:
+                "Develop secure, scalable, and high-performing websites for your business needs. We utilize the latest technologies to build responsive and dynamic platforms that drive growth.",
+              icon: <Globe className="w-8 h-8 text-green-500" />,
+            },
+            {
+              title: "Instagram Ads",
+              description:
+                "Boost engagement and grow your audience with impactful Instagram campaigns. We create visually appealing ads and optimize targeting to maximize ROI.",
+              icon: <Instagram className="w-8 h-8 text-pink-500" />,
+            },
+            {
+              title: "Facebook Ads",
+              description:
+                "Reach targeted audiences with innovative ad strategies on Facebook. We leverage advanced analytics and ad creatives to increase visibility and conversions.",
+              icon: <Facebook className="w-8 h-8 text-yellow-500" />,
+            },
+            {
+              title: "SEO Optimization",
+              description:
+                "Improve your search rankings with tailored SEO strategies. From keyword research to on-page optimization, we ensure higher visibility and organic traffic growth.",
+              icon: <Award className="w-8 h-8 text-purple-500" />,
+            },
+            {
+              title: "Brand Vision",
+              description:
+                "Understand and align with your brand’s vision to deliver exceptional results. We focus on building a cohesive identity that resonates with your audience and leaves a lasting impression.",
+              icon: <Eye className="w-8 h-8 text-indigo-500" />,
+            },
+           
+           
+            
           ].map((item, index) => (
             <div
               key={index}

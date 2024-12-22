@@ -116,14 +116,13 @@ const About = () => {
         <title>About Us - TechCanva</title>
         <meta name="description" content="Learn more about TechCanva, the web development services we offer, and how we help businesses grow online." />
       </Head>
-{/* Header section of about page  */}
-<GridBackgroundDemo />
-     
+
+
       {/* Hero Section */}
-      <section className="text-center py-20 px-4 bg-indigo-600 dark:bg-background dotted-background text-white">
-        <Heading word={'Our Web Services'} />
+      <section className="text-center py-20 px-4 bg-indigo-600 dark:bg-background  text-white">
+        <Heading word={'Our Services'} />
         <p className="mt-4 text-lg max-w-xl mx-auto slide-in" style={{ animationDelay: '0.2s' }}>
-          We are committed to delivering top-notch web solutions to help your business thrive online.
+        We are dedicated to providing exceptional web solutions to drive your business success online.
         </p>
       </section>
 
@@ -133,6 +132,9 @@ const About = () => {
 
 
       <div className=" dark:bg-background dark:bg-grid-small-white/[0.2]  px-4">
+
+
+
         {services.map((service, index) => (
           <div
             key={index}
@@ -151,7 +153,7 @@ const About = () => {
             </div>
             {/* Content Section */}
             <div className="w-full lg:w-1/2  text-justify lg:text-left mb-5 lg:mb-0">
-              <h3 className="text-3xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-indigo-500">{service.title}</h3>
+              <h3 className="text-3xl font-bold text-left bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-indigo-500">{service.title}</h3>
               <p className="mt-4 text-gray-600 dark:text-gray-400">{service.text}</p>
             </div>
           </div>
@@ -167,7 +169,7 @@ const About = () => {
         <p className="text-4xl sm:text-6xl font-bold relative mt-5 z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-8  text-center">
           Power Up Your Presence With
         </p>
-      
+
 
 
         <div className='flex justify-start w-full flex-col px-4 md:px-16'>
@@ -230,38 +232,39 @@ const About = () => {
         </div>
       </div>
 
- 
+
 
       {/* What Our Client Say Component  */}
-       <WhatOurClientsSay />
-        <Client/>
-        <OurProject/>
-
- {/* Call to Action Section */}
+      <WhatOurClientsSay />
+      <Client />
+      <OurProject />
+      {/* Header section of about page  */}
+      <GridBackgroundDemo />
+      {/* Call to Action Section */}
       <section className="bg-indigo-600 dark:bg-background relative dark:bg-grid-small-white/[0.2] dark:text-gray-300 text-white py-16">
-  {/* Radial gradient for the container to give a faded look */}
-  <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] z-10"></div>
+        {/* Radial gradient for the container to give a faded look */}
+        <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] z-10"></div>
 
-  {/* Text container */}
-  <div className="container mx-auto px-6 text-center relative z-20">
-    <h2 className="text-xl font-semibold">Ready to Grow Your Business?</h2>
-    <h1 className="text-4xl md:text-4xl lg:text-6xl font-semibold max-w-7xl mx-auto text-center mt-1 py-3 relative bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white">
-      Build amazing websites <br /> at <Cover>warp speed</Cover>
-    </h1>
-    <p className="my-4 max-w-lg mx-auto text-sm">
-      Contact us today to discuss how we can help bring your vision to life with tailored web solutions.
-    </p>
-    <Link href="/contact">
-      <Button
-        borderRadius="2rem"
-        className="bg-indigo-200 dark:bg-transparent font-light text-black dark:text-white border-neutral-200 dark:border-slate-800">
-        Get in Touch
-      </Button>
-    </Link>
-  </div>
-</section>
+        {/* Text container */}
+        <div className="container mx-auto px-6 text-center relative z-20">
+          <h2 className="text-xl font-semibold">Ready to Grow Your Business?</h2>
+          <h1 className="text-4xl md:text-4xl lg:text-6xl font-semibold max-w-7xl mx-auto text-center mt-1 py-3 relative bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white">
+            Build amazing websites <br /> at <Cover>warp speed</Cover>
+          </h1>
+          <p className="my-4 max-w-lg mx-auto text-sm">
+            Contact us today to discuss how we can help bring your vision to life with tailored web solutions.
+          </p>
+          <Link href="/contact">
+            <Button
+              borderRadius="2rem"
+              className="bg-indigo-200 dark:bg-transparent font-light text-black dark:text-white border-neutral-200 dark:border-slate-800">
+              Get in Touch
+            </Button>
+          </Link>
+        </div>
+      </section>
 
-   
+
 
     </div>
   );
