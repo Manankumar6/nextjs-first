@@ -69,8 +69,8 @@ const Hero = () => {
             }}
             className="text-sm md:text-lg text-muted-foreground text-center max-w-4xl"
           >
-           Crafting Modern Web Solutions with MERN Stack Expertise
-           We deliver high-quality, responsive, and scalable web applications to enhance your business's online presence.
+        Transforming Digital Experiences with Comprehensive Web Solutions
+        We specialize in web design, development, WordPress sites, and digital marketing to build responsive, scalable, and SEO-optimized solutions that drive growth and enhance your online presence.
           </motion.p>
         </LampContainer>
 

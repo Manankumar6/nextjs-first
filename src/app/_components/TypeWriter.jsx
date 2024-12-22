@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/moving-border";
 import { SparklesCore } from "@/components/ui/sparkles";
 import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
 import Link from "next/link";
-import { Eye, Users, Handshake, Award, Globe, Monitor, Instagram, Facebook } from "lucide-react";
+import { Eye, Users, Handshake, Award, Globe, Monitor, Instagram, Facebook, CheckIcon, CircleCheckIcon } from "lucide-react";
 
 export function TypewriterEffectSmoothDemo() {
   const words = [
@@ -25,6 +25,141 @@ export function TypewriterEffectSmoothDemo() {
       className: "text-blue-500 dark:text-blue-500",
     },
   ];
+
+
+  const webdev = [
+    {
+      heading: "Startup Business Website",
+      lists: [
+        "5 pages Website",
+        "1 Year Free Domain",
+        "1 Year Free Hosting",
+        "Free SSL Certificates",
+        "Social Media Integration",
+        "Inquiry Form",
+        "Technical Support"
+      ]
+    },
+    {
+      heading: "E-Commerce Website",
+      lists: [
+        "Dynamic Website",
+        "Admin Access",
+        "100% Responsive Website",
+        "Social Media Integration",
+        "1 Year Free Domain",
+        "1 Year Free Hosting",
+        "Free SSL Certificates"
+      ]
+    },
+    {
+      heading: "Custom Website",
+      lists: [
+        "Multi Page Website",
+        "Dynamic Website",
+        "Admin Access",
+        "100% Responsive Website",
+        "Social Media Integration",
+        "1 Year Free Domain",
+        "1 Year Free Hosting",
+        "Free SSL Certificates",
+        "Facebook & Instagram Ads"
+      ]
+    },
+    {
+      heading: "Portfolio Website",
+      lists: [
+        "Personalized Design",
+        "One Page Website",
+        "Fast Loading Speed",
+        "Responsive Layout",
+        "Social Media Integration",
+        "Free SSL Certificates",
+        "1 Year Free Hosting",
+        "Contact Form"
+      ]
+    },
+    {
+      heading: "Educational Website",
+      lists: [
+        "Dynamic Course Pages",
+        "Student Login",
+        "Admin Panel",
+        "Video Integration",
+        "100% Responsive Design",
+        "1 Year Free Domain",
+        "1 Year Free Hosting",
+        "Free SSL Certificates"
+      ]
+    },
+    {
+      heading: "Blog Website",
+      lists: [
+        "Customizable Design",
+        "SEO-Ready Structure",
+        "Social Sharing Features",
+        "100% Responsive Layout",
+        "1 Year Free Domain",
+        "1 Year Free Hosting",
+        "Free SSL Certificates",
+        "Content Management System"
+      ]
+    }
+  ];
+
+  const digitalMarketing = [
+    {
+      heading: "Facebook & Instagram Ads",
+      para: "Leverage the power of social media to boost brand awareness, generate leads, and drive sales with highly targeted campaigns on Facebook and Instagram. Our strategy ensures your ads reach the right audience at the right time."
+    },
+    {
+      heading: "Google Ads",
+      para: "Maximize your online visibility and ROI with Google Ads. Our PPC experts create and optimize search, display, and shopping campaigns to put your business in front of customers actively searching for your services."
+    },
+    {
+      heading: "Search Engine Optimization",
+      para: "Enhance your website's organic rankings with our comprehensive SEO services. From keyword research to on-page and off-page optimization, we ensure your business stays ahead of the competition in search engine results."
+    },
+    {
+      heading: "Content Marketing",
+      para: "Engage your audience with high-quality, compelling content that builds trust and drives conversions. From blog posts to infographics, we create content that resonates with your audience."
+    },
+    {
+      heading: "Email Marketing",
+      para: "Stay connected with your audience through personalized and impactful email campaigns. We design and manage campaigns that drive engagement, nurture leads, and boost customer retention."
+    },
+
+  ];
+
+  const wordpressServices = [
+    {
+      heading: "Custom WordPress Development",
+      para: "Get a fully customized WordPress website tailored to your business needs. Our team builds responsive, fast, and scalable websites with unique designs and functionality."
+    },
+    {
+      heading: "WordPress Theme Customization",
+      para: "Transform your chosen theme into a unique design that aligns perfectly with your brand identity. We ensure your website stands out and delivers a seamless user experience."
+    },
+    {
+      heading: "WooCommerce Integration",
+      para: "Turn your WordPress site into a powerful e-commerce platform with WooCommerce. We set up, configure, and optimize your online store for maximum sales and performance."
+    },
+    {
+      heading: "WordPress Maintenance & Support",
+      para: "Keep your website secure and up-to-date with our ongoing WordPress maintenance services. We handle updates, backups, performance optimization, and more."
+    },
+    {
+      heading: "WordPress SEO Optimization",
+      para: "Boost your website's organic traffic with our WordPress-specific SEO services. From optimizing content to technical SEO fixes, we help improve your search rankings."
+    },
+    {
+      heading: "Plugin Development & Customization",
+      para: "Extend your website’s functionality with custom WordPress plugins. Whether you need a plugin built from scratch or modifications to existing ones, we've got you covered."
+    }
+  ];
+
+
+
   return (
     (<div className="flex relative  flex-col items-center justify-center py-16  ">
       <div className="w-full absolute inset-0 h-auto">
@@ -46,7 +181,97 @@ export function TypewriterEffectSmoothDemo() {
       <p className="text-lg text-justify text-gray-600 dark:text-gray-400 px-5">
         Transforming your ideas into impactful digital solutions with expert web design, development, and marketing strategies.
       </p>
-      <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-4  px-10">
+
+      <div className="w-full my-5 z-20 relative overflow-hidden">
+        <div
+          className="md:ml-12 p-6 md:p-8 text-lg md:text-xl font-extrabold bg-gray-800 w-[30rem] md:w-[35rem] "
+          style={{
+            clipPath: "polygon(0 0, 62% 0, 80% 100%, 0% 100%)",
+          }}
+        >
+          <p className=" bg-clip-text text-transparent bg-gradient-to-b from-gray-600 to-gray-900 dark:from-gray-100 dark:to-blue-600">Web Design & Web Development</p>
+        </div>
+        {/* Full-width bottom line */}
+        <div className="absolute  bottom-0 left-0 md:left-12 w-full md:w-[94%] h-[2px] bg-blue-500"></div>
+      </div>
+
+      <div className="flex flex-wrap gap-4 w-full justify-around">
+        {webdev.map((service, ind) => (
+          <div
+            key={ind}
+           className="bg-white dark:bg-gray-800 z-10 rounded-lg p-6 my-5 shadow-md hover:shadow-lg flex flex-col items-start text-left
+                  sm:basis-1/2 md:basis-1/3 lg:basis-1/4  min-w-[20rem]"
+          >
+            <h3 className="text-xl mb-2 text-blue-400">{service.heading}</h3>
+            {service.lists.map((list, listInd) => (
+              <div
+                key={listInd}
+                className="flex my-1 items-center justify-start w-full"
+              >
+                <CircleCheckIcon className="fill-blue-700 size-5 mr-2" />
+                {list}
+              </div>
+            ))}
+          </div>
+        ))}
+      </div>
+
+
+      <div className="w-full my-5 z-20 relative overflow-hidden">
+        <div
+          className="md:ml-12 p-6 md:p-8 text-lg md:text-xl font-extrabold bg-gray-800 w-[30rem] md:w-[35rem] "
+          style={{
+            clipPath: "polygon(0 0, 62% 0, 80% 100%, 0% 100%)",
+          }}
+        >
+
+          <p className="  bg-clip-text text-transparent bg-gradient-to-b from-gray-600 to-gray-900 dark:from-gray-100 dark:to-blue-600"> Digital Marketing Services</p>
+        </div>
+        {/* Full-width bottom line */}
+        <div className="absolute  bottom-0 left-0 md:left-12 w-full md:w-[94%] h-[2px] bg-blue-500"></div>
+      </div>
+      <div className="flex flex-wrap gap-4 w-full justify-evenly px-10">
+        {digitalMarketing.map((service, ind) => (
+          <div
+            key={ind}
+            className="bg-white dark:bg-gray-800 z-10 rounded-lg p-6 my-5 shadow-md hover:shadow-lg flex flex-col items-start text-left 
+                  sm:basis-1/2 md:basis-1/3 lg:basis-1/4  "
+          >
+            <h3 className="text-xl mb-2 text-blue-400">{service.heading}</h3>
+            <p className="text-balance">{service.para}</p>
+          </div>
+        ))}
+      </div>
+
+      <div className="w-full my-5 z-20 relative overflow-hidden">
+        <div
+          className="md:ml-12 p-6 md:p-8 text-lg md:text-xl font-extrabold bg-gray-800 w-[30rem] md:w-[35rem] "
+          style={{
+            clipPath: "polygon(0 0, 62% 0, 80% 100%, 0% 100%)",
+          }}
+        >
+
+          <p className=" bg-clip-text text-transparent bg-gradient-to-b from-gray-600 to-gray-900 dark:from-gray-100 dark:to-blue-600">  WordPress Services</p>
+        </div>
+       
+        <div className="absolute  bottom-0 left-0 md:left-12 w-full md:w-[94%] h-[2px] bg-blue-500"></div>
+      </div>
+
+      <div className="flex flex-wrap gap-6 w-full px-10 justify-around">
+        {wordpressServices.map((service, index) => (
+          <div
+            key={index}
+            className="bg-white dark:bg-gray-800 z-10 rounded-lg p-6 my-5 shadow-md hover:shadow-lg flex flex-col items-start text-balance 
+                  sm:basis-1/2 md:basis-1/3 lg:basis-1/4  " 
+          >
+            <h3 className="text-xl font-bold mb-2 text-blue-400">{service.heading}</h3>
+            <p className="text-gray-700 dark:text-gray-300">{service.para}</p>
+          </div>
+        ))}
+      </div>
+
+
+      {/* <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-4  px-10">
         {[
           {
             title: "Web Design",
@@ -110,13 +335,8 @@ export function TypewriterEffectSmoothDemo() {
             </p>
           </div>
         ))}
-      </div>
-      {/* <Link href={'/contact'}>
-        <Button borderRadius="2rem"
-          className="bg-indigo-200 dark:bg-transparent font-bold text-black dark:text-white border-neutral-200 dark:border-slate-800 ">
-          <p className="animate-pulse"> Contact now</p>
-        </Button>
-      </Link> */}
+      </div> */}
+      
     </div>
     )
   );

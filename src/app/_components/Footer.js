@@ -23,9 +23,7 @@ const Footer = () => {
             <h2 className="title-font font-medium text-gray-900 dark:text-gray-300  tracking-widest text-sm mb-3">ABOUT US</h2>
             <nav className="list-none mb-10">
            
-              <li>
-                <Link href="/about" className="text-gray-500 hover:text-gray-300">About</Link>
-              </li>
+             
               <li>
                 <Link href="/about" className="text-gray-500 hover:text-gray-300">Services</Link>
               </li>
