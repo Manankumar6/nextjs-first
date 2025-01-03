@@ -7,7 +7,7 @@ import React from 'react';
 
 const TermsAndConditions = () => {
   return (
-    <div className="bg-gray-100 dark:bg-gray-900 text-gray-800 font-sans leading-relaxed tracking-wide mt-24">
+    <div className="bg-gray-100 dark:bg-gray-900 text-gray-800  leading-relaxed tracking-wide mt-24">
       <section className="text-center relative py-20 px-4 bg-indigo-600 dark:bg-background text-white overflow-hidden z-20">
         <div className="relative z-30">
           <MovingCircle count={8} />
