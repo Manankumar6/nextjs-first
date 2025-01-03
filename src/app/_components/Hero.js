@@ -8,6 +8,9 @@ import { HeroParallaxDemo } from './HeroParallex';
 import { TypewriterEffectSmoothDemo } from './TypeWriter';
 import WhyChooseUs from './WhyChooseUs';
 import ExploreService from './ExploreService';
+import Achievements from './Achievements';
+import Technology from './Technology';
+import Head from 'next/head';
 
 const Hero = () => {
   const offers = [
@@ -43,7 +46,13 @@ const Hero = () => {
 
 
   return (
-    <section className="text-foreground bg-background body-font ">
+
+    <section className="text-foreground bg-background body-font  ">
+      <Head>
+        <title>Custom Web Development Services | Business, Portfolio, and E-commerce Websites</title>
+        <meta name="description" content="Boost your online presence with our expert web development services. We create responsive business websites, stunning portfolios, and scalable e-commerce solutions. Build your dream website today!" />
+  
+      </Head>
       <div className="  justify-center flex   items-center ">
         <LampContainer>
           <motion.h1
@@ -67,23 +76,26 @@ const Hero = () => {
               duration: 0.8,
               ease: "easeInOut",
             }}
-            className="text-sm md:text-lg text-muted-foreground text-center max-w-4xl"
+            className="text-sm md:text-lg text-muted-foreground mt-2 text-center max-w-4xl"
           >
-        Transforming Digital Experiences with Comprehensive Web Solutions
-        We specialize in web design, development, WordPress sites, and digital marketing to build responsive, scalable, and SEO-optimized solutions that drive growth and enhance your online presence.
+            <h1>Empowering Your Digital Success with Custom Web Solutions</h1>
+            <p>Based in <span className='font-bold'>Firozabad</span>, we provide professional web design, development, and digital marketing services. We focus on creating responsive, scalable, and SEO-friendly websites to help businesses grow and succeed online.</p>
+           
           </motion.p>
         </LampContainer>
 
-       
+
       </div>
 
 
-          <HeroParallaxDemo/>
-          <TypewriterEffectSmoothDemo/>
-          <WhyChooseUs/>
-          <ExploreService/>
+      <HeroParallaxDemo />
+      <TypewriterEffectSmoothDemo />
+      <Achievements />
+      <WhyChooseUs />
+      <Technology />
+      <ExploreService />
 
-    
+
 
       {/* Google Ads */}
       <Ads />

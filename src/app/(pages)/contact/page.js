@@ -14,6 +14,7 @@ import Image from 'next/image';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/moving-border';
 import Heading from '@/app/_components/Heading';
+import MovingCircle from '@/components/MovingCircle';
 
 const Contact = () => {
   const form = useRef();
@@ -110,17 +111,29 @@ const Contact = () => {
     }
   }, [user]);
   return (
-    <div className="bg-gray-100 dark:bg-background dotted-background py-12">
+    <div className="bg-gray-100 dark:bg-background dotted-background mt-24 ">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-800 dark:text-gray-200"></h1>
-          <Heading word={'Contact Us'} />
-          <p className="text-center text-lg md:text-xl font-medium text-gray-600 dark:text-gray-400 mt-4">
-            We'd love to hear from you! Whether you have a question about services, pricing, or anything else, feel free to reach out.
+      <section className="text-center relative py-20 px-4 bg-indigo-600 dark:bg-background text-white overflow-hidden z-20">
+        <div className="relative z-30"> {/* Added relative and z-index */}
+          <MovingCircle count={8} />
+
+          <h1 className='text-4xl md:text-5xl  font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-indigo-500 py-4 slide-in'>Contact Us</h1>
+          <p
+            className="mt-4 text-lg max-w-xl mx-auto slide-in animate-move"
+            style={{ animationDelay: '0.2s' }}
+          >
+               We'd love to hear from you! Whether you have a question about services, pricing, or anything else, feel free to reach out.
           </p>
+        
+
         </div>
 
-        <div className="flex flex-wrap justify-center">
+        {/* Background Shape */}
+        <div className="w-1/2 h-[31rem] rounded-full min-h-full bg-slate-700 absolute  md:-right-20 -right-20 -top-16   md:-top-12 z-10 md:rotate-45 -rotate-45 animate-slide-in  "></div>
+      </section>
+     
+
+        <div className="flex flex-wrap pt-10 justify-center">
           <div className="w-full lg:w-1/2 md:p-4 ">
             <div className="bg-white dark:bg-gray-900 shadow-lg rounded-lg p-4 md:p-8" data-aos="fade-up"
               data-aos-delay={100}>

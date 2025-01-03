@@ -2,12 +2,17 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { IoMail } from "react-icons/io5";
-import { Mail } from 'lucide-react';
+import { Mail, MapPinned, PhoneIcon } from 'lucide-react';
 const Footer = () => {
-  return (
-    <footer className="text-foreground body-font bg-muted dark:bg-background dotted-background">
-      <div className="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
-        <div className="w-64 flex flex-col items-center md:mx-0 mx-auto text-center md:text-center">
+  return (<>
+    <footer className="text-foreground body-font bg-muted dark:bg-background dotted-background min-h-[28rem] relative w-full flex flex-col justify-center box-border overflow-hidden">
+
+
+
+      <div className=" w-full   md:ms-auto flex flex-col justify-center  md:items-center md:flex-row md:flex-nowrap flex-wrap ">
+
+        {/* First Flex  */}
+        <div className="md:w-[30%] flex flex-col py-10 items-center justify-center md:mx-0  text-center md:text-center px-5">
           <Link href="/" className="flex title-font font-medium items-center justify-center text-gray-900">
             <span className="logo font-bold text-indigo-500">
               <Image src='/image/logo4.png' width={70} height={70} alt='logo' />
@@ -17,13 +22,14 @@ const Footer = () => {
           <p className="text-[10px] tracking-widest mt-1">Your Vision, Our Canvas</p>
           <p className='text-[1rem] text-balance'>India's #1 in Web Development, delivering quality websites with engaging animations at great prices.</p>
         </div>
-
-        <div className="flex-grow flex  flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
-        <div className="lg:w-1/4 md:w-1/2 w-full px-4 text-center md:text-left">
-            <h2 className="title-font font-medium text-gray-900 dark:text-gray-300  tracking-widest text-sm mb-3">ABOUT US</h2>
+        {/* About connect support  */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 p-8 py-14 bg-slate-900 text-center md:text-left w-full">
+          {/* About section  */}
+          <div className=" px-4 text-center md:text-left border-b md:border-b-0 md:border-r border-gray-500">
+            <h2 className="title-font font-medium text-gray-900 dark:text-gray-300  tracking-widest text-lg mb-3">ABOUT US</h2>
             <nav className="list-none mb-10">
-           
-             
+
+
               <li>
                 <Link href="/about" className="text-gray-500 hover:text-gray-300">Services</Link>
               </li>
@@ -35,40 +41,42 @@ const Footer = () => {
               </li>
             </nav>
           </div>
-          <div className="lg:w-1/4 md:w-1/2 w-full px-4 text-center md:text-left">
-            <h2 className="title-font font-medium text-gray-900 dark:text-gray-300  tracking-widest text-sm mb-3">CONNECT WITH US</h2>
+          {/* connect with us section  */}
+          <div className=" px-4 text-center md:text-left  border-b md:border-b-0 md:border-r border-gray-500">
+            <h2 className="title-font font-medium text-gray-900 dark:text-gray-300  tracking-widest text-lg mb-3  ">CONNECT WITH US</h2>
             <nav className="list-none mb-10">
               <li>
                 <Link href="/contact" className="text-gray-500 hover:text-gray-300">Get in Touch</Link>
               </li>
-              
+
               <li>
                 <Link href="/feedback" className="text-gray-500 hover:text-gray-300">Feedback</Link>
               </li>
-            
+
               <li>
                 <Link href="/events" className="text-gray-500 hover:text-gray-300">Events</Link>
               </li>
               <li className="flex items-center justify-center md:justify-normal">
-                <Mail className="text-gray-500 hover:text-gray-300" /> 
-                  <Link target='_blank' href="https://mail.google.com/mail/?view=cm&fs=1&to=support@techcanva.in&su=Support&body=Hello,%0A%0AI%20would%20like%20to%20inquire%20about..." className="text-indigo-500 hover:underline ms-2">
-                    support@techcanva.in
-                  </Link>
-                </li>
-                <li className="flex items-center justify-center md:justify-normal">
-                <Mail className="text-gray-500 hover:text-gray-300" /> 
-                  <Link target='_blank' href="https://mail.google.com/mail/?view=cm&fs=1&to=support@techcanva.in&su=Support&body=Hello,%0A%0AI%20would%20like%20to%20inquire%20about..." className="text-indigo-500 hover:underlin ms-2">
-                    info@techcanva.in
-                  </Link>
-                </li>
+                <Mail className="text-gray-500 hover:text-gray-300" />
+                <Link target='_blank' href="https://mail.google.com/mail/?view=cm&fs=1&to=support@techcanva.in&su=Support&body=Hello,%0A%0AI%20would%20like%20to%20inquire%20about..." className="text-indigo-500 hover:underline ms-2">
+                  support@techcanva.in
+                </Link>
+              </li>
+              <li className="flex items-center justify-center md:justify-normal">
+                <Mail className="text-gray-500 hover:text-gray-300" />
+                <Link target='_blank' href="https://mail.google.com/mail/?view=cm&fs=1&to=support@techcanva.in&su=Support&body=Hello,%0A%0AI%20would%20like%20to%20inquire%20about..." className="text-indigo-500 hover:underlin ms-2">
+                  info@techcanva.in
+                </Link>
+              </li>
             </nav>
           </div>
-          <div className="lg:w-1/4 md:w-1/2 w-full px-4 text-center md:text-left">
-            <h2 className="title-font font-medium text-gray-900 dark:text-gray-300 tracking-widest text-sm mb-3">SUPPORT</h2>
+          {/* support  */}
+          <div className=" px-4 text-center md:text-left border-b md:border-b-0 md:border-r border-gray-500">
+            <h2 className="title-font font-medium text-gray-900 dark:text-gray-300 tracking-widest text-lg mb-3">SUPPORT</h2>
             <nav className="list-none mb-10">
-             
-             
-             
+
+
+
               <li>
                 <Link href="/refund" className="text-gray-500 hover:text-gray-300">Refund Policy</Link>
               </li>
@@ -80,15 +88,29 @@ const Footer = () => {
               </li>
             </nav>
           </div>
-        
-         
+          {/* Address  */}
+          <div className=" px-4 text-center md:text-left">
+            <h2 className="title-font font-medium text-gray-900 dark:text-gray-300 tracking-widest text-lg mb-3">HEAD OFFICE</h2>
+            <div className="flex flex-col gap-y-5 items-start text-gray-500 hover:text-gray-300">
+              <div className='flex  items-center'>
 
+                <MapPinned className='size-4 md:size-6 mr-2' />
+                <p> Suhag Nagar, Firozabad, Uttar Pradesh - 283203</p>
+              </div>
+              <div className="flex items-center">
+                <PhoneIcon className='size-4  mr-2' />
+                <p>+91 6398401607</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div className="bg-background">
+     
+    </footer>
+    <div className="bg-background w-full">
         <div className="container mx-auto py-4 px-5 my-auto flex flex-wrap flex-col sm:flex-row">
           <p className="text-gray-500 text-sm text-center sm:text-left">© 2024 TechCanva —
-           <span> techcanva.in</span>
+            <span> techcanva.in</span>
           </p>
           <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
             <Link href="https://www.facebook.com/manan.kumar.144734/" target='_blank' className="text-gray-500">
@@ -122,7 +144,7 @@ const Footer = () => {
           </span>
         </div>
       </div>
-    </footer>
+  </>
   );
 };
 
