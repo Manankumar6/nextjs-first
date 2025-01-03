@@ -14,7 +14,7 @@ const Navbar = () => {
 
   const { authenticate, logout } = useAuth();
   return (
-    <nav className=" body-font bg-background dark:bg-gray-900 dark:shadow-[0px_4px_10px_rgba(255,255,255,0.5)]   text-foreground">
+    <nav className=" body-font bg-background dark:bg-gray-900 dark:shadow-[0px_4px_10px_rgba(255,255,255,0.1)]   text-foreground fixed z-30 w-full top-0 left-0">
       <div className="container mx-auto  flex flex-wrap p-5 flex-col md:flex-row items-center">
         <Link href='/' className="flex title-font font-medium items-center  mb-4 md:mb-0">
           <span className="logo font-bold  text-indigo-100"><Image src='/image/logo4.png' width={60} height={60} alt='logo' /></span>

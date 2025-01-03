@@ -8,7 +8,7 @@ const WhyChooseUs = () => {
   return (
     <div className="relative flex flex-col bg-muted dark:bg-transparent  items-center justify-center h-auto pb-12 ">
       {/* SparklesCore Background */}
-      <div className="absolute inset-0 w-full h-full">
+      {/* <div className="absolute inset-0 w-full h-full">
         <SparklesCore
           id="sparkles-why-choose-us"
           background="transparent"
@@ -18,7 +18,7 @@ const WhyChooseUs = () => {
           particleColor="#FFFFFF"
           className="w-full h-full"
         />
-      </div>
+      </div> */}
 
       {/* Content */}
       <div className="relative z-10 text-center px-10 pb-12 ">
@@ -37,61 +37,61 @@ const WhyChooseUs = () => {
             {
               title: "We Understand Your Vision",
               description:
-                "Every business is unique, and so are its challenges. We start by understanding your specific goals and requirements, ensuring that our solutions align perfectly with your vision and objectives.",
+                "We know that every business is unique, with its own set of challenges. That’s why we take the time to fully understand your goals and needs, ensuring that our solutions are perfectly aligned with your vision and objectives.",
               icon: <Eye className="w-8 h-8 text-blue-500" />,
             },
             {
               title: "Your Success Is Our Priority",
               description:
-                "Think of us as an extension of your team. We take ownership of your challenges, working side-by-side to deliver results that drive success and add value to your business.",
+                "Consider us an extension of your team. We take full ownership of your challenges, collaborating closely with you to deliver meaningful results that drive success and bring lasting value to your business.",
               icon: <Users className="w-8 h-8 text-green-500" />,
             },
             {
               title: "Long-Term Partnerships",
               description:
-                "We believe trust is built on honesty. Our process is fully transparent—you’ll always have a clear understanding of every aspect of your project and the results we deliver.",
+                "We believe trust is the foundation of any successful relationship. Our process is completely transparent, ensuring you have a clear understanding of every step of your project and the results we deliver, fostering a lasting partnership built on honesty.",
               icon: <Handshake className="w-8 h-8 text-purple-500" />,
             },
             {
               title: "Commitment to Excellence",
               description:
-                "Quality is at the heart of everything we do. With a passion for innovation and a commitment to exceeding expectations, we ensure every project is executed to perfection.",
+                "Quality is the cornerstone of everything we do. Driven by a passion for innovation and a commitment to exceeding expectations, we ensure that every project is executed with precision and delivers outstanding results.",
               icon: <Award className="w-8 h-8 text-yellow-500" />,
             },
             {
               title: "Web Design",
               description:
-                "Craft visually stunning, user-friendly designs tailored to your brand’s identity and goals. From wireframes to prototypes, we ensure seamless user experiences that captivate and convert.",
+                "We create visually stunning, user-friendly web designs that align with your brand’s identity and goals. From initial wireframes to final prototypes, we focus on delivering seamless user experiences that engage visitors and drive conversions.",
               icon: <Monitor className="w-8 h-8 text-blue-500" />,
             },
             {
               title: "Web Development",
               description:
-                "Develop secure, scalable, and high-performing websites for your business needs. We utilize the latest technologies to build responsive and dynamic platforms that drive growth.",
+                "We specialize in developing secure, scalable, and high-performing websites tailored to your business needs. By leveraging the latest technologies, we build responsive and dynamic platforms that drive growth and enhance your online presence.",
               icon: <Globe className="w-8 h-8 text-green-500" />,
             },
             {
               title: "Instagram Ads",
               description:
-                "Boost engagement and grow your audience with impactful Instagram campaigns. We create visually appealing ads and optimize targeting to maximize ROI.",
+                "Enhance your brand’s visibility and grow your audience with powerful Instagram ads. We design visually appealing campaigns and optimize targeting to ensure maximum ROI, driving meaningful engagement and growth for your business.",
               icon: <Instagram className="w-8 h-8 text-pink-500" />,
             },
             {
               title: "Facebook Ads",
               description:
-                "Reach targeted audiences with innovative ad strategies on Facebook. We leverage advanced analytics and ad creatives to increase visibility and conversions.",
+                "Expand your reach and engage with targeted audiences through effective Facebook ad strategies. Using advanced analytics and creative ad designs, we increase your visibility and drive higher conversions for your business.",
               icon: <Facebook className="w-8 h-8 text-yellow-500" />,
             },
             {
               title: "SEO Optimization",
               description:
-                "Improve your search rankings with tailored SEO strategies. From keyword research to on-page optimization, we ensure higher visibility and organic traffic growth.",
+                "Boost your search rankings with customized SEO strategies. From thorough keyword research to effective on-page optimization, we focus on increasing your visibility and driving organic traffic growth to help your business succeed online.",
               icon: <Award className="w-8 h-8 text-purple-500" />,
             },
             {
               title: "Brand Vision",
               description:
-                "Understand and align with your brand’s vision to deliver exceptional results. We focus on building a cohesive identity that resonates with your audience and leaves a lasting impression.",
+                "We take the time to understand and align with your brand’s unique vision to deliver exceptional results. Our focus is on creating a cohesive brand identity that resonates with your audience and leaves a lasting, positive impression.",
               icon: <Eye className="w-8 h-8 text-indigo-500" />,
             },
            

@@ -3,7 +3,8 @@ import { Button } from "@/components/ui/moving-border";
 import { SparklesCore } from "@/components/ui/sparkles";
 import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
 import Link from "next/link";
-import { Eye, Users, Handshake, Award, Globe, Monitor, Instagram, Facebook, CheckIcon, CircleCheckIcon } from "lucide-react";
+import { Eye, Users, Handshake, Award, Globe, Monitor, Instagram, Facebook, CheckIcon, CircleCheckIcon, ArrowRight, Circle, Quote } from "lucide-react";
+import Image from "next/image";
 
 export function TypewriterEffectSmoothDemo() {
   const words = [
@@ -27,252 +28,57 @@ export function TypewriterEffectSmoothDemo() {
   ];
 
 
-  const webdev = [
-    {
-      heading: "Startup Business Website",
-      lists: [
-        "5 pages Website",
-        "1 Year Free Domain",
-        "1 Year Free Hosting",
-        "Free SSL Certificates",
-        "Social Media Integration",
-        "Inquiry Form",
-        "Technical Support"
-      ]
-    },
-    {
-      heading: "E-Commerce Website",
-      lists: [
-        "Dynamic Website",
-        "Admin Access",
-        "100% Responsive Website",
-        "Social Media Integration",
-        "1 Year Free Domain",
-        "1 Year Free Hosting",
-        "Free SSL Certificates"
-      ]
-    },
-    {
-      heading: "Custom Website",
-      lists: [
-        "Multi Page Website",
-        "Dynamic Website",
-        "Admin Access",
-        "100% Responsive Website",
-        "Social Media Integration",
-        "1 Year Free Domain",
-        "1 Year Free Hosting",
-        "Free SSL Certificates",
-        "Facebook & Instagram Ads"
-      ]
-    },
-    {
-      heading: "Portfolio Website",
-      lists: [
-        "Personalized Design",
-        "One Page Website",
-        "Fast Loading Speed",
-        "Responsive Layout",
-        "Social Media Integration",
-        "Free SSL Certificates",
-        "1 Year Free Hosting",
-        "Contact Form"
-      ]
-    },
-    {
-      heading: "Educational Website",
-      lists: [
-        "Dynamic Course Pages",
-        "Student Login",
-        "Admin Panel",
-        "Video Integration",
-        "100% Responsive Design",
-        "1 Year Free Domain",
-        "1 Year Free Hosting",
-        "Free SSL Certificates"
-      ]
-    },
-    {
-      heading: "Blog Website",
-      lists: [
-        "Customizable Design",
-        "SEO-Ready Structure",
-        "Social Sharing Features",
-        "100% Responsive Layout",
-        "1 Year Free Domain",
-        "1 Year Free Hosting",
-        "Free SSL Certificates",
-        "Content Management System"
-      ]
-    }
-  ];
+  
 
-  const digitalMarketing = [
+  const CraftingData = [
     {
-      heading: "Facebook & Instagram Ads",
-      para: "Leverage the power of social media to boost brand awareness, generate leads, and drive sales with highly targeted campaigns on Facebook and Instagram. Our strategy ensures your ads reach the right audience at the right time."
+      title: "Web Design",
+      desc: "Our web design services are all about creating visually appealing, easy-to-use websites that drive results. We focus on responsive design, smooth navigation, and a user-friendly experience to make sure your website stands out, engages visitors, and helps achieve your business goals.",
+      img: '/image/webdesign.jpg'
     },
     {
-      heading: "Google Ads",
-      para: "Maximize your online visibility and ROI with Google Ads. Our PPC experts create and optimize search, display, and shopping campaigns to put your business in front of customers actively searching for your services."
+      title: "Web Development",
+      desc: "Our web development services focus on building secure, scalable, and high-performance websites designed to meet your unique business goals. From custom coding and CMS solutions to eCommerce platforms, we ensure your website is fast, responsive, and dynamic, helping you grow and enhance your online presence.",
+      img: '/image/webdev.avif'
     },
     {
-      heading: "Search Engine Optimization",
-      para: "Enhance your website's organic rankings with our comprehensive SEO services. From keyword research to on-page and off-page optimization, we ensure your business stays ahead of the competition in search engine results."
+      title: "Digital Marketing",
+      desc: "Unlock your business’s full potential with our comprehensive digital marketing services. From SEO and social media marketing to PPC campaigns and content creation, we help drive traffic, increase engagement, and enhance your brand’s ROI. Our data-driven approach ensures measurable success and long-term growth for your business.",
+      img: '/image/digitalmarketing.jpg'
     },
-    {
-      heading: "Content Marketing",
-      para: "Engage your audience with high-quality, compelling content that builds trust and drives conversions. From blog posts to infographics, we create content that resonates with your audience."
-    },
-    {
-      heading: "Email Marketing",
-      para: "Stay connected with your audience through personalized and impactful email campaigns. We design and manage campaigns that drive engagement, nurture leads, and boost customer retention."
-    },
+  ]
 
-  ];
 
-  const wordpressServices = [
-    {
-      heading: "Custom WordPress Development",
-      para: "Get a fully customized WordPress website tailored to your business needs. Our team builds responsive, fast, and scalable websites with unique designs and functionality."
-    },
-    {
-      heading: "WordPress Theme Customization",
-      para: "Transform your chosen theme into a unique design that aligns perfectly with your brand identity. We ensure your website stands out and delivers a seamless user experience."
-    },
-    {
-      heading: "WooCommerce Integration",
-      para: "Turn your WordPress site into a powerful e-commerce platform with WooCommerce. We set up, configure, and optimize your online store for maximum sales and performance."
-    },
-    {
-      heading: "WordPress Maintenance & Support",
-      para: "Keep your website secure and up-to-date with our ongoing WordPress maintenance services. We handle updates, backups, performance optimization, and more."
-    },
-    {
-      heading: "WordPress SEO Optimization",
-      para: "Boost your website's organic traffic with our WordPress-specific SEO services. From optimizing content to technical SEO fixes, we help improve your search rankings."
-    },
-    {
-      heading: "Plugin Development & Customization",
-      para: "Extend your website’s functionality with custom WordPress plugins. Whether you need a plugin built from scratch or modifications to existing ones, we've got you covered."
-    }
-  ];
+
 
 
 
   return (
-    (<div className="flex relative  flex-col items-center justify-center py-16  ">
-      <div className="w-full absolute inset-0 h-auto">
-        <SparklesCore
-          id="tsparticlesfullpage"
-          background="transparent"
-          minSize={0.6}
-          maxSize={1.4}
-          particleDensity={100}
-          className="w-full h-full"
-          particleColor="#FFFFFF"
-        />
-      </div>
+    (
+      <div>
+        <div className="flex relative  flex-col items-center justify-center pt-10  ">
+          {/* <div className="w-full absolute inset-0 h-auto">
+            <SparklesCore
+              id="tsparticlesfullpage"
+              background="transparent"
+              minSize={0.6}
+              maxSize={1.4}
+              particleDensity={100}
+              className="w-full h-full"
+              particleColor="#FFFFFF"
+            />
+          </div> */}
 
-      <p className="text-neutral-600 dark:text-neutral-200 text-xs sm:text-base  ">
-        The road to freedom starts from here
-      </p>
-      <TypewriterEffectSmooth words={words} />
-      <p className="text-lg text-justify text-gray-600 dark:text-gray-400 px-5">
-        Transforming your ideas into impactful digital solutions with expert web design, development, and marketing strategies.
-      </p>
+          <p className="text-neutral-600 dark:text-neutral-200 text-xs sm:text-base  ">
+            The road to freedom starts from here
+          </p>
+          <TypewriterEffectSmooth words={words} />
+          <p className="text-lg text-justify text-gray-600 dark:text-gray-400 px-5">
+            Transforming your ideas into impactful digital solutions with expert web design, development, and marketing strategies.
+          </p>
 
-      <div className="w-full my-5 z-20 relative overflow-hidden">
-        <div
-          className="md:ml-12 p-6 md:p-8 text-lg md:text-xl font-extrabold bg-gray-800 w-[30rem] md:w-[35rem] "
-          style={{
-            clipPath: "polygon(0 0, 62% 0, 80% 100%, 0% 100%)",
-          }}
-        >
-          <p className=" bg-clip-text text-transparent bg-gradient-to-b from-gray-600 to-gray-900 dark:from-gray-100 dark:to-blue-600">Web Design & Web Development</p>
-        </div>
-        {/* Full-width bottom line */}
-        <div className="absolute  bottom-0 left-0 md:left-12 w-full md:w-[94%] h-[2px] bg-blue-500"></div>
-      </div>
-
-      <div className="flex flex-wrap gap-4 w-full justify-around">
-        {webdev.map((service, ind) => (
-          <div
-            key={ind}
-           className="bg-white dark:bg-gray-800 z-10 rounded-lg p-6 my-5 shadow-md hover:shadow-lg flex flex-col items-start text-left
-                  sm:basis-1/2 md:basis-1/3 lg:basis-1/4  min-w-[20rem]"
-          >
-            <h3 className="text-xl mb-2 text-blue-400">{service.heading}</h3>
-            {service.lists.map((list, listInd) => (
-              <div
-                key={listInd}
-                className="flex my-1 items-center justify-start w-full"
-              >
-                <CircleCheckIcon className="fill-blue-700 size-5 mr-2" />
-                {list}
-              </div>
-            ))}
-          </div>
-        ))}
-      </div>
-
-
-      <div className="w-full my-5 z-20 relative overflow-hidden">
-        <div
-          className="md:ml-12 p-6 md:p-8 text-lg md:text-xl font-extrabold bg-gray-800 w-[30rem] md:w-[35rem] "
-          style={{
-            clipPath: "polygon(0 0, 62% 0, 80% 100%, 0% 100%)",
-          }}
-        >
-
-          <p className="  bg-clip-text text-transparent bg-gradient-to-b from-gray-600 to-gray-900 dark:from-gray-100 dark:to-blue-600"> Digital Marketing Services</p>
-        </div>
-        {/* Full-width bottom line */}
-        <div className="absolute  bottom-0 left-0 md:left-12 w-full md:w-[94%] h-[2px] bg-blue-500"></div>
-      </div>
-      <div className="flex flex-wrap gap-4 w-full justify-evenly px-10">
-        {digitalMarketing.map((service, ind) => (
-          <div
-            key={ind}
-            className="bg-white dark:bg-gray-800 z-10 rounded-lg p-6 my-5 shadow-md hover:shadow-lg flex flex-col items-start text-left 
-                  sm:basis-1/2 md:basis-1/3 lg:basis-1/4  "
-          >
-            <h3 className="text-xl mb-2 text-blue-400">{service.heading}</h3>
-            <p className="text-balance">{service.para}</p>
-          </div>
-        ))}
-      </div>
-
-      <div className="w-full my-5 z-20 relative overflow-hidden">
-        <div
-          className="md:ml-12 p-6 md:p-8 text-lg md:text-xl font-extrabold bg-gray-800 w-[30rem] md:w-[35rem] "
-          style={{
-            clipPath: "polygon(0 0, 62% 0, 80% 100%, 0% 100%)",
-          }}
-        >
-
-          <p className=" bg-clip-text text-transparent bg-gradient-to-b from-gray-600 to-gray-900 dark:from-gray-100 dark:to-blue-600">  WordPress Services</p>
-        </div>
-       
-        <div className="absolute  bottom-0 left-0 md:left-12 w-full md:w-[94%] h-[2px] bg-blue-500"></div>
-      </div>
-
-      <div className="flex flex-wrap gap-6 w-full px-10 justify-around">
-        {wordpressServices.map((service, index) => (
-          <div
-            key={index}
-            className="bg-white dark:bg-gray-800 z-10 rounded-lg p-6 my-5 shadow-md hover:shadow-lg flex flex-col items-start text-balance 
-                  sm:basis-1/2 md:basis-1/3 lg:basis-1/4  " 
-          >
-            <h3 className="text-xl font-bold mb-2 text-blue-400">{service.heading}</h3>
-            <p className="text-gray-700 dark:text-gray-300">{service.para}</p>
-          </div>
-        ))}
-      </div>
-
-
-      {/* <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-4  px-10">
-        {[
+          {/* <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-4  px-10">
+         {[
           {
             title: "Web Design",
             description:
@@ -321,7 +127,7 @@ export function TypewriterEffectSmoothDemo() {
               "Deliver high-quality, innovative solutions to meet and exceed client expectations.",
             icon: <Users className="w-8 h-8 text-orange-500" />,
           },
-        ].map((item, index) => (
+         ].map((item, index) => (
           <div
             key={index}
             className="bg-white dark:bg-gray-800 z-10 rounded-lg p-6 my-5 shadow-md hover:shadow-lg flex flex-col items-center text-center"
@@ -334,10 +140,76 @@ export function TypewriterEffectSmoothDemo() {
               {item.description}
             </p>
           </div>
-        ))}
-      </div> */}
-      
-    </div>
+         ))}
+         </div> */}
+
+
+
+          <div className="relative  w-full overflow-hidden">
+            <div className=" absolute top-0 left-0 text-white ">
+
+
+              <Quote color="#60A5FA" className="fill-blue-400  relative size-24" style={{ transform: 'rotate(180deg)' }} />
+              <Quote color="#eff6ff" className="fill-blue-50 absolute top-1 left-1.5 size-24" style={{ transform: 'rotate(180deg)' }} />
+
+            </div>
+            <div className="w-full z-10 px-10 py-24 overflow-hidden box-border "
+            //  style={{
+            //   backgroundImage: `url('/image/bg.jpg'), linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6))`,
+            //   backgroundRepeat: 'no-repeat',
+            //   backgroundPosition: 'center',
+            //   backgroundSize: 'cover',
+            //   backgroundBlendMode: 'darken',
+
+            // }}
+            >
+              <div className="md:ps-40 pt-2 w-full ">
+
+                <h1 className="text-2xl md:text-4xl  font-bold bg-clip-text text-transparent bg-gradient-to-b from-gray-600 to-gray-900 dark:from-gray-200 dark:to-gray-600 ">Crafting Digital Excellence</h1>
+                <p className="text-xl md:text-2xl mb-2 truncate">Your Vision, Our Expertise</p>
+               
+              </div>
+
+              <div className="flex flex-wrap w-full md:p-10 gap-x-14 justify-center">
+                {CraftingData.map((service, ind) => {
+                  return (
+                    <div key={ind} className="flex flex-col w-full md:w-1/3 lg:w-1/4 min:w-full ">
+                      <Image
+                        src={service.img}
+                        width={500}
+                        height={500}
+                        alt="webdesingimage"
+                        className="rounded-xl object-cover h-64" // Ensuring all images have the same size
+                      />
+                      <div className="text-justify my-5">
+                        <h1 className="text-2xl">{service.title}</h1>
+                        <div className="w-full border-b-2 my-2 relative border-blue-400">
+                          <div className="w-[15px] h-[15px] absolute -top-1.5 right-0 bg-blue-400"></div>
+                        </div>
+                        <p className="mb-3">{service.desc}</p>
+                        <Link href={'/solutions'}>
+                        <button className="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 flex items-center" >
+                          Explore More <ArrowRight className="size-4 ml-2" />
+                        </button>
+                        </Link>
+                      </div>
+                    </div>
+
+                  );
+                })}
+              </div>
+
+            </div>
+            <div className=" absolute bottom-5 right-0 text-white ">
+
+
+              <Quote color="#60A5FA" className="fill-blue-400  relative size-24" />
+              <Quote color="#eff6ff" className="fill-blue-50 absolute top-1 left-1.5 size-24" />
+
+            </div>
+          </div>
+        </div>
+      </div>
     )
   );
 }

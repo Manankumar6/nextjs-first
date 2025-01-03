@@ -1,3 +1,5 @@
+'use client'
+import MovingCircle from '@/components/MovingCircle';
 import Head from 'next/head';
 import React from 'react';
 
@@ -7,15 +9,26 @@ const Blog = () => {
             <title>Our Blog - Stay Updated with the Latest News</title>
             <meta name="description" content="Read our latest blog posts on web development, design, and business strategies. Stay updated with valuable insights." />
         </Head>
-        <div className="bg-gray-100 text-gray-800 font-sans leading-relaxed tracking-wide">
+        <div className="bg-gray-100 text-gray-800 mt-24 font-sans leading-relaxed tracking-wide">
+        <section className="text-center relative py-20 px-4 bg-indigo-600 dark:bg-background text-white overflow-hidden z-20">
+        <div className="relative z-30">
+          <MovingCircle count={8} />
+          <h1 className="text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-indigo-500 py-4 slide-in">
+          Our Blog
+          </h1>
+          <p
+            className="mt-4 text-lg max-w-3xl text-center mx-auto slide-in animate-move"
+            style={{ animationDelay: '0.2s' }}
+          >
+           Insights, tips, and stories from our team to help your business thrive.
+          </p>
+        </div>
 
+        {/* Background Shape */}
+        <div className="w-1/2 h-[31rem] rounded-full min-h-full bg-slate-700 absolute md:-right-20 -right-20 -top-16 md:-top-12 z-10 md:rotate-45 -rotate-45 animate-slide-in"></div>
+      </section>
             {/* Blog Header Section */}
-            <header className="text-center py-20 bg-background dotted-background text-white">
-                <h1 className="text-4xl md:text-5xl font-bold">Our Blog</h1>
-                <p className="mt-4 text-xl max-w-2xl mx-auto">
-                    Insights, tips, and stories from our team to help your business thrive.
-                </p>
-            </header>
+           
 
             {/* Blog Posts Section */}
             <section className="container mx-auto px-6 py-16 dark:bg-gray-900 dark:text-gray-300">

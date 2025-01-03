@@ -63,10 +63,10 @@ export const Header = () => {
     (<div
       className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0">
       <h1 className="text-2xl md:text-7xl font-bold dark:text-white">
-        The Ultimate <br /> development studio
+      Your Premier <br /> Web Development Partner
       </h1>
       <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
-      As a MERN Stack and Next.js development team, we craft high-performance, responsive, and scalable web solutions. Our passion lies in building exceptional digital products that drive business growth and create lasting impact.
+      We specialize in creating fast, responsive, and scalable websites that are tailored to your business needs. Our focus is on crafting digital experiences that drive growth, enhance user engagement, and make a lasting impact in today’s competitive online world.
       </p>
     </div>)
   );

@@ -23,11 +23,12 @@ const Feedback = ({ img, projectName, madeFor, feedback, client, url, ind }) => 
 
       {/* Text Column */}
       <div
-        className={`lg:flex-grow lg:w-1/2 ${ind  % 2 === 0 ? "lg:pl-24 md:pl-16" : "lg:pr-24 md:pr-16"} flex flex-col md:items-start md:text-left items-center text-justify`}
+        className={`lg:flex-grow lg:w-1/2 ${ind  % 2 === 0 ? "lg:pl-24 md:pl-16" : "lg:pr-24 md:pr-16"} flex flex-col md:items-start  items-center text-justify`}
       >
-        <h1 className="title-font sm:text-2xl text-3xl font-semibold dark:text-foreground text-gray-800">
+        <h1 className="title-font sm:text-2xl text-3xl font-semibold  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-300">
           {projectName}
         </h1>
+       
         <span className="text-gray-500 dark:text-gray-400 text-sm mb-4">{madeFor}</span>
         <p className="mb-8 leading-relaxed text-lg text-gray-700 dark:text-gray-400">{feedback}</p>
         <div className="flex gap-4 items-center">

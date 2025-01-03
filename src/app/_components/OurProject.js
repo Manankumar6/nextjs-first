@@ -11,6 +11,7 @@ import Link from 'next/link'
 import { Button } from "@/components/ui/moving-border";
 const OurProject = () => {
   const projectData = [
+    
     {
       img: "/image/music.png",
       title: "Sound Wavy Studio",
@@ -44,22 +45,17 @@ const OurProject = () => {
     <section className=" bg-background dark:text-gray-400 dark:bg-grid-small-white/[0.2] px-6  md:py-12 text-center">
       <div className="flex lg:flex-row flex-col">
 
-        <div className='lg:w-1/2'>
+        <div className='lg:w-1/2 order-2 md:order-1'>
 
 
-          <p className="mt-4 max-w-lg mx-auto text-justify md:text-left text-lg mb-4 ">
-            At our company, we take pride in delivering innovative solutions across a range of industries, transforming visions into
-            powerful digital experiences. With a portfolio that spans fields including e-commerce, healthcare, education, finance,
-            and entertainment, we’re committed to crafting customized solutions that address specific challenges and unlock new opportunities.
+          <p className="mt-4 max-w-lg mx-auto text-justify  text-lg mb-4 ">
+          At TechCanve, we are passionate about delivering innovative digital solutions that are tailored to meet the unique needs of businesses across various industries. Our expertise spans fields including e-commerce, healthcare, education, finance, and entertainment, helping companies address challenges and unlock new opportunities through custom-built platforms.
             <br /><br />
-            In each of these fields, we bring a deep understanding of industry-specific needs and a meticulous approach to design and
-            functionality. Our e-commerce solutions enable seamless shopping experiences, while our healthcare and finance applications
-            provide secure, user-centered platforms for critical services. Our educational platforms foster engagement and accessibility,
-            and our entertainment solutions bring intuitive and engaging experiences to users worldwide.
+            With a deep understanding of industry-specific needs, we create user-friendly e-commerce websites that provide seamless shopping experiences, secure healthcare and finance applications that ensure data privacy, and educational platforms that promote engagement and accessibility. Additionally, our entertainment solutions bring captivating and intuitive experiences to users around the world.
           </p>
 
         </div>
-        <Carousel className="w-full max-w-lg mx-auto my-auto overflow-hidden md:overflow-visible">
+        <Carousel className="w-full max-w-lg mx-auto my-auto overflow-hidden md:overflow-visible order-1 md:order-2 ">
           <CarouselContent>
             {projectData.map((project, index) => (
               <CarouselItem key={index}>
@@ -68,7 +64,7 @@ const OurProject = () => {
                     <CardContent className="flex aspect-square  items-center p-4 flex-col ">
                       <img src={project.img} />
                       <p className="text-2xl font-semibold mt-5">{project.title}</p>
-                      <p className='text-sm'>{project.desr}</p>
+                      <p className='text-sm text-justify'>{project.desr}</p>
                       <div className="mt-10">
                       <Link
                             href={project.link}

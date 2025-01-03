@@ -1,16 +1,32 @@
+'use client'
+import MovingCircle from '@/components/MovingCircle';
+import { Button } from '@/components/ui/button';
+import { ArrowRightIcon } from 'lucide-react';
 import Link from 'next/link';
 import React from 'react';
 
 const RefundPolicy = () => {
     return (
-        <div className="bg-gray-100 dark:bg-gray-900 dark:text-gray-300 text-gray-800 font-sans leading-relaxed tracking-wide">
+        <div className="bg-gray-100 dark:bg-gray-900 dark:text-gray-300 text-gray-800 font-sans leading-relaxed tracking-wide mt-24">
             {/* Hero Section */}
-            <section className="text-center py-20 bg-indigo-700 dark:bg-background dotted-background text-white">
-                <h1 className="md:text-5xl text-3xl font-bold">Refund Policy</h1>
-                <p className="mt-4 text-lg max-w-2xl mx-auto">
-                    Our goal is to ensure complete satisfaction with every service we provide. Read our refund policy for more details.
-                </p>
+            <section className="text-center relative py-20 px-4 bg-indigo-600 dark:bg-background text-white overflow-hidden z-20">
+                <div className="relative z-30">
+                    <MovingCircle count={8} />
+                    <h1 className="text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-indigo-500 py-4 slide-in">
+                        Refund Policy
+                    </h1>
+                    <p
+                        className="mt-4 text-lg max-w-3xl text-center mx-auto slide-in animate-move"
+                        style={{ animationDelay: '0.2s' }}
+                    >
+                        Our goal is to ensure complete satisfaction with every service we provide. Read our refund policy for more details.
+                    </p>
+                </div>
+
+                {/* Background Shape */}
+                <div className="w-1/2 h-[31rem] rounded-full min-h-full bg-slate-700 absolute md:-right-20 -right-20 -top-16 md:-top-12 z-10 md:rotate-45 -rotate-45 animate-slide-in"></div>
             </section>
+
 
             {/* Overview Section */}
             <section className="container mx-auto px-6 py-16 text-center">
@@ -106,9 +122,11 @@ const RefundPolicy = () => {
                         If you have questions about this refund policy, please contact us at <Link href="mailto:support@techcanva.in" className="underline">support@techcanva.in</Link> or visit our <Link href="/contact"><span className="underline">Contact Us</span></Link> page.
                     </p>
                     <Link href="/contact">
-                        <p className="inline-block mt-8 px-8 py-4 bg-white text-indigo-700 rounded-lg font-semibold shadow-md hover:bg-gray-200 transition duration-300">
-                            Contact Support
-                        </p>
+                        <Button type="button" variant={'outline'} className='px-3 py-5 mt-5'>
+                           Contact Now
+                            <ArrowRightIcon />
+                        </Button>
+
                     </Link>
                 </div>
             </section>
