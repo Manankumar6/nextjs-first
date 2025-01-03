@@ -9,7 +9,7 @@ const Blog = () => {
             <title>Our Blog - Stay Updated with the Latest News</title>
             <meta name="description" content="Read our latest blog posts on web development, design, and business strategies. Stay updated with valuable insights." />
         </Head>
-        <div className="bg-gray-100 text-gray-800 mt-24 font-sans leading-relaxed tracking-wide">
+        <div className="bg-gray-100 text-gray-800 mt-24  leading-relaxed tracking-wide">
         <section className="text-center relative py-20 px-4 bg-indigo-600 dark:bg-background text-white overflow-hidden z-20">
         <div className="relative z-30">
           <MovingCircle count={8} />

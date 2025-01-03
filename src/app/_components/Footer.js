@@ -91,7 +91,7 @@ const Footer = () => {
           {/* Address  */}
           <div className=" px-4 text-center md:text-left">
             <h2 className="title-font font-medium text-gray-900 dark:text-gray-300 tracking-widest text-lg mb-3">HEAD OFFICE</h2>
-            <div className="flex flex-col gap-y-5 items-start text-gray-500 hover:text-gray-300">
+            <div className="flex flex-col gap-y-5 items-center md:items-start justify-center text-gray-500 hover:text-gray-300">
               <div className='flex  items-center'>
 
                 <MapPinned className='size-4 md:size-6 mr-2' />
