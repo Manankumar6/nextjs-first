@@ -32,7 +32,6 @@ const Contact = () => {
   const [loading, setLoading] = useState(false);
   const [responseMessage, setResponseMessage] = useState('');
 
-  // Input handler to update state
   const inputHandler = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -41,12 +40,10 @@ const Contact = () => {
     }));
   };
 
-  // Submit handler for the form
   const sendEmail = async (e) => {
     e.preventDefault();
     if (!authenticate) {
-      router.push('/login')
-
+      router.push('/login');
       return;
     }
     setLoading(true);
@@ -65,31 +62,30 @@ const Contact = () => {
           duration: 3000,
           isClosable: true,
         });
-
       } else {
         toast({
           title: "An error occurred while sending your message.",
-          status: "erro",
+          status: "error",
           duration: 3000,
           isClosable: true,
         });
-
       }
     } catch (error) {
       console.error('Failed to send message:', error);
       toast({
         title: "An error occurred while sending your message.",
-        status: "erro",
+        status: "error",
         duration: 3000,
         isClosable: true,
       });
-
     } finally {
       setLoading(false);
       setFormData({
         name: '',
         email: '',
         message: '',
+        siteType: 'business', // Reset all fields
+        plan: 'basic', // Reset all fields
         phone: ''
       });
     }
@@ -97,41 +93,42 @@ const Contact = () => {
 
   useEffect(() => {
     AOS.init({
-      duration: 800, // Set animation duration in milliseconds
-      once: false,   // Allows animations to repeat on every scroll
+      duration: 800,
+      once: false,
     });
   }, []);
+
   useEffect(() => {
     if (user) {
       setFormData((prevData) => ({
         ...prevData,
-        name: user.name,
-        email: user.email
+        name: user.name || '', // Fallback to empty string if undefined
+        email: user.email || '' // Fallback to empty string if undefined
       }));
     }
-  }, [user]);
+  }, [user])
   return (
     <div className="bg-gray-100 dark:bg-background dotted-background mt-24 ">
       <div className="container mx-auto px-4">
-      <section className="text-center relative py-20 px-4 bg-indigo-600 dark:bg-background text-white overflow-hidden z-20">
-        <div className="relative z-30"> {/* Added relative and z-index */}
-          <MovingCircle count={8} />
+        <section className="text-center relative py-20 px-4 bg-indigo-600 dark:bg-background text-white overflow-hidden z-20">
+          <div className="relative z-30"> {/* Added relative and z-index */}
+            <MovingCircle count={8} />
 
-          <h1 className='text-4xl md:text-5xl  font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-indigo-500 py-4 slide-in'>Contact Us</h1>
-          <p
-            className="mt-4 text-lg max-w-xl mx-auto slide-in animate-move"
-            style={{ animationDelay: '0.2s' }}
-          >
-               We'd love to hear from you! Whether you have a question about services, pricing, or anything else, feel free to reach out.
-          </p>
-        
+            <h1 className='text-4xl md:text-5xl  font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-indigo-500 py-4 slide-in'>Contact Us</h1>
+            <p
+              className="mt-4 text-lg max-w-xl mx-auto slide-in animate-move"
+              style={{ animationDelay: '0.2s' }}
+            >
+              We'd love to hear from you! Whether you have a question about services, pricing, or anything else, feel free to reach out.
+            </p>
 
-        </div>
 
-        {/* Background Shape */}
-        <div className="w-1/2 h-[31rem] rounded-full min-h-full bg-slate-700 absolute  md:-right-20 -right-20 -top-16   md:-top-12 z-10 md:rotate-45 -rotate-45 animate-slide-in  "></div>
-      </section>
-     
+          </div>
+
+          {/* Background Shape */}
+          <div className="w-1/2 h-[31rem] rounded-full min-h-full bg-slate-700 absolute  md:-right-20 -right-20 -top-16   md:-top-12 z-10 md:rotate-45 -rotate-45 animate-slide-in  "></div>
+        </section>
+
 
         <div className="flex flex-wrap pt-10 justify-center">
           <div className="w-full lg:w-1/2 md:p-4 ">
@@ -207,7 +204,7 @@ const Contact = () => {
                       required
                     >
 
-                      <option value="basic" selected>Basic</option>
+                      <option value="basic" >Basic</option>
                       <option value="premium">Premium</option>
                       <option value="custom">Custom</option>
                     </select>
@@ -227,7 +224,7 @@ const Contact = () => {
                       required
                     >
 
-                      <option value="business" selected>Business</option>
+                      <option value="business" >Business</option>
                       <option value="ecommerce">E-commerce</option>
                       <option value="portfolio">Portfolio</option>
                       <option value="blog">Blog</option>
@@ -279,13 +276,13 @@ const Contact = () => {
                   <span>+91 6398401607</span>
                 </li>
                 <li className="flex items-center">
-                <Mail className='text-blue-500 w-6 h-6 mr-2' /> 
+                  <Mail className='text-blue-500 w-6 h-6 mr-2' />
                   <Link target='_blank' href="https://mail.google.com/mail/?view=cm&fs=1&to=support@techcanva.in&su=Support&body=Hello,%0A%0AI%20would%20like%20to%20inquire%20about..." className="text-indigo-500 hover:underline">
                     support@techcanva.in
                   </Link>
                 </li>
                 <li className="flex items-center">
-                <Mail className='text-blue-500 w-6 h-6 mr-2' />
+                  <Mail className='text-blue-500 w-6 h-6 mr-2' />
                   <Link target='_blank' href="https://mail.google.com/mail/?view=cm&fs=1&to=info@techcanva.in&su=Support&body=Hello,%0A%0AI%20would%20like%20to%20inquire%20about..." className="text-indigo-500 hover:underline">
                     info@techcanva.in
                   </Link>
@@ -315,14 +312,21 @@ const Contact = () => {
               width: '100%', height: "350px", borderRadius: '0.5rem',  // Apply the border radius
               overflow: 'hidden',
             }}>
-              <Image src='/image/contact.jpg' alt='contactjpg' layout='fill' objectFit='cover ' />
+              <Image
+                src="/image/contact.jpg"
+                alt="contactjpg"
+                fill
+                priority 
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                style={{ objectFit: 'cover' }}
+              />
             </div>
 
           </div>
 
         </div>
       </div>
-   
+
     </div>
   );
 };

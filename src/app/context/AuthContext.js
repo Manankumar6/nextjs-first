@@ -99,7 +99,7 @@ export const AuthProvider = ({ children }) => {
 
     }
     useEffect(() => {
-        checkAuth();
+        // checkAuth();
     }, [])
 
 

@@ -2,14 +2,13 @@
 import MovingCircle from '@/components/MovingCircle';
 import { Button } from '@/components/ui/button';
 import { ArrowRightIcon } from 'lucide-react';
-import Image from 'next/image';
+
 import Link from 'next/link';
 import React from 'react';
-import { FaArrowRightLong } from "react-icons/fa6";
 
 const EventPage = () => {
     return (
-        <div className="bg-gray-100 text-gray-800 font-sans leading-relaxed tracking-wide dark:bg-background dark:text-white">
+        <div className="bg-gray-100 text-gray-800  leading-relaxed tracking-wide dark:bg-background dark:text-white">
             <section className="text-center mt-24 relative py-20 px-4 bg-indigo-600 dark:bg-background text-white overflow-hidden z-20">
                 <div className="relative z-30"> {/* Added relative and z-index */}
                     <MovingCircle count={8} />

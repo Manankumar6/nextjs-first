@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { ModeToggle } from './ThemeButton'
-import { DropdownMenu, DropdownMenuContent, DropdownMenuTrigger ,DropdownMenuItem} from '@/components/ui/dropdown-menu';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuTrigger, DropdownMenuItem } from '@/components/ui/dropdown-menu';
 
 
 const Navbar = () => {
@@ -17,7 +17,15 @@ const Navbar = () => {
     <nav className=" body-font bg-background dark:bg-gray-900 dark:shadow-[0px_4px_10px_rgba(255,255,255,0.1)]   text-foreground fixed z-30 w-full top-0 left-0">
       <div className="container mx-auto  flex flex-wrap p-5 flex-col md:flex-row items-center">
         <Link href='/' className="flex title-font font-medium items-center  mb-4 md:mb-0">
-          <span className="logo font-bold  text-indigo-100"><Image src='/image/logo4.png' width={60} height={60} alt='logo' /></span>
+          <span className="logo font-bold  text-indigo-100">
+            <Image
+              src="/image/logo4.png"
+              alt="logo"
+              width={60}
+              height={60}
+           
+            />
+          </span>
 
           <span className="ml-3 text-xl flex flex-col ">
             <b>TechCanva</b>
@@ -48,11 +56,11 @@ const Navbar = () => {
             </DropdownMenuContent>
           </DropdownMenu> */}
 
-         
+
           <Link href='/about' className={pathname === '/about' ? "border-b-2 border-blue-500 mr-5 hover:text-gray-500" : "mr-5 hover:text-gray-500"}>Services</Link>
           <Link href='/pricing' className={pathname === '/pricing' ? "border-b-2 border-blue-500 mr-5 hover:text-gray-500" : "mr-5 hover:text-gray-500"}>Pricing</Link>
           <Link href='/contact' className={pathname === '/contact' ? "border-b-2 border-blue-500 mr-5 hover:text-gray-500" : "mr-5 hover:text-gray-500"}>Request a Quote</Link>
-         
+
 
 
           {/* {!authenticate ? <>

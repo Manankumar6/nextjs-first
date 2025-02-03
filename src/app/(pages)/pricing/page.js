@@ -57,7 +57,9 @@ const page = () => {
         </div>
 
         {/* Background Shape */}
-        <div className="w-1/2 h-[31rem] rounded-full min-h-full bg-slate-700 absolute  md:-right-20 -right-20 -top-16   md:-top-12 z-10 md:rotate-45 -rotate-45 animate-slide-in  "></div>
+        <div className="w-1/2 h-[31rem] rounded-full min-h-full bg-slate-700 absolute  md:-right-20 -right-20 -top-16   md:-top-12 z-10 md:rotate-45 -rotate-45 animate-slide-in  "
+      
+        ></div>
       </section>
       {/* <Heading word={'Pricing Plans'} />
     
