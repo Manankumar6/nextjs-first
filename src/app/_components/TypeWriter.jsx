@@ -178,7 +178,7 @@ export function TypewriterEffectSmoothDemo() {
                         src={service.img}
                         width={500}
                         height={500}
-                        alt="webdesingimage"
+                        alt={ind}
                         className="rounded-xl object-cover h-64" // Ensuring all images have the same size
                       />
                       <div className="text-justify my-5">

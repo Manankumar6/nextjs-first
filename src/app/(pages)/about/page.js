@@ -4,20 +4,17 @@ import React, { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Head from 'next/head';
-
 import Image from 'next/image';
 import WhatOurClientsSay from '@/app/_components/WhatOurClientsSay';
-import { GridBackgroundDemo } from '@/app/_components/GridBackground';
-import Heading from '@/app/_components/Heading';
-
 import { DynamicList } from '@/app/_components/GlareCardDemo';
 import { Cover } from '@/components/ui/cover';
 import { Button } from '@/components/ui/moving-border';
 import Client from '@/app/_components/Client';
 import OurProject from '@/app/_components/OurProject';
-import { CircleCheckIcon } from 'lucide-react';
-import { TypewriterEffect } from '@/components/ui/typewriter-effect';
+import { ChevronDown, ChevronUp, CircleCheckIcon } from 'lucide-react';
+
 import MovingCircle from '@/components/MovingCircle';
+import ImageGallery from '@/app/_components/ImageGallery';
 
 
 const services = [
@@ -82,6 +79,7 @@ const googleIndexing = [
 ]
 const About = () => {
   const [feedbackList, setFeedbackList] = useState([]); // State for storing feedback data
+  const [showAll, setShowAll] = useState(false);
 
   // Fetch feedback data from API
   const fetchFeedback = async () => {
@@ -266,7 +264,9 @@ const About = () => {
         </div>
 
         {/* Background Shape */}
-        <div className="w-1/2 h-[31rem] rounded-full min-h-full bg-slate-700 absolute  md:-right-20 -right-20 -top-16   md:-top-12 z-10 md:rotate-45 -rotate-45 animate-slide-in  "></div>
+        <div className="w-1/2 h-[31rem] rounded-full min-h-full bg-slate-700 absolute  md:-right-20 -right-20 -top-16   md:-top-12 z-10 md:rotate-45 -rotate-45 animate-slide-in  "
+
+        ></div>
       </section>
 
 
@@ -283,10 +283,11 @@ const About = () => {
           </div>
 
           <div className="absolute  bottom-0 left-0 md:left-12 w-full md:w-[94%] h-[2px] bg-blue-500"></div>
+
         </div>
 
         <div className="flex flex-wrap gap-4 w-full justify-around">
-          {webdev.map((service, ind) => (
+          {webdev.slice(0, showAll ? webdev.length : 3).map((service, ind) => (
             <div
               key={ind}
               className="bg-white dark:bg-slate-900 z-10 rounded-lg p-6 my-5 shadow-md hover:shadow-lg flex flex-col items-start text-left
@@ -304,8 +305,19 @@ const About = () => {
               ))}
             </div>
           ))}
-        </div>
 
+        </div>
+        {webdev.length > 3 && (
+          <div className="flex justify-center">
+            <button
+              onClick={() => setShowAll(!showAll)}
+              className="bg-gray-800 font-extralight text-white px-4 py-2 rounded-md shadow-md hover:bg-gray-900 transition"
+            >
+
+              {showAll ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+            </button>
+          </div>
+        )}
 
         <div className="w-full my-5 z-20 relative overflow-hidden">
 
@@ -322,7 +334,7 @@ const About = () => {
           <div className="absolute  bottom-0 left-0 md:left-12 w-full md:w-[94%] h-[2px] bg-blue-500"></div>
         </div>
         <div className="flex flex-wrap gap-4 w-full justify-evenly px-10">
-          {digitalMarketing.map((service, ind) => (
+          {digitalMarketing.slice(0, showAll ? digitalMarketing.length : 3).map((service, ind) => (
             <div
               key={ind}
               className="bg-white dark:bg-slate-900 z-10 rounded-lg p-6 my-5 shadow-md hover:shadow-lg flex flex-col items-start text-left 
@@ -333,6 +345,17 @@ const About = () => {
             </div>
           ))}
         </div>
+        {digitalMarketing.length > 3 && (
+          <div className="flex justify-center">
+            <button
+              onClick={() => setShowAll(!showAll)}
+              className="bg-gray-800 font-extralight text-white px-4 py-2 rounded-md shadow-md hover:bg-gray-900 transition"
+            >
+
+              {showAll ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+            </button>
+          </div>
+        )}
 
         <div className="w-full my-5 z-20 relative overflow-hidden">
           <div
@@ -349,7 +372,7 @@ const About = () => {
         </div>
 
         <div className="flex flex-wrap gap-6 w-full px-10 justify-around">
-          {wordpressServices.map((service, index) => (
+          {wordpressServices.slice(0, showAll ? wordpressServices.length : 3).map((service, index) => (
             <div
               key={index}
               className="bg-white dark:bg-slate-900 z-10 rounded-lg p-6 my-5 shadow-md hover:shadow-lg flex flex-col items-start text-balance 
@@ -360,14 +383,23 @@ const About = () => {
             </div>
           ))}
         </div>
+        {wordpressServices.length > 3 && (
+          <div className="flex justify-center">
+            <button
+              onClick={() => setShowAll(!showAll)}
+              className="bg-gray-800 font-extralight text-white px-4 py-2 mb-2 rounded-md shadow-md hover:bg-gray-900 transition"
+            >
+
+              {showAll ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+            </button>
+          </div>
+        )}
 
       </div>
 
 
 
       {/* Services Section */}
-
-
       <div className=" dark:bg-background  dark:bg-grid-small-white/[0.2]  px-4">
         <div className="w-full px-2 md:px-10 text-3xl sm:text-6xl font-bold relative  z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-8  text-left">
           Key Concepts
@@ -388,7 +420,7 @@ const About = () => {
                 className="object-contain w-full lg:w-3/4"
                 width={500}
                 height={500}
-                alt="Service Image"
+                alt={index}
               />
             </div>
             {/* Content Section */}
@@ -486,9 +518,9 @@ const About = () => {
       <WhatOurClientsSay />
       <Client />
       <OurProject />
-      {/* Header section of about page  */}
+      <ImageGallery />
       {/* <GridBackgroundDemo /> */}
-      {/* Call to Action Section */}
+
       <section className="bg-indigo-600 dark:bg-background relative dark:bg-grid-small-white/[0.2] dark:text-gray-300 text-white py-16">
         {/* Radial gradient for the container to give a faded look */}
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] z-10"></div>

@@ -35,7 +35,7 @@ const Technology = () => {
   };
   return (
     <div className='w-full min-h-40 p-5 md:p-10 relative'>
-        
+
       <h1 className='text-2xl md:text-6xl md:p-10 bg-clip-text text-transparent bg-gradient-to-b from-gray-400 to-gray-700 dark:from-gray-200 dark:to-gray-600'>TECHNOLOGIES</h1>
 
       {/* Category Buttons */}
@@ -59,7 +59,7 @@ const Technology = () => {
           CMS
         </button>
       </div>
-    
+
       <hr className='md:mx-10' />
 
       {/* Display Technologies Based on Selected Category */}
@@ -74,6 +74,7 @@ const Technology = () => {
               src={tech.icon}
               width={500}
               height={500}
+              alt={tech.name}
               className='z-10 w-12 h-12 mx-auto my-3 invert transition-transform duration-300 hover:scale-110 fill-blue-400'
             />
             <h2 className='text-xl font-bold'>{tech.name}</h2>

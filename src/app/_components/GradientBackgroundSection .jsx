@@ -7,7 +7,7 @@ const GradientBackgroundSection = () => {
         <div
             className="relative w-full h-[400px] md:h-[500px] bg-cover bg-center"
             style={{
-                backgroundImage: "url('https://images.pexels.com/photos/3184302/pexels-photo-3184302.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')",
+                backgroundImage: "url('/image/pricebg.webp')",
             }}
         >
             {/* Gradient overlay */}

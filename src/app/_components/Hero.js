@@ -12,6 +12,7 @@ import Achievements from './Achievements';
 import Technology from './Technology';
 import Head from 'next/head';
 
+
 const Hero = () => {
   const offers = [
     {
@@ -68,7 +69,7 @@ const Hero = () => {
             Welcome to <br />  <span className='tracking-wide'>TechCanva</span>
 
           </motion.h1>
-          <motion.p
+          <motion.div
             initial={{ opacity: 0, y: 50 }} // Slightly different for subtle distinction
             whileInView={{ opacity: 1, y: 0 }}
             transition={{
@@ -81,7 +82,7 @@ const Hero = () => {
             <h1>Empowering Your Digital Success with Custom Web Solutions</h1>
             <p>Based in <span className='font-bold'>Firozabad</span>, we provide professional web design, development, and digital marketing services. We focus on creating responsive, scalable, and SEO-friendly websites to help businesses grow and succeed online.</p>
            
-          </motion.p>
+          </motion.div>
         </LampContainer>
 
 
@@ -96,7 +97,7 @@ const Hero = () => {
       <ExploreService />
 
 
-
+           
       {/* Google Ads */}
       <Ads />
     </section>

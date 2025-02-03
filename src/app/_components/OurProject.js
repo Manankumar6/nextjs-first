@@ -11,7 +11,7 @@ import Link from 'next/link'
 import { Button } from "@/components/ui/moving-border";
 const OurProject = () => {
   const projectData = [
-    
+
     {
       img: "/image/music.png",
       title: "Sound Wavy Studio",
@@ -36,8 +36,8 @@ const OurProject = () => {
       desr: "Explore TechTutor Online's Student Survey Portal, a comprehensive platform designed to gather feedback, insights, and experiences from students. Tailored for educational institutions, this portal helps educators understand student needs, track progress, and enhance learning outcomes through structured surveys and analytics.",
       link: "https://techtutoronline.vercel.app"
     },
-   
-   
+
+
 
   ]
   return (
@@ -49,7 +49,7 @@ const OurProject = () => {
 
 
           <p className="mt-4 max-w-lg mx-auto text-justify  text-lg mb-4 ">
-          At TechCanve, we are passionate about delivering innovative digital solutions that are tailored to meet the unique needs of businesses across various industries. Our expertise spans fields including e-commerce, healthcare, education, finance, and entertainment, helping companies address challenges and unlock new opportunities through custom-built platforms.
+            At TechCanve, we are passionate about delivering innovative digital solutions that are tailored to meet the unique needs of businesses across various industries. Our expertise spans fields including e-commerce, healthcare, education, finance, and entertainment, helping companies address challenges and unlock new opportunities through custom-built platforms.
             <br /><br />
             With a deep understanding of industry-specific needs, we create user-friendly e-commerce websites that provide seamless shopping experiences, secure healthcare and finance applications that ensure data privacy, and educational platforms that promote engagement and accessibility. Additionally, our entertainment solutions bring captivating and intuitive experiences to users around the world.
           </p>
@@ -62,22 +62,22 @@ const OurProject = () => {
                 <div >
                   <Card>
                     <CardContent className="flex aspect-square  items-center p-4 flex-col ">
-                      <img src={project.img} />
+                      <img src={project.img} alt={index} />
                       <p className="text-2xl font-semibold mt-5">{project.title}</p>
                       <p className='text-sm text-justify'>{project.desr}</p>
                       <div className="mt-10">
-                      <Link
-                            href={project.link}
-                           target='_blank'
-                          >
-                        <Button
-                          borderRadius="1.75rem"
-                          className="bg-white dark:bg-transparent font-bold text-black dark:text-white border-neutral-200 dark:border-slate-800"
+                        <Link
+                          href={project.link}
+                          target='_blank'
                         >
-                          
+                          <Button
+                            borderRadius="1.75rem"
+                            className="bg-white dark:bg-transparent font-bold text-black dark:text-white border-neutral-200 dark:border-slate-800"
+                          >
+
                             View Live
-                        </Button>
-                          </Link>
+                          </Button>
+                        </Link>
                       </div>
                     </CardContent>
                   </Card>
