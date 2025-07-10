@@ -11,7 +11,12 @@ import Link from 'next/link'
 import { Button } from "@/components/ui/moving-border";
 const OurProject = () => {
   const projectData = [
-
+    {
+      img: "/image/foodcafe.png",
+      title: "Food Café – Digital Food Ordering System",
+      desr: "A modern restaurant web application built for seamless digital dining. Cool Caffé features real-time menu updates, cart management, order tracking, and admin controls — developed with Next.js, MongoDB, and Socket.IO to deliver a fast, interactive, and scalable experience.",
+      link: "https://food-cafe-template.vercel.app/"
+    },
     {
       img: "/image/music.png",
       title: "Sound Wavy Studio",

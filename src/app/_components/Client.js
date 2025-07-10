@@ -8,6 +8,15 @@ const Client = () => {
 
   const projects = [
     {
+  img: '/image/foodcafe.png',
+  projectName: "Fool Café – Food Ordering Website",
+  madeFor: "Fool Café",
+  feedback: "Fool Café’s digital platform, developed by TechCanva, has transformed how we manage our restaurant. With real-time menu management, customized cart system, dynamic order tracking, admin dashboard, and mobile-optimized design, it offers an intuitive experience for both customers and staff. Technologies like Next.js, MongoDB, and Socket.IO power its responsiveness and reliability. This project has streamlined our operations and elevated our brand’s digital presence.",
+  client: "Client",
+  url: "https://food-cafe-template.vercel.app/"
+}
+,
+    {
       img: '/image/home.png',
       projectName: "Student Survey Portal",
       madeFor: "Made for IT Computer Education World",
