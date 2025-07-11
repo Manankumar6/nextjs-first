@@ -46,7 +46,7 @@ const ImageGallery = () => {
   };
 
   return (
-    <div id="food-cafe" className="bg-background  dark:bg-grid-small-white/[0.2] min-h-screen py-6 sm:py-8 lg:py-12">
+    <div  className="bg-background  dark:bg-grid-small-white/[0.2] min-h-screen py-6 sm:py-8 lg:py-12">
       <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
         {/* Header Section */}
         <div className="mb-4 flex items-center justify-between gap-8 sm:mb-8 md:mb-12">

@@ -60,7 +60,7 @@ const OurProject = () => {
           </p>
 
         </div>
-        <Carousel className="w-full max-w-lg mx-auto my-auto overflow-hidden md:overflow-visible order-1 md:order-2 ">
+        <Carousel id="food-cafe" className="w-full max-w-lg mx-auto my-auto overflow-hidden md:overflow-visible order-1 md:order-2 ">
           <CarouselContent>
             {projectData.map((project, index) => (
               <CarouselItem key={index}>

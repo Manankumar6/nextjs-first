@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { X } from 'lucide-react'
 import { Button } from '@/components/ui/moving-border'
+import Link from 'next/link'
 
 
 export default function FeaturedProjectCard() {
@@ -16,9 +17,9 @@ export default function FeaturedProjectCard() {
     }, [])
 
     const handleClose = () => setShow(false)
-    const handleClick = () => {
-        router.push('/services/food-cafe')
-    }
+    // const handleClick = () => {
+    //     router.push('/services/food-cafe')
+    // }
 
     return (
         <AnimatePresence>
@@ -80,21 +81,21 @@ export default function FeaturedProjectCard() {
                     </button>
 
                     {/* Card Content */}
-                    <div onClick={handleClick} className="cursor-pointer pt-4">
+                    <div className="cursor-pointer pt-4">
                         <img
                             src="/image/foodcafe.png"
                             alt="Cool Caffé"
                             className="rounded-xl w-full mb-4 border border-white/10"
                         />
-                        <h3 className="text-xl font-bold mb-2">🔥 Latest Project: Food Café</h3>
+                        <h3 className="text-xl font-bold mb-2">🔥 <span className='font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-indigo-200 py-4 slide-in' >Latest Project: Food Café</span></h3>
                         <p className="text-sm text-gray-300 mb-4 leading-snug">
                             Step into the future of food ordering! From live menu updates to seamless cart & admin controls —
                             Food Café delivers a complete, real-time experience crafted with tech precision.
                         </p>
                         <div className="flex justify-center">
-                            <a
+                            <Link
                                 href="/about#food-cafe"
-                               
+
                             >
                                 <Button
                                     borderRadius="1.75rem"
@@ -102,7 +103,7 @@ export default function FeaturedProjectCard() {
                                 >
                                     Tap to view
                                 </Button>
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </motion.div>
