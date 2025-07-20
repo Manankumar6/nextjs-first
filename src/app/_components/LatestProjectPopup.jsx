@@ -8,19 +8,36 @@ import Link from 'next/link'
 
 
 export default function FeaturedProjectCard() {
-    const [show, setShow] = useState(false)
-    const router = useRouter()
+      const [show, setShow] = useState(false)
 
+    // Show only once per calendar day
     useEffect(() => {
-        const timer = setTimeout(() => setShow(true), 1200)
-        return () => clearTimeout(timer)
+        const lastShownDate = localStorage.getItem('foodCafeCardShownDate')
+        const today = new Date().toDateString() // e.g., "Sat Jul 20 2025"
+
+        if (lastShownDate !== today) {
+            const showTimer = setTimeout(() => {
+                setShow(true)
+                localStorage.setItem('foodCafeCardShownDate', today)
+            }, 1200)
+
+            return () => clearTimeout(showTimer)
+        }
     }, [])
 
-    const handleClose = () => setShow(false)
-    // const handleClick = () => {
-    //     router.push('/services/food-cafe')
-    // }
+    // Auto-hide after 5 seconds
+    useEffect(() => {
+        if (show) {
+            const hideTimer = setTimeout(() => {
+                setShow(false)
+            }, 5000)
 
+            return () => clearTimeout(hideTimer)
+        }
+    }, [show])
+
+    const handleClose = () => setShow(false)
+  
     return (
         <AnimatePresence>
             {show && (
