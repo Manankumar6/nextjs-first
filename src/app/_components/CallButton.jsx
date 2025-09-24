@@ -6,7 +6,7 @@ import { Phone, Instagram, Linkedin, MessageSquare } from 'lucide-react'; // Use
 
 const StaticCallButton = () => {
   const handleCall = () => {
-    window.location.href = 'tel:+1234567890';
+    window.location.href = 'tel:+916398401607';
   };
 
   const handleWhatsApp = () => {
@@ -14,11 +14,11 @@ const StaticCallButton = () => {
   };
 
   const handleInstagram = () => {
-    window.open('https://www.instagram.com/manankumar_06/profilecard/?igsh=NzQxYzZiM3o3aWdw', '_blank'); // Replace with your Instagram URL
+    window.open('https://www.instagram.com/techcanva_19/', '_blank'); // Replace with your Instagram URL
   };
 
   const handleLinkedIn = () => {
-    window.open('https://www.linkedin.com/in/manan-kumar-m1906', '_blank'); // Replace with your LinkedIn URL
+    window.open('https://www.linkedin.com/in/tech-canva-23a919385', '_blank'); // Replace with your LinkedIn URL
   };
 
   return (

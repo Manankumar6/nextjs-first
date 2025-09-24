@@ -58,7 +58,7 @@ const page = () => {
 
         {/* Background Shape */}
         <div className="w-1/2 h-[31rem] rounded-full min-h-full bg-slate-700 absolute  md:-right-20 -right-20 -top-16   md:-top-12 z-10 md:rotate-45 -rotate-45 animate-slide-in  "
-      
+
         ></div>
       </section>
       {/* <Heading word={'Pricing Plans'} />
@@ -83,81 +83,207 @@ const page = () => {
         <div className="absolute  bottom-0 left-0 md:left-12 w-full md:w-[94%] h-[2px] bg-blue-500"></div>
       </div>
       <div className="flex gap-3  mt-5 flex-wrap justify-around">
-
-        <CardSpotlight className="h-auto w-96 ">
-          <h3 className="text-2xl font-semibold text-gray-700 dark:text-gray-200 mb-2">Basic Plan</h3>
-          <p className="text-4xl font-bold mb-4 text-gray-800 dark:text-gray-300">₹15,000</p>
+        <CardSpotlight className="h-auto w-96">
+          <h3 className="text-2xl font-semibold text-gray-700 dark:text-gray-200 mb-2">
+            Single Page WordPress Website
+          </h3>
+          <p className="text-4xl font-bold mb-4 text-gray-800 dark:text-gray-300">
+            ₹1,499
+          </p>
           <div className="text-neutral-700 dark:text-neutral-200 mt-4 relative z-20">
-            <p className="text-gray-700 dark:text-indigo-300 mb-4">Perfect for small businesses or startups.</p>
-            <ul className="list-none  mt-2">
-              <Step title="5 pages Website" />
-              <Step title="1 Year Free Domain Name (.com, .in, .org)" />
-              <Step title="1 Year Free Hosting (Unlimited Space)" />
-              <Step title="Dynamic Website (Premium Design)" />
-              <Step title="Lifetime 24/7 Free Hosting Support" />
-              <Step title="Unlimited Images & Videos Upload" />
-              <Step title="Free SSL Certificates" />
-              <Step title="Social Media Integration" />
-              <Step title="5 Free Email Ids" />
-              <Step title="100% Responsive Website" />
-              <Step title="Inquiry Form" />
-              <Step title="1 Year Free Technical Support For Website" />
-              <Step title="Annual Renewal For Hosting ₹5000" />
-
+            <p className="text-gray-700 dark:text-indigo-300 mb-4">
+              Affordable and easy-to-manage website powered by WordPress.
+            </p>
+            <ul className="list-none mt-2">
+              <Step title="Single Page WordPress Website" />
+              <Step title="Customizable Home Section" />
+              <Step title="Company Gallery Section (Showcase Photos/Videos)" />
+              <Step title="Contact/Inquiry Form" />
+              <Step title="Direct Call Button & WhatsApp Button" />
+              <Step title="Google Map Integration (Business Location)" />
+              <Step title="Free SSL Certificate" />
+              <Step title="Responsive & Mobile Friendly" />
+              <Step title="Beginner-Friendly WordPress Admin Panel" />
+              <Step title="SEO Ready Structure" />
+              <Step title="1 Month Free Technical Support" />
             </ul>
-            <div className='w-full mt-5 flex justify-center'>
-
-              <Link href='/contact' >
+            <div className="w-full mt-5 flex justify-center">
+              <Link href="/contact">
                 <Button
                   borderRadius="1.75rem"
-                  className="bg-white  dark:bg-transparent font-bold text-black dark:text-white border-neutral-200 dark:border-slate-800"
+                  className="bg-white dark:bg-transparent font-bold text-black dark:text-white border-neutral-200 dark:border-slate-800"
+                >
+                  Choose WordPress
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </CardSpotlight>
+
+        <CardSpotlight className="h-auto w-96">
+          <h3 className="text-2xl font-semibold text-gray-700 dark:text-gray-200 mb-2">
+            Single Page Website
+          </h3>
+          <p className="text-4xl font-bold mb-4 text-gray-800 dark:text-gray-300">
+            ₹2,999
+          </p>
+          <div className="text-neutral-700 dark:text-neutral-200 mt-4 relative z-20">
+            <p className="text-gray-700 dark:text-indigo-300 mb-4">
+              Best for individuals or small businesses who want a simple yet professional online presence.
+            </p>
+            <ul className="list-none mt-2">
+              <Step title="Modern Single Page Website" />
+              <Step title="Home Section with Business Overview" />
+              <Step title="Company Gallery Section (Showcase Photos/Videos)" />
+              <Step title="Contact/Inquiry Form" />
+              <Step title="Direct Call Button & WhatsApp Button" />
+              <Step title="Google Map Integration (Business Location)" />
+              <Step title="Free SSL Certificate" />
+              <Step title="Fully Responsive Design (Mobile Friendly)" />
+              <Step title="SEO-Friendly Structure" />
+              <Step title="1 Year Free Technical Support" />
+              <Step title="Fast Loading & Optimized Performance" />
+            </ul>
+            <div className="w-full mt-5 flex justify-center">
+              <Link href="/contact">
+                <Button
+                  borderRadius="1.75rem"
+                  className="bg-white dark:bg-transparent font-bold text-black dark:text-white border-neutral-200 dark:border-slate-800"
+                >
+                  Choose Single Page
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </CardSpotlight>
+          <CardSpotlight className="h-auto w-96">
+  <h3 className="text-2xl font-semibold text-gray-700 dark:text-gray-200 mb-2">
+    Digital Menu System
+  </h3>
+  <p className="text-4xl font-bold mb-4 text-gray-800 dark:text-gray-300">
+    Starting at ₹11,999
+  </p>
+  <div className="text-neutral-700 dark:text-neutral-200 mt-4 relative z-20">
+    <p className="text-gray-700 dark:text-indigo-300 mb-4">
+      Smart digital menu for restaurants, cafes, and food outlets with real-time order management.
+    </p>
+    <ul className="list-none mt-2">
+      <Step title="Interactive Digital Menu (Mobile & Tablet Friendly)" />
+      <Step title="Add Unlimited Food Items with Images & Prices" />
+      <Step title="Variants & Add-ons (Sizes, Extra Toppings, etc.)" />
+      <Step title="QR Code Scanning for Instant Access" />
+      <Step title="Cart & Checkout System" />
+      <Step title="Order Tracking with Timer" />
+      <Step title="Admin Dashboard for Live Order Management" />
+      <Step title="Real-Time Updates with Socket.IO" />
+      <Step title="GST & Service Charge Auto Calculation" />
+      <Step title="Payment Gateway Integration (UPI, Cards, Wallets)" />
+      <Step title="Customer Notifications " />
+      <Step title="Sales Reports & Analytics Dashboard" />
+      <Step title="Social Media & Google Maps Integration" />
+      <Step title="Secure & SEO-Friendly Design" />
+      <Step title="1 Year Free Technical Support" />
+      <Step title="Annual Renewal For Hosting ₹3,500" />
+    </ul>
+    <div className="w-full mt-5 flex justify-center">
+      <Link href="/contact">
+        <Button
+          borderRadius="1.75rem"
+          className="bg-white dark:bg-transparent font-bold text-black dark:text-white border-neutral-200 dark:border-slate-800"
+        >
+          Choose Digital Menu
+        </Button>
+      </Link>
+    </div>
+  </div>
+</CardSpotlight>
+
+        <CardSpotlight className="h-auto w-96">
+          <h3 className="text-2xl font-semibold text-gray-700 dark:text-gray-200 mb-2">
+            Basic Plan
+          </h3>
+          <p className="text-4xl font-bold mb-4 text-gray-800 dark:text-gray-300">
+            ₹9,999
+          </p>
+          <div className="text-neutral-700 dark:text-neutral-200 mt-4 relative z-20">
+            <p className="text-gray-700 dark:text-indigo-300 mb-4">
+              Perfect for small businesses or startups looking for a professional online presence.
+            </p>
+            <ul className="list-none mt-2">
+              <Step title="Up to 5 Pages Website (Home, About, Services, Gallery, Contact)" />
+              <Step title="1 Year Free Domain Name (.com, .in, .org)" />
+              <Step title="1 Year Free Hosting " />
+              <Step title="Dynamic Website with Admin Panel (Easy Updates)" />
+              <Step title="Premium & Modern Website Design" />
+              <Step title="Content Management System (CMS)" />
+              <Step title="SEO-Friendly Website Structure" />
+              <Step title="Free SSL Certificate" />
+
+              <Step title="1GB Images & Videos Upload" />
+              <Step title="Social Media Integration" />
+              <Step title="Google Maps Integration" />
+              <Step title="Contact/Inquiry Form" />
+              <Step title="Basic Analytics & Traffic Reports" />
+              <Step title="100% Responsive (Mobile & Tablet Friendly)" />
+              <Step title="1 Year Free Technical Support" />
+              <Step title="Annual Renewal For Hosting ₹5000" />
+            </ul>
+            <div className="w-full mt-5 flex justify-center">
+              <Link href="/contact">
+                <Button
+                  borderRadius="1.75rem"
+                  className="bg-white dark:bg-transparent font-bold text-black dark:text-white border-neutral-200 dark:border-slate-800"
                 >
                   Choose Basic
                 </Button>
               </Link>
             </div>
           </div>
-
         </CardSpotlight>
-        <CardSpotlight className="h-auto w-96">
-          <h3 className="text-2xl font-semibold text-gray-700 dark:text-gray-200 mb-2">Premium Plan</h3>
-          <p className="text-4xl font-bold mb-4 text-gray-800 dark:text-gray-300">₹25,000</p>
-          <div className="text-neutral-700 dark:text-neutral-200 mt-4 relative z-20">
-            <p className="text-gray-700 dark:text-indigo-300 mb-4">Ideal for growing businesses looking to scale.</p>
-            <ul className="list-none mt-2">
-              <Step title="12 pages Website" />
-              <Step title="1 Year Free Domain Name (.com, .in, .org)" />
-              <Step title="1 Year Free Hosting (Unlimited Space)" />
-              <Step title="Dynamic Website (Premium Design)" />
-              <Step title="Admin Access" />
-              <Step title="Google Search Console Setup" />
-              <Step title="Lifetime 24/7 Free Hosting Support" />
-              <Step title="Unlimited Images & Videos Upload" />
-              <Step title="Free SSL Certificates" />
-              <Step title="10 Free Email Ids" />
-              <Step title="SEO Friendly Website" />
-              <Step title="100% Responsive Website" />
-              <Step title="Payment Gateway Integration" />
-              <Step title="Social Media Integration" />
-              <Step title="Call Button Integration" />
-              <Step title="WhatsApp Button Integration" />
-              <Step title="Inquiry Form" />
-              <Step title="1 Year Free Technical Support For Website" />
-              <Step title="Annual Renewal For Hosting ₹6000" />
-            </ul>
-            <div className='w-full mt-5 flex justify-center'>
 
+        <CardSpotlight className="h-auto w-96">
+          <h3 className="text-2xl font-semibold text-gray-700 dark:text-gray-200 mb-2">
+            E-Commerce Website
+          </h3>
+          <p className="text-4xl font-bold mb-4 text-gray-800 dark:text-gray-300">
+            Starting at ₹14,999
+          </p>
+          <div className="text-neutral-700 dark:text-neutral-200 mt-4 relative z-20">
+            <p className="text-gray-700 dark:text-indigo-300 mb-4">
+              Perfect for businesses looking to sell products online with a professional store.
+            </p>
+            <ul className="list-none mt-2">
+              <Step title="Modern E-Commerce Website (Unlimited Products)" />
+              <Step title="1 Year Free Domain Name (.com, .in, .org)" />
+              <Step title="1 Year Free Hosting " />
+              <Step title="Dynamic Admin Panel (Product & Order Management)" />
+              <Step title="Shopping Cart & Secure Checkout" />
+              <Step title="Payment Gateway Integration (UPI, Cards, NetBanking)" />
+              <Step title="Customer Login & Registration" />
+              <Step title="Free SSL Certificate" />
+              <Step title="SEO-Friendly Structure" />
+              <Step title="Google Analytics & Search Console Setup" />
+              <Step title="3GB Images & Videos Upload" />
+              <Step title="Social Media Integration" />
+              <Step title="Wishlist & Order Tracking" />
+              <Step title="Responsive & Mobile Friendly Design" />
+              <Step title="Email/SMS Order Notifications" />
+              <Step title="1 Year Free Technical Support" />
+              <Step title="Annual Renewal For Hosting ₹6,000" />
+            </ul>
+            <div className="w-full mt-5 flex justify-center">
               <Link href="/contact">
                 <Button
                   borderRadius="1.75rem"
                   className="bg-white dark:bg-transparent font-bold text-black dark:text-white border-neutral-200 dark:border-slate-800"
                 >
-                  Choose Premium
+                  Choose E-Commerce
                 </Button>
               </Link>
             </div>
           </div>
         </CardSpotlight>
+
         <CardSpotlight className="h-auto w-96">
           <h3 className="text-2xl font-semibold text-gray-700 dark:text-gray-200 mb-2">Custom Plan</h3>
           <p className="text-4xl font-bold mb-4 text-gray-800 dark:text-gray-300">Pricing Varies</p>
@@ -182,7 +308,7 @@ const page = () => {
               <Step title="WhatsApp Button Integration" />
               <Step title="Inquiry Form" />
               <Step title="1 Year 24/7 Free Support For Website" />
-              <Step title="Annual Renewal ₹6000" />
+              {/* <Step title="Annual Renewal ₹6000" /> */}
             </ul>
             <div className='w-full mt-5 flex justify-center'>
               <Link href="/contact">
@@ -197,6 +323,37 @@ const page = () => {
 
           </div>
         </CardSpotlight>
+        <CardSpotlight className="h-auto w-96">
+          <h3 className="text-2xl font-semibold text-gray-700 dark:text-gray-200 mb-2">Digital Marketing Plan</h3>
+          <p className="text-4xl font-bold mb-4 text-gray-800 dark:text-gray-300">Pricing Varies</p>
+          <div className="text-neutral-700 dark:text-neutral-200 mt-4 relative z-20">
+            <p className="text-gray-700 dark:text-indigo-300 mb-4">Boost your business with comprehensive digital marketing strategies.</p>
+            <ul className="list-none mt-2">
+              <Step title="SEO Optimization" />
+              <Step title="Social Media Management (Facebook, Instagram, LinkedIn)" />
+              <Step title="Google Ads Campaign Setup" />
+              <Step title="Content Marketing (Blogs, Articles)" />
+              <Step title="1 Month Free Analytics Reporting" />
+              <Step title="Monthly Progress Reports" />
+              <Step title="Email Marketing Setup" />
+              <Step title="Ad Budget Management" />
+              <Step title="Targeted Ads Based on Audience Insights" />
+              <Step title="Brand Awareness Strategy" />
+              <Step title="Competitor Analysis" />
+              <Step title="Dedicated Account Manager" />
+            </ul>
+            <div className="w-full mt-5 flex justify-center">
+              <Link href="/contact">
+                <Button
+                  borderRadius="1.75rem"
+                  className="bg-white dark:bg-transparent font-bold text-black dark:text-white border-neutral-200 dark:border-slate-800"
+                >
+                  Choose Digital Marketing
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </CardSpotlight>
       </div>
       <div className="mt-5">
 
@@ -204,84 +361,7 @@ const page = () => {
       </div>
 
 
-      <div className="w-full pt-5  z-20 relative overflow-hidden">
-        <div
-          className="md:ml-12 p-6 md:p-8 text-lg md:text-xl font-extrabold bg-slate-900 w-[30rem] md:w-[35rem] "
-          style={{
-            clipPath: "polygon(0 0, 62% 0, 80% 100%, 0% 100%)",
-          }}
-        >
-          <p className=" bg-clip-text text-transparent bg-gradient-to-b from-gray-600 to-gray-900 dark:from-gray-100 dark:to-blue-600">WorsPress & Digital Marketing</p>
-        </div>
 
-        <div className="absolute  bottom-0 left-0 md:left-12 w-full md:w-[94%] h-[2px] bg-blue-500"></div>
-      </div>
-      <div className="flex gap-3  mt-5 flex-wrap justify-start px-1 gap-x-10 md:px-10">
-      <CardSpotlight className="h-auto w-96">
-        <h3 className="text-2xl font-semibold text-gray-700 dark:text-gray-200 mb-2">WordPress Basic Plan</h3>
-        <p className="text-4xl font-bold mb-4 text-gray-800 dark:text-gray-300">₹7,000</p>
-        <div className="text-neutral-700 dark:text-neutral-200 mt-4 relative z-20">
-          <p className="text-gray-700 dark:text-indigo-300 mb-4">Perfect for small businesses or startups looking to establish their online presence.</p>
-          <ul className="list-none mt-2">
-            <Step title="5 Pages Website" />
-            <Step title="1 Year Free Domain Name (.com, .in, .org)" />
-            <Step title="1 Year Free Hosting (Unlimited Space)" />
-            <Step title="Dynamic Website (Premium Design)" />
-            <Step title="Lifetime 24/7 Free Hosting Support" />
-            <Step title="Unlimited Images & Videos Upload" />
-            <Step title="Free SSL Certificates" />
-            <Step title="Social Media Integration" />
-            <Step title="5 Free Email Ids" />
-            <Step title="100% Responsive Website" />
-            <Step title="Inquiry Form" />
-            <Step title="1 Year Free Technical Support For Website" />
-            <Step title="Annual Renewal For Hosting ₹5000" />
-          </ul>
-          <div className="w-full mt-5 flex justify-center">
-            <Link href="/contact">
-              <Button
-                borderRadius="1.75rem"
-                className="bg-white dark:bg-transparent font-bold text-black dark:text-white border-neutral-200 dark:border-slate-800"
-              >
-                Choose WordPress Basic
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </CardSpotlight>
-
-      <CardSpotlight className="h-auto w-96">
-        <h3 className="text-2xl font-semibold text-gray-700 dark:text-gray-200 mb-2">Digital Marketing Plan</h3>
-        <p className="text-4xl font-bold mb-4 text-gray-800 dark:text-gray-300">Pricing Varies</p>
-        <div className="text-neutral-700 dark:text-neutral-200 mt-4 relative z-20">
-          <p className="text-gray-700 dark:text-indigo-300 mb-4">Boost your business with comprehensive digital marketing strategies.</p>
-          <ul className="list-none mt-2">
-            <Step title="SEO Optimization" />
-            <Step title="Social Media Management (Facebook, Instagram, LinkedIn)" />
-            <Step title="Google Ads Campaign Setup" />
-            <Step title="Content Marketing (Blogs, Articles)" />
-            <Step title="1 Month Free Analytics Reporting" />
-            <Step title="Monthly Progress Reports" />
-            <Step title="Email Marketing Setup" />
-            <Step title="Ad Budget Management" />
-            <Step title="Targeted Ads Based on Audience Insights" />
-            <Step title="Brand Awareness Strategy" />
-            <Step title="Competitor Analysis" />
-            <Step title="Dedicated Account Manager" />
-          </ul>
-          <div className="w-full mt-5 flex justify-center">
-            <Link href="/contact">
-              <Button
-                borderRadius="1.75rem"
-                className="bg-white dark:bg-transparent font-bold text-black dark:text-white border-neutral-200 dark:border-slate-800"
-              >
-                Choose Digital Marketing
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </CardSpotlight>
-      </div>
 
       {/* FAQ Section */}
       <section className="py-16 px-4 bg-gray-100 dark:bg-background dark:bg-grid-small-white/[0.2]">

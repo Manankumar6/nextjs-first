@@ -204,6 +204,9 @@ const Contact = () => {
                       required
                     >
 
+                      <option value="WordPress" >WordPress</option>
+                      <option value="Single Page (Code Base)" >Single Page (Code Base)</option>
+                      <option value="Digital Menu" >Digital Menu</option>
                       <option value="basic" >Basic</option>
                       <option value="premium">Premium</option>
                       <option value="custom">Custom</option>
@@ -225,6 +228,7 @@ const Contact = () => {
                     >
 
                       <option value="business" >Business</option>
+                      <option value="digitalmenu" >Digital Menu</option>
                       <option value="ecommerce">E-commerce</option>
                       <option value="portfolio">Portfolio</option>
                       <option value="blog">Blog</option>
