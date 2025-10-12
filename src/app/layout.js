@@ -1,18 +1,18 @@
-import { Inter } from 'next/font/google';
+import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "./_components/Navbar";
-import { ChakraProvider } from '@chakra-ui/react';
+import { ChakraProvider } from "@chakra-ui/react";
 import { AuthProvider } from "./context/AuthContext";
 import ProtectedRoute from "./_components/ProtectiveRoute";
 import Footer from "./_components/Footer";
-import Head from "next/head";
 import { ThemeProvider } from "@/components/theme-provider";
-import StaticCallButton from './_components/CallButton';
-import Script from 'next/script';
+import StaticCallButton from "./_components/CallButton";
+import Script from "next/script";
+import Image from "next/image";
 
 const inter = Inter({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata = {
@@ -23,7 +23,17 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <Head>
+      <head>
+        {/* ✅ You can safely include meta tags or link tags here */}
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5317982228910759"
+          crossOrigin="anonymous"
+        ></script>
+      </head>
+
+      <body className={inter.className}>
+        {/* ✅ Move Script outside <Head> */}
         <Script
           id="meta-pixel"
           strategy="afterInteractive"
@@ -42,19 +52,20 @@ export default function RootLayout({ children }) {
             `,
           }}
         />
-        <noscript>
-          <img
-            height="1"
-            width="1"
-            style={{ display: "none" }}
-            src={`https://www.facebook.com/tr?id=1521058109016649&ev=PageView&noscript=1`}
-          />
-        </noscript>
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5317982228910759"
-          crossorigin="anonymous"></script>
-          
-      </Head>
-      <body className={inter.className}>
+
+        {/* ✅ Use Next.js <Image /> instead of <img> */}
+       <noscript>
+  <Image
+    src="https://www.facebook.com/tr?id=1521058109016649&ev=PageView&noscript=1"
+    alt=""
+    width={1}
+    height={1}
+    unoptimized
+    style={{ display: "none" }}
+  />
+</noscript>
+
+
         <AuthProvider>
           <ChakraProvider>
             <ProtectedRoute>
@@ -66,7 +77,7 @@ export default function RootLayout({ children }) {
               >
                 <Navbar />
                 {children}
-                <StaticCallButton/>
+                <StaticCallButton />
                 <Footer />
               </ThemeProvider>
             </ProtectedRoute>
