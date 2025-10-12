@@ -15,10 +15,10 @@ const Footer = () => {
         <div className="md:w-[30%] flex flex-col py-10 items-center justify-center md:mx-0  text-center md:text-center px-5">
           <Link href="/" className="flex title-font font-medium items-center justify-center text-gray-900">
             <span className="logo font-bold text-indigo-500">
-              <Image src='/image/logo4.png' width={70} height={70} alt='logo' />
+              <Image src='/image/logo.jpg' className='rounded-full' width={70} height={70} alt='logo' />
             </span>
           </Link>
-          <b className='text-xl mt-2'>TechCanva</b>
+          <b className='text-xl mt-2'>Tech<span className='text-sky-500'>Canva</span></b>
           <p className="text-[10px] tracking-widest mt-1">Your Vision, Our Canvas</p>
           <p className='text-[1rem] text-balance'>India's #1 in Web Development, delivering quality websites with engaging animations at great prices.</p>
         </div>

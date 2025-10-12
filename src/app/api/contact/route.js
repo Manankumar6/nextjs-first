@@ -5,7 +5,7 @@ import nodemailer from "nodemailer";
 export async function POST(req) {
   try {
     // Connect to the database
-    await connectDb();
+    // await connectDb();
 
     // Parse the JSON body from the request
     const body = await req.json(); // Assuming this works without issues
@@ -15,10 +15,10 @@ export async function POST(req) {
 
     // Log the extracted values for debugging
     
-    const newContact = new Contact({ name, email,phone, plan, siteType, message });
+    // const newContact = new Contact({ name, email,phone, plan, siteType, message });
 
-    // Save the new contact to the database
-    await newContact.save();
+    // // Save the new contact to the database
+    // await newContact.save();
 
     // Set up Nodemailer transporter
     const transporter = nodemailer.createTransport({

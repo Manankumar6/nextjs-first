@@ -15,6 +15,7 @@ import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/moving-border';
 import Heading from '@/app/_components/Heading';
 import MovingCircle from '@/components/MovingCircle';
+import { FaWhatsapp } from 'react-icons/fa';
 
 const Contact = () => {
   const form = useRef();
@@ -42,10 +43,10 @@ const Contact = () => {
 
   const sendEmail = async (e) => {
     e.preventDefault();
-    if (!authenticate) {
-      router.push('/login');
-      return;
-    }
+    // if (!authenticate) {
+    //   router.push('/login');
+    //   return;
+    // }
     setLoading(true);
 
     try {
@@ -296,10 +297,13 @@ const Contact = () => {
               <div className="mt-8">
                 <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-300">Follow Us</h2>
                 <div className="flex space-x-4 mt-4">
-                  <Link target='_blank' href="https://www.instagram.com/manankumar_06/?igsh=NzQxYzZiM3o3aWdw" className="text-gray-500 hover:text-purple-500 transition">
+                  <Link target='_blank' href="https://www.instagram.com/techcanva_19/" className="text-gray-500 hover:text-purple-500 transition">
                     <AiFillInstagram className='w-6 h-6' />
                   </Link>
-                  <Link target='_blank' href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile" className="text-gray-500 hover:text-indigo-500 transition">
+                  <Link target='_blank' href="https://wa.me/6398401607" className="text-gray-500 hover:text-indigo-500 transition">
+                    <FaWhatsapp className='w-6 h-6' />
+                  </Link>
+                  <Link target='_blank' href="www.linkedin.com/in/tech-canva-23a919385" className="text-gray-500 hover:text-indigo-500 transition">
                     <IoLogoLinkedin className='w-6 h-6' />
                   </Link>
                   <Link
