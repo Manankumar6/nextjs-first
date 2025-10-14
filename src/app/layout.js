@@ -25,6 +25,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         {/* ✅ You can safely include meta tags or link tags here */}
+        <meta name="facebook-domain-verification" content="oo82fj2ls2k40ernv1zac7errhpf20" />
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5317982228910759"
@@ -54,16 +55,16 @@ export default function RootLayout({ children }) {
         />
 
         {/* ✅ Use Next.js <Image /> instead of <img> */}
-       <noscript>
-  <Image
-    src="https://www.facebook.com/tr?id=1521058109016649&ev=PageView&noscript=1"
-    alt=""
-    width={1}
-    height={1}
-    unoptimized
-    style={{ display: "none" }}
-  />
-</noscript>
+        <noscript>
+          <Image
+            src="https://www.facebook.com/tr?id=1521058109016649&ev=PageView&noscript=1"
+            alt=""
+            width={1}
+            height={1}
+            unoptimized
+            style={{ display: "none" }}
+          />
+        </noscript>
 
 
         <AuthProvider>

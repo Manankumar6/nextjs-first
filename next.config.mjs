@@ -24,7 +24,7 @@ const nextConfig = {
             },
         ];
     }, images: {
-        domains: ['plus.unsplash.com','aceternity.com','images.pexels.com'], // Add external image domains here
+        domains: ['plus.unsplash.com','aceternity.com','images.pexels.com','www.facebook.com'], // Add external image domains here
       },
 };
 
