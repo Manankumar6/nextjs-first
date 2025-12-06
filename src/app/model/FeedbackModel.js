@@ -6,11 +6,12 @@ const FeedbackSchema = new mongoose.Schema({
         required: true,
         trim: true,
     },
-    email: {
-        type: String,
-        required: true,
-        trim: true,
-    },
+     rating: {
+    type: Number,
+    required: true,
+    min: 1, // minimum 1 star
+    max: 5, // maximum 5 stars
+  },
     feedback: {
         type: String,
         required: true,

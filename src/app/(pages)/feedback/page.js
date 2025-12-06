@@ -9,25 +9,19 @@ import WhatOurClientsSay from '@/app/_components/WhatOurClientsSay';
 import { Button } from '@/components/ui/moving-border';
 import MovingCircle from '@/components/MovingCircle';
 import Image from 'next/image';
-// import { Card, CardContent } from "@/components/ui/card";
-// import {
-//     Carousel,
-//     CarouselContent,
-//     CarouselItem,
-//     CarouselNext,
-//     CarouselPrevious,
-// } from "@/components/ui/carousel";
+
 
 const Feedback = () => {
-    const { authenticate, user } = useAuth();
+    const { user } = useAuth();
     const toast = useToast();
+    const [hover, setHover] = useState(0);
 
     const [formData, setFormData] = useState({
         name: '',
-        email: '',
+        rating: 0,
         feedback: ''
     });
-
+console.log(formData,'fordat')
     // const [feedbackList, setFeedbackList] = useState([]);
 
     const inputHandle = (e) => {
@@ -168,15 +162,25 @@ const Feedback = () => {
                             className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:border-indigo-600 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-100"
                             required
                         />
-                        <input
-                            type="email"
-                            name="email"
-                            value={formData.email}
-                            onChange={inputHandle}
-                            placeholder="Your Email"
-                            className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:border-indigo-600 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-100"
-                            required
-                        />
+                        {/* ⭐ Rating */}
+                        <div
+                            className="flex items-center justify-center space-x-2 py-3 border border-gray-100/10 bg-slate-800/80 rounded-lg "
+                            onMouseLeave={() => setHover(0)}
+                        >
+                            {[1, 2, 3, 4, 5].map((star) => (
+                                <span
+                                    key={star}
+                                    className={`cursor-pointer text-5xl transition-colors duration-200 ${(hover || formData.rating) >= star ? "text-yellow-500" : "text-gray-400"
+                                        }`}
+                                    onMouseEnter={() => setHover(star)}
+                                    onClick={() => setFormData({ ...formData, rating: star })}
+                                >
+                                    ★
+                                </span>
+                            ))}
+                        </div>
+
+
                         <textarea
                             name="feedback"
                             value={formData.feedback}
@@ -215,32 +219,7 @@ const Feedback = () => {
 
 
             <WhatOurClientsSay />
-            {/* <section className="container mx-auto px-6 py-12 text-center">
-                <h2 className="text-3xl font-semibold">What Our Clients Say</h2>
-                <Carousel
-                    opts={{
-                        align: "start",
-                    }}
-                    className="w-full max-w-[90%] sm:max-w-[40rem] md:max-w-[55rem] mx-auto"
-                >
-                    <CarouselContent>
-                        {feedbackList.map((feed, index) => (
-                            <CarouselItem key={index} className="sm:basis-3/4 md:basis-1/2 lg:basis-1/3 px-2">
-                                <div className="p-4">
-                                    <Card className="w-full max-w-[300px] sm:max-w-[250px] h-[200px] mx-auto">
-                                        <CardContent className="flex flex-col h-full items-center justify-center p-4">
-                                            <span>{feed.feedback}</span>
-                                            <p className='text-right italic'>-{feed.name}</p>
-                                        </CardContent>
-                                    </Card>
-                                </div>
-                            </CarouselItem>
-                        ))}
-                    </CarouselContent>
-                    <CarouselPrevious />
-                    <CarouselNext />
-                </Carousel>
-            </section> */}
+
 
             <section className="bg-indigo-600 text-white py-16 dark:bg-background dotted-background">
                 <div className="container mx-auto px-6 text-center">

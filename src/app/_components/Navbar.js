@@ -2,19 +2,15 @@
 import Link from 'next/link'
 import React from 'react'
 import { useAuth } from '../context/AuthContext'
-import { Button } from "@/components/ui/button";
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
-import { ModeToggle } from './ThemeButton'
-import { DropdownMenu, DropdownMenuContent, DropdownMenuTrigger, DropdownMenuItem } from '@/components/ui/dropdown-menu';
 
 
 const Navbar = () => {
   const pathname = usePathname();
 
-  const { authenticate, logout } = useAuth();
   return (
-    <nav className=" body-font bg-background dark:bg-gray-900 dark:shadow-[0px_4px_10px_rgba(255,255,255,0.1)]   text-foreground fixed z-30 w-full top-0 left-0">
+    <nav className=" body-font  bg-background dark:bg-gray-900 dark:shadow-[0px_4px_10px_rgba(255,255,255,0.1)]   text-foreground fixed z-30 w-full top-0 left-0">
       <div className="container mx-auto  flex flex-wrap p-5 flex-col md:flex-row items-center">
         <Link href='/' className="flex title-font font-medium items-center  mb-4 md:mb-0">
           

@@ -48,7 +48,7 @@ const Hero = () => {
 
   return (
 
-    <section className="text-foreground bg-background body-font  ">
+    <section className="text-foreground bg-background body-font md:mt-24 ">
       <Head>
         <title>Custom Web Development Services | Business, Portfolio, and E-commerce Websites</title>
         <meta name="description" content="Boost your online presence with our expert web development services. We create responsive business websites, stunning portfolios, and scalable e-commerce solutions. Build your dream website today!" />
