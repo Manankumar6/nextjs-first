@@ -23,13 +23,16 @@ const Footer = () => {
           <p className='text-[1rem] text-balance'>India's #1 in Web Development, delivering quality websites with engaging animations at great prices.</p>
         </div>
         {/* About connect support  */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 p-8 py-14 bg-slate-900 text-center md:text-left w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-8 py-14 bg-slate-900 text-center md:text-left w-full">
           {/* About section  */}
-          <div className=" px-4 text-center md:text-left border-b md:border-b-0 md:border-r border-gray-500">
-            <h2 className="title-font font-medium text-gray-900 dark:text-gray-300  tracking-widest text-lg mb-3">ABOUT US</h2>
+          <div className="  text-left border-b md:border-b-0 md:border-r border-gray-500">
+            <h2 className="title-font font-medium text-gray-900 dark:text-gray-300  tracking-widest text-lg mb-3">QUICK LINKS</h2>
             <nav className="list-none mb-10">
 
 
+              <li>
+                <Link href="/" className="text-gray-500 hover:text-gray-300">Home</Link>
+              </li>
               <li>
                 <Link href="/about" className="text-gray-500 hover:text-gray-300">Services</Link>
               </li>
@@ -42,7 +45,7 @@ const Footer = () => {
             </nav>
           </div>
           {/* connect with us section  */}
-          <div className=" px-4 text-center md:text-left  border-b md:border-b-0 md:border-r border-gray-500">
+          <div className="  text-left  border-b md:border-b-0 md:border-r border-gray-500">
             <h2 className="title-font font-medium text-gray-900 dark:text-gray-300  tracking-widest text-lg mb-3  ">CONNECT WITH US</h2>
             <nav className="list-none mb-10">
               <li>
@@ -56,13 +59,13 @@ const Footer = () => {
               <li>
                 <Link href="/events" className="text-gray-500 hover:text-gray-300">Events</Link>
               </li>
-              <li className="flex items-center justify-center md:justify-normal">
+              <li className="flex items-center justify-start md:justify-normal ">
                 <Mail className="text-gray-500 hover:text-gray-300" />
                 <Link target='_blank' href="https://mail.google.com/mail/?view=cm&fs=1&to=support@techcanva.in&su=Support&body=Hello,%0A%0AI%20would%20like%20to%20inquire%20about..." className="text-indigo-500 hover:underline ms-2">
                   support@techcanva.in
                 </Link>
               </li>
-              <li className="flex items-center justify-center md:justify-normal">
+              <li className="flex items-center justify-start md:justify-normal">
                 <Mail className="text-gray-500 hover:text-gray-300" />
                 <Link target='_blank' href="https://mail.google.com/mail/?view=cm&fs=1&to=support@techcanva.in&su=Support&body=Hello,%0A%0AI%20would%20like%20to%20inquire%20about..." className="text-indigo-500 hover:underlin ms-2">
                   info@techcanva.in
@@ -71,7 +74,7 @@ const Footer = () => {
             </nav>
           </div>
           {/* support  */}
-          <div className=" px-4 text-center md:text-left border-b md:border-b-0 md:border-r border-gray-500">
+          <div className="  text-left border-b md:border-b-0 md:border-r border-gray-500">
             <h2 className="title-font font-medium text-gray-900 dark:text-gray-300 tracking-widest text-lg mb-3">SUPPORT</h2>
             <nav className="list-none mb-10">
 
@@ -89,13 +92,13 @@ const Footer = () => {
             </nav>
           </div>
           {/* Address  */}
-          <div className=" px-4 text-center md:text-left">
+          <div className=" px-0 text-left">
             <h2 className="title-font font-medium text-gray-900 dark:text-gray-300 tracking-widest text-lg mb-3">HEAD OFFICE</h2>
-            <div className="flex flex-col gap-y-5 items-center md:items-start justify-center text-gray-500 hover:text-gray-300">
-              <div className='flex  items-center'>
+            <div className="flex flex-col gap-y-5 items-start md:items-start justify-center text-gray-500 hover:text-gray-300">
+              <div className='flex text-base space-x-2 items-center'>
 
-                <MapPinned className='size-4 md:size-6 mr-2' />
-                <p> Suhag Nagar, Firozabad, Uttar Pradesh - 283203</p>
+                <MapPinned className='size-6' />
+                <p> Satya Nagar, Jalesar Road, Firozabad, Uttar Pradesh - 283203</p>
               </div>
               <div className="flex items-center">
                 <PhoneIcon className='size-4  mr-2' />
@@ -113,7 +116,7 @@ const Footer = () => {
             <span> techcanva.in</span>
           </p>
           <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
-            <Link href="https://www.facebook.com/manan.kumar.144734/" target='_blank' className="text-gray-500">
+            <Link href="https://www.facebook.com/profile.php?id=61569975924217" target='_blank' className="text-gray-500">
               <svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
                 <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
               </svg>
@@ -129,7 +132,7 @@ const Footer = () => {
 
 
 
-            <Link target='_blank' href="https://www.instagram.com/manankumar_06/?igsh=NzQxYzZiM3o3aWdw" className="ml-3 text-gray-500">
+            <Link target='_blank' href="https://www.instagram.com/techcanva_19/" className="ml-3 text-gray-500">
               <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
                 <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
                 <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>

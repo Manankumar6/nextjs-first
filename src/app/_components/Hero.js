@@ -65,7 +65,7 @@ const Hero = () => {
               duration: 0.8,
               ease: "easeInOut",
             }}
-            className="mt-8 bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-widest text-transparent md:text-7xl"
+            className="mt-8 bg-white py-4 bg-clip-text text-center text-4xl font-bold tracking-widest text-transparent md:text-7xl"
           >
             Welcome to <br />  <span className='tracking-wide'>TechCanva</span>
 
