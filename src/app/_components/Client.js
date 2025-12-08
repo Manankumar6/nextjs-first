@@ -1,12 +1,30 @@
 'use client'
 import React from 'react';
-import Heading from './Heading'
+
 
 import Feedback from './Feedback';
 const Client = () => {
 
 
   const projects = [
+    {
+  img: '/image/mshomedecor.png',
+  projectName: "MS HOME DECOR – Interior Website",
+  madeFor: "MS Home Decor",
+  feedback:  "TechCanva has created a professional and visually appealing interior website for our business. Now we don’t need to share product images and details manually with customers—everything is available online with categories, product descriptions, and inquiry options. The website properly represents our brand and helps us convert more customers. We are extremely happy with the design quality, performance and overall working process.",
+  client: "Ashish Singh",
+  url: "https://mshomedecor.in/"
+},
+  {
+  img: '/image/bbstudio.png',
+  projectName: "Blueberries Studio – Showcase Website",
+  madeFor: "Blueberries Studio",
+  feedback:
+    "TechCanva created a professional showcase website for our studio that beautifully presents our work, services and portfolio all in one place. Earlier we had to share our work individually with clients, but now they can explore our studio profile, previous projects, and creative approach directly on the website. The modern design and smooth user experience truly represent our brand. We are very happy with the final result and the entire development process.",
+  client: "Harsh Jain",
+  url: "https://blue-berries-studios.vercel.app/"
+},
+
     {
   img: '/image/foodcafe.png',
   projectName: "Fool Café – Food Ordering Website",

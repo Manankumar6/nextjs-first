@@ -1,17 +1,17 @@
 import mongoose from "mongoose";
 
 const FeedbackSchema = new mongoose.Schema({
-   name: {
+    name: {
         type: String,
         required: true,
         trim: true,
     },
-     rating: {
-    type: Number,
-    required: true,
-    min: 1, // minimum 1 star
-    max: 5, // maximum 5 stars
-  },
+    rating: {
+        type: Number,
+        required: true,
+        min: 1, // minimum 1 star
+        max: 5, // maximum 5 stars
+    },
     feedback: {
         type: String,
         required: true,
@@ -21,9 +21,9 @@ const FeedbackSchema = new mongoose.Schema({
         type: Date,
         default: Date.now,
     },
-    isDeleted:{
-        type:Boolean,
-        default:false
+    isDeleted: {
+        type: Boolean,
+        default: false
     }
 
 })

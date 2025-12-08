@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "@/components/ui/moving-border";
 import Link from "next/link";
-import { SparklesCore } from "@/components/ui/sparkles";
+
 
 const ExploreService = () => {
   return (

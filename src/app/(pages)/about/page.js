@@ -397,7 +397,11 @@ const About = () => {
 
       </div>
 
-
+  {/* What Our Client Say Component  */}
+      <OurProject />
+      <Client />
+      <WhatOurClientsSay />
+      <ImageGallery />
 
       {/* Services Section */}
       <div className=" dark:bg-background  dark:bg-grid-small-white/[0.2]  px-4">
@@ -514,11 +518,7 @@ const About = () => {
 
 
 
-      {/* What Our Client Say Component  */}
-      <WhatOurClientsSay />
-      <Client />
-      <OurProject />
-      <ImageGallery />
+    
       {/* <GridBackgroundDemo /> */}
 
       <section className="bg-indigo-600 dark:bg-background relative dark:bg-grid-small-white/[0.2] dark:text-gray-300 text-white py-16">

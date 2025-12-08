@@ -12,6 +12,18 @@ import { Button } from "@/components/ui/moving-border";
 const OurProject = () => {
   const projectData = [
     {
+      img: "/image/mshomedecor.png",
+      title: "MS HOME DECOR – Interior Website",
+      desr: "A beautifully crafted interior and furniture showcase website designed to help businesses present their products online instead of sending PDFs on WhatsApp. Customers can easily explore categories, view details, and inquire directly. Built with a modern UI and responsive design to make interior browsing effortless and professional.",
+      link: "https://mshomedecor.in/"
+    },
+    {
+      img: "/image/bbstudio.png",
+      title: "Blueberries Studio – Showcase Website",
+      desr: "TechCanva created a professional showcase website for our studio that beautifully presents our work, services and portfolio all in one place. Earlier we had to share our work individually with clients, but now they can explore our studio profile, previous projects, and creative approach directly on the website. The modern design and smooth user experience truly represent our brand. We are very happy with the final result and the entire development process.",
+      link: "https://blue-berries-studios.vercel.app/"
+    },
+    {
       img: "/image/foodcafe.png",
       title: "Food Café – Digital Food Ordering System",
       desr: "A modern restaurant web application built for seamless digital dining. Cool Caffé features real-time menu updates, cart management, order tracking, and admin controls — developed with Next.js, MongoDB, and Socket.IO to deliver a fast, interactive, and scalable experience.",

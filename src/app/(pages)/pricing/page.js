@@ -156,47 +156,86 @@ const page = () => {
             </div>
           </div>
         </CardSpotlight>
-          <CardSpotlight className="h-auto w-96">
-  <h3 className="text-2xl font-semibold text-gray-700 dark:text-gray-200 mb-2">
-    Digital Menu System
-  </h3>
-  <p className="text-4xl font-bold mb-4 text-gray-800 dark:text-gray-300">
-    Starting at ₹11,999
-  </p>
-  <div className="text-neutral-700 dark:text-neutral-200 mt-4 relative z-20">
-    <p className="text-gray-700 dark:text-indigo-300 mb-4">
-      Smart digital menu for restaurants, cafes, and food outlets with real-time order management.
-    </p>
-    <ul className="list-none mt-2">
-      <Step title="Interactive Digital Menu (Mobile & Tablet Friendly)" />
-      <Step title="Add Unlimited Food Items with Images & Prices" />
-      <Step title="Variants & Add-ons (Sizes, Extra Toppings, etc.)" />
-      <Step title="QR Code Scanning for Instant Access" />
-      <Step title="Cart & Checkout System" />
-      <Step title="Order Tracking with Timer" />
-      <Step title="Admin Dashboard for Live Order Management" />
-      <Step title="Real-Time Updates with Socket.IO" />
-      <Step title="GST & Service Charge Auto Calculation" />
-      <Step title="Payment Gateway Integration (UPI, Cards, Wallets)" />
-      <Step title="Customer Notifications " />
-      <Step title="Sales Reports & Analytics Dashboard" />
-      <Step title="Social Media & Google Maps Integration" />
-      <Step title="Secure & SEO-Friendly Design" />
-      <Step title="1 Year Free Technical Support" />
-      <Step title="Annual Renewal For Hosting ₹3,500" />
-    </ul>
-    <div className="w-full mt-5 flex justify-center">
-      <Link href="/contact">
-        <Button
-          borderRadius="1.75rem"
-          className="bg-white dark:bg-transparent font-bold text-black dark:text-white border-neutral-200 dark:border-slate-800"
-        >
-          Choose Digital Menu
-        </Button>
-      </Link>
-    </div>
-  </div>
-</CardSpotlight>
+        <CardSpotlight className="h-auto w-96">
+          <h3 className="text-2xl font-semibold text-gray-700 dark:text-gray-200 mb-2">
+            5 Pages Website
+          </h3>
+          <p className="text-4xl font-bold mb-4 text-gray-800 dark:text-gray-300">
+            ₹4,999
+          </p>
+          <div className="text-neutral-700 dark:text-neutral-200 mt-4 relative z-20">
+            <p className="text-gray-700 dark:text-indigo-300 mb-4">
+             Perfect for businesses who want a complete professional website with multiple pages and essential info.
+
+            </p>
+           <ul className="list-none mt-2">
+  <Step title="Home Page (Hero, Overview, Highlights)" />
+  <Step title="About Page (Company Info, Mission & Vision)" />
+  <Step title="Services Page (What You Offer, Details)" />
+  <Step title="Contact Page (Form, Map, Business Info)" />
+  <Step title="Privacy Policy / Terms Page" />
+  <Step title="Clickable Call & WhatsApp Button" />
+  <Step title="Google Map Integration" />
+  <Step title="Free SSL Certificate (Secure Website)" />
+  <Step title="Fully Responsive Mobile Design" />
+  <Step title="SEO-friendly Structure" />
+  <Step title="1 Year Free Technical Support" />
+  <Step title="Fast Loading & Optimized Performance" />
+</ul>
+
+            <div className="w-full mt-5 flex justify-center">
+              <Link href="/contact">
+                <Button
+                  borderRadius="1.75rem"
+                  className="bg-white dark:bg-transparent font-bold text-black dark:text-white border-neutral-200 dark:border-slate-800"
+                >
+                 Choose 5 Pages Website
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </CardSpotlight>
+        <CardSpotlight className="h-auto w-96">
+          <h3 className="text-2xl font-semibold text-gray-700 dark:text-gray-200 mb-2">
+            Digital Menu System
+          </h3>
+          <p className="text-4xl font-bold mb-4 text-gray-800 dark:text-gray-300">
+            Starting at ₹11,999
+          </p>
+          <div className="text-neutral-700 dark:text-neutral-200 mt-4 relative z-20">
+            <p className="text-gray-700 dark:text-indigo-300 mb-4">
+              Smart digital menu for restaurants, cafes, and food outlets with real-time order management.
+            </p>
+            <ul className="list-none mt-2">
+              <Step title="Interactive Digital Menu (Mobile & Tablet Friendly)" />
+              <Step title="Add Unlimited Food Items with Images & Prices" />
+              <Step title="Variants & Add-ons (Sizes, Extra Toppings, etc.)" />
+              <Step title="QR Code Scanning for Instant Access" />
+              <Step title="Cart & Checkout System" />
+              <Step title="Order Tracking with Timer" />
+              <Step title="Admin Dashboard for Live Order Management" />
+              <Step title="Real-Time Updates with Socket.IO" />
+              <Step title="GST & Service Charge Auto Calculation" />
+              <Step title="Payment Gateway Integration (UPI, Cards, Wallets)" />
+              <Step title="Customer Notifications " />
+              <Step title="Sales Reports & Analytics Dashboard" />
+              <Step title="Social Media & Google Maps Integration" />
+              <Step title="Secure & SEO-Friendly Design" />
+              <Step title="1 Year Free Technical Support" />
+              <Step title="Annual Renewal For Hosting ₹3,500" />
+            </ul>
+            <div className="w-full mt-5 flex justify-center">
+              <Link href="/contact">
+                <Button
+                  borderRadius="1.75rem"
+                  className="bg-white dark:bg-transparent font-bold text-black dark:text-white border-neutral-200 dark:border-slate-800"
+                >
+                  Choose Digital Menu
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </CardSpotlight>
 
         <CardSpotlight className="h-auto w-96">
           <h3 className="text-2xl font-semibold text-gray-700 dark:text-gray-200 mb-2">

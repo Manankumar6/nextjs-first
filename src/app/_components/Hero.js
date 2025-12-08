@@ -11,6 +11,7 @@ import ExploreService from './ExploreService';
 import Achievements from './Achievements';
 import Technology from './Technology';
 import Head from 'next/head';
+import OurProject from './OurProject';
 
 
 const Hero = () => {
@@ -93,6 +94,7 @@ const Hero = () => {
       
       <TypewriterEffectSmoothDemo />
       <Achievements />
+       <OurProject />
       <WhyChooseUs />
       <Technology />
       <ExploreService />
