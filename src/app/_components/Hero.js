@@ -92,9 +92,9 @@ const Hero = () => {
 
       <HeroParallaxDemo />
             
-      <TypewriterEffectSmoothDemo />
-      <Achievements />
        <OurProject />
+      <Achievements />
+      <TypewriterEffectSmoothDemo />
       <WhyChooseUs />
       <Technology />
       <ExploreService />

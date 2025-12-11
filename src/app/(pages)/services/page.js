@@ -243,7 +243,7 @@ const About = () => {
     <div className="bg-gray-100 mt-24 text-gray-700">
 
       <Head>
-        <title>About Us - TechCanva</title>
+        <title>Our Services - TechCanva</title>
         <meta name="description" content="Learn more about TechCanva, the web development services we offer, and how we help businesses grow online." />
       </Head>
 

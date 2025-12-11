@@ -57,92 +57,16 @@ export function TypewriterEffectSmoothDemo() {
     (
       <div>
         <div className="flex relative  flex-col items-center justify-center pt-10  ">
-          {/* <div className="w-full absolute inset-0 h-auto">
-            <SparklesCore
-              id="tsparticlesfullpage"
-              background="transparent"
-              minSize={0.6}
-              maxSize={1.4}
-              particleDensity={100}
-              className="w-full h-full"
-              particleColor="#FFFFFF"
-            />
-          </div> */}
-
+      
           <p className="text-neutral-600 dark:text-neutral-200 text-xs sm:text-base  ">
             The road to freedom starts from here
           </p>
           <TypewriterEffectSmooth words={words} />
-          <p className="text-lg text-justify text-gray-600 dark:text-gray-400 px-5">
-            Transforming your ideas into impactful digital solutions with expert web design, development, and marketing strategies.
-          </p>
+         <p className="text-lg max-w-7xl text-justify text-gray-600 dark:text-gray-400 px-5">
+    At TechCanva, we transform your ideas into modern and impactful digital solutions. As a leading web development company in Firozabad, we create fast, responsive, and SEO-optimized websites that help your business grow online. From clean web design to high-performance development and strategic digital marketing—our goal is to boost your brand’s visibility and help you stand out in today’s competitive digital world.
+  </p>
 
-          {/* <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-4  px-10">
-         {[
-          {
-            title: "Web Design",
-            description:
-              "Craft stunning, user-friendly designs tailored to your brand’s identity and goals.",
-            icon: <Monitor className="w-8 h-8 text-blue-500" />,
-          },
-          {
-            title: "Web Development",
-            description:
-              "Develop secure, scalable, and high-performing websites for your business needs.",
-            icon: <Globe className="w-8 h-8 text-green-500" />,
-          },
-          {
-            title: "Instagram Ads",
-            description:
-              "Boost engagement and grow your audience with impactful Instagram campaigns.",
-            icon: <Instagram className="w-8 h-8 text-pink-500" />,
-          },
-          {
-            title: "Facebook Ads",
-            description:
-              "Reach targeted audiences with innovative ad strategies on Facebook.",
-            icon: <Facebook className="w-8 h-8 text-yellow-500" />,
-          },
-          {
-            title: "SEO Optimization",
-            description:
-              "Improve your search rankings with tailored SEO strategies.",
-            icon: <Award className="w-8 h-8 text-purple-500" />,
-          },
-          {
-            title: "Brand Vision",
-            description:
-              "Understand and align with your brand’s vision to deliver exceptional results.",
-            icon: <Eye className="w-8 h-8 text-indigo-500" />,
-          },
-          {
-            title: "Client Collaboration",
-            description:
-              "Build long-term partnerships through seamless collaboration and trust.",
-            icon: <Handshake className="w-8 h-8 text-teal-500" />,
-          },
-          {
-            title: "Commitment to Excellence",
-            description:
-              "Deliver high-quality, innovative solutions to meet and exceed client expectations.",
-            icon: <Users className="w-8 h-8 text-orange-500" />,
-          },
-         ].map((item, index) => (
-          <div
-            key={index}
-            className="bg-white dark:bg-gray-800 z-10 rounded-lg p-6 my-5 shadow-md hover:shadow-lg flex flex-col items-center text-center"
-          >
-            <div className="mb-4">{item.icon}</div>
-            <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200">
-              {item.title}
-            </h3>
-            <p className="text-gray-600 dark:text-gray-400 text-sm mt-2 text-pretty">
-              {item.description}
-            </p>
-          </div>
-         ))}
-         </div> */}
-
+        
 
 
           <div className="relative  w-full overflow-hidden">
@@ -154,14 +78,7 @@ export function TypewriterEffectSmoothDemo() {
 
             </div>
             <div className="w-full z-10 px-10 py-24 overflow-hidden box-border "
-            //  style={{
-            //   backgroundImage: `url('/image/bg.jpg'), linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6))`,
-            //   backgroundRepeat: 'no-repeat',
-            //   backgroundPosition: 'center',
-            //   backgroundSize: 'cover',
-            //   backgroundBlendMode: 'darken',
-
-            // }}
+          
             >
               <div className="md:ps-40 pt-2 w-full ">
 
@@ -189,7 +106,7 @@ export function TypewriterEffectSmoothDemo() {
                         <p className="mb-3">{service.desc}</p>
                         <Link href={'/solutions'}>
                         <button className="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 flex items-center" >
-                          Explore More <ArrowRight className="size-4 ml-2" />
+                          Read More <ArrowRight className="size-4 ml-2" />
                         </button>
                         </Link>
                       </div>

@@ -8,12 +8,12 @@ const ExploreService = () => {
     <div className="text-2xl  bg-transparent relative  md:text-4xl py-5 lg:text-7xl font-bold text-center text-black tracking-tight">
      
 
-      <p className="text-4xl md:text-6xl lg:text-7xl bg-clip-text text-transparent bg-gradient-to-b from-gray-600 to-gray-900 dark:from-gray-200 dark:to-gray-600">
+      <h1 className="text-4xl md:text-6xl lg:text-7xl bg-clip-text text-transparent bg-gradient-to-b from-gray-600 to-gray-900 dark:from-gray-200 dark:to-gray-600">
         Explore Our Services
-      </p>
-      <p className="mt-4 w-full md:w-1/2 px-5 mx-auto text-sm font-light tracking-wide text-justify md:text-center text-gray-700 dark:text-gray-300 mb-10">
-      We offer a wide range of services designed to make your experience smoother and more efficient. Whether you're looking for creative solutions or need help with something specific, our team is here for you. Take a look at what we can do and let us help you reach your goals.
-      </p>
+      </h1>
+      <p className="mt-4 w-full md:w-6xl px-5 mx-auto text-lg font-light tracking-wide text-justify md:text-center text-gray-700 dark:text-gray-300 mb-10">
+  As a trusted web development company in Firozabad, we offer a wide range of services designed to help your business grow online. From modern web design and high-performance development to digital marketing and branding solutions, our team is here to make your journey smoother and more impactful. Explore our services and discover how we can help you achieve your goals with the right digital strategy.
+</p>
       <Link href={"/about"}>
         <Button
           borderRadius="2rem"
