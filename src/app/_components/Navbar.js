@@ -1,7 +1,7 @@
 "use client"
 import Link from 'next/link'
 import React from 'react'
-import { useAuth } from '../context/AuthContext'
+
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 
@@ -31,29 +31,10 @@ const Navbar = () => {
         <nav className="md:ml-auto flex gap-2 flex-wrap items-center text-base justify-center">
           {/* <ModeToggle /> */}
           <Link href='/' className={pathname === '/' ? "border-b-2 border-blue-500 mr-5 hover:text-gray-500" : "mr-5 hover:text-gray-500"}>Home</Link>
-          {/* <DropdownMenu >
-            <DropdownMenuTrigger >Services</DropdownMenuTrigger>
-            <DropdownMenuContent className=' border-none'>
-              <DropdownMenuItem>
-                <Link href={'/about'}>
-                Web Development
-                </Link>
-                
-                </DropdownMenuItem>
-              <DropdownMenuItem>
-              <Link href={'/about'}>
-              Digital Marketing
-                </Link>
-             
-
-              </DropdownMenuItem>
-              <DropdownMenuItem>WordPress Site</DropdownMenuItem>
-             
-            </DropdownMenuContent>
-          </DropdownMenu> */}
+        
 
 
-          <Link href='/about' className={pathname === '/about' ? "border-b-2 border-blue-500 mr-5 hover:text-gray-500" : "mr-5 hover:text-gray-500"}>Services</Link>
+          <Link href='/services' className={pathname === '/servuces' ? "border-b-2 border-blue-500 mr-5 hover:text-gray-500" : "mr-5 hover:text-gray-500"}>Services</Link>
           <Link href='/pricing' className={pathname === '/pricing' ? "border-b-2 border-blue-500 mr-5 hover:text-gray-500" : "mr-5 hover:text-gray-500"}>Pricing</Link>
           <Link href='/contact' className={pathname === '/contact' ? "border-b-2 border-blue-500 mr-5 hover:text-gray-500" : "mr-5 hover:text-gray-500"}>Request a Quote</Link>
 

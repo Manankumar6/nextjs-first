@@ -91,7 +91,7 @@ const Hero = () => {
 
 
       <HeroParallaxDemo />
-      
+            
       <TypewriterEffectSmoothDemo />
       <Achievements />
        <OurProject />

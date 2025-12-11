@@ -64,7 +64,7 @@ export const Header = () => {
         Your Premier <br /> Web Development Partner
       </h1>
       <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
-        We specialize in creating fast, responsive, and scalable websites that are tailored to your business needs. Our focus is on crafting digital experiences that drive growth, enhance user engagement, and make a lasting impact in today’s competitive online world.
+      At TechCanva, we create websites that are fast, responsive, and truly built around your business. Our goal is simple — to design digital experiences that feel smooth, look modern, and help your brand grow online. Whether you’re a small business or an expanding brand, we build scalable websites that load quickly, attract customers, and deliver a great user experience. In today’s competitive digital world, we focus on making your online presence strong, trustworthy, and ready to convert.
       </p>
     </div>)
   );
