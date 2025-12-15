@@ -21,7 +21,7 @@ const OurProject = () => {
       img: "/image/bbstudio.png",
       title: "Blueberries Studio – Showcase Website",
       desr: "TechCanva created a professional showcase website for our studio that beautifully presents our work, services and portfolio all in one place. Earlier we had to share our work individually with clients, but now they can explore our studio profile, previous projects, and creative approach directly on the website. The modern design and smooth user experience truly represent our brand. We are very happy with the final result and the entire development process.",
-      link: "https://blue-berries-studios.vercel.app/"
+      link: "https://blueberriesstudios.com/"
     },
     {
       img: "/image/foodcafe.png",
